@@ -7,11 +7,11 @@ import Footer from "./footer/Footer";
 // Styles
 import GlobalStyle from "./../shared/global.js";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, footer, header }) => {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header brand={header.brand} nav={header.nav} top={header.top} />
       <main className="main" id="main">
         {children}
       </main>
