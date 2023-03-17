@@ -2,12 +2,13 @@ export const prefix = "lec";
 
 // Colors
 export const color = {
+  black: "#000000",
   botti: "#C6D4E0",
-  marino: "#43749C",
   chateau: "#9ca7ad",
+  marino: "#43749C",
+  seashell: "#f1f1f1",
   transparent: "transparent",
   white: "#FFFFFF",
-  black: "#000000",
 };
 
 // Typography
