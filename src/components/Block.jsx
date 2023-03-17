@@ -12,12 +12,17 @@ const StyledBlock = styled.div`
   padding: 80px 0;
 `;
 
+const Content = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
 const Block = ({ bgColor, children, bgImage }) => (
   <StyledBlock
     style={{ backgroundImage: bgImage ? `url("images/${bgImage}")` : "" }}
     className={classnames({ [`${bgColor}`]: bgColor }, `${prefix}-block`)}
   >
-    <div className="container">{children}</div>
+    <Content>{children}</Content>
   </StyledBlock>
 );
 

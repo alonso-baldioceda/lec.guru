@@ -12,6 +12,8 @@ import Top from "./Top";
 // Styles
 const StyledHeader = styled.header`
   width: 100%;
+  position: fixed;
+  z-index: 1000;
 `;
 
 const Container = styled.div`
