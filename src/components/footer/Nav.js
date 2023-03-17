@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 
 // Components
 import NavItem from "./NavItem";
@@ -7,20 +6,8 @@ import NavItem from "./NavItem";
 // Variables
 import { prefix } from "./../../shared/styles.js";
 
-// Styles
-const StyledNav = styled.nav`
-  li {
-    display: inline-block;
-    padding-right: 22px;
-
-    &:last-child {
-      padding-right: 0;
-    }
-  }
-`;
-
 const Nav = ({ nav }) => (
-  <StyledNav className={`${prefix}-nav-desktop`}>
+  <div className={`${prefix}-footer-nav`}>
     <ul>
       {nav.map((item, index) => (
         <li key={index}>
@@ -28,7 +15,7 @@ const Nav = ({ nav }) => (
         </li>
       ))}
     </ul>
-  </StyledNav>
+  </div>
 );
 
 export default Nav;

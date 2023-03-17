@@ -4,6 +4,33 @@ import React from "react";
 import Layout from "../components/Layout";
 
 const IndexPage = () => {
+  const nav = [
+    {
+      label: "Home",
+      link: "/",
+    },
+    {
+      label: "About Us",
+      link: "/about",
+    },
+    {
+      label: "Services",
+      link: "/services",
+    },
+    {
+      label: "Executive Advisors",
+      link: "/executive-advisors",
+    },
+    {
+      label: "Contact",
+      link: "/contact",
+    },
+    {
+      label: "Blog",
+      link: "/blog",
+    },
+  ];
+
   const data = {
     header: {
       top: {
@@ -18,37 +45,60 @@ const IndexPage = () => {
         alt: "Lean Enterprise Consulting",
         to: "/",
       },
-      nav: [
-        {
-          label: "Home",
-          link: "/",
+      nav: nav,
+    },
+    footer: {
+      business: {
+        heading: "Business Hours",
+        days: {
+          label: "Opening Days",
+          value: "Mon - Fri: 8am to 5pm",
         },
-        {
-          label: "About Us",
-          link: "/about",
+        vacations: {
+          label: "Vacations",
+          value: "Sundays - Official Holidays",
         },
-        {
-          label: "Services",
-          link: "/services",
-        },
-        {
-          label: "Executive Advisors",
-          link: "/executive-advisors",
-        },
-        {
-          label: "Contact",
-          link: "/contact",
-        },
-        {
-          label: "Blog",
-          link: "/blog",
-        },
-      ],
+      },
+      contact: {
+        heading: "Contact",
+        phone: { label: "Telephone", value: "954-258-3117" },
+        email: { label: "E-mail", value: "contact@lec.guru" },
+      },
+      nav: { heading: "Pages", nav: nav },
+      blog: {
+        heading: "Recent Posts",
+        posts: [
+          {
+            title: "Living our own Lives!",
+            link: "/blog/living-our-own-lives",
+            date: "April 1, 2020",
+          },
+          {
+            title: "Virtual Inspection",
+            link: "/blog/virtual-inspection",
+            date: "March 1, 2020",
+          },
+          {
+            title:
+              "It doesn’t matter how many times you fail, it only matters that you don’t the last time you try.",
+            link: "/blog/it-doesnt-matter",
+            date: "February 1, 2020",
+          },
+          {
+            title: "Our Purpose at Lean Enterprise Consulting",
+            link: "/blog/our-purpose",
+            date: "January 1, 2020",
+          },
+        ],
+      },
+      copyright: {
+        text: "© 2008 - 2022 Lean Enterprise Consulting, Inc. | All Rights Reserved.",
+      },
     },
   };
 
   return (
-    <Layout header={data.header}>
+    <Layout header={data.header} footer={data.footer}>
       {/* Parallax */}
       <h1>#Parallax</h1>
       {/* Title */}

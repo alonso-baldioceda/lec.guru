@@ -35,14 +35,46 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
+    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
+    font-style: normal;
+    font-weight: bold;
   }
 
+  h1 {}
 
+  h2 {}
+
+  h3 {}
+
+  h4 {
+    font-size: 21px;
+    line-height: 1em;
+  }
+
+  h5 {}
+  
+  h6 {}
 
   /* h1 {
     @media (min-width: <number>px) {
     }
   } */
+
+  p {
+    font-size: 13px;
+    line-height: 1.5em;
+  }
+
+  /*********************/
+  /**** Grid ****/
+  /*********************/
+
+  .container {
+    position: relative;
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+  }
 
   /*********************/
   /**** Backgrounds ****/

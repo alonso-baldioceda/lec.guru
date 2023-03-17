@@ -58,7 +58,6 @@ const Top = ({ phone, email }) => (
         <Span dangerouslySetInnerHTML={{ __html: icons[phone.icon] }} />
         <Span>{phone.label}</Span>
       </Link>
-
       <Link href={`mailto:${email.href}`}>
         <Span dangerouslySetInnerHTML={{ __html: icons[email.icon] }} />
         <Span>{email.label}</Span>

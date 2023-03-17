@@ -15,7 +15,13 @@ const Layout = ({ children, footer, header }) => {
       <main className="main" id="main">
         {children}
       </main>
-      <Footer />
+      <Footer
+        nav={footer.nav}
+        contact={footer.contact}
+        business={footer.business}
+        blog={footer.blog}
+        copyright={footer.copyright}
+      />
     </>
   );
 };
