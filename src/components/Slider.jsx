@@ -8,6 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 // Variables
 import { color, prefix } from "./../shared/styles.js";
 
+// Components
+import LinkButton from "./LinkButton.jsx";
+
 // Styles
 const SliderWrapper = styled((props) => <section {...props} />)`
   margin: 0 auto;
@@ -19,9 +22,9 @@ const SliderWrapper = styled((props) => <section {...props} />)`
   .slick-slider {
     .slick-list {
       .image-item {
-        width: 100%;
         max-height: 584px;
         object-fit: cover;
+        width: 100%;
       }
     }
 
@@ -47,8 +50,8 @@ const SliderWrapper = styled((props) => <section {...props} />)`
     }
 
     .slick-dots {
-      position: absolute;
       bottom: 25px;
+      position: absolute;
       z-index: 100;
 
       li {
@@ -83,9 +86,26 @@ const Box = styled.div`
 `;
 
 const Heading = styled.h1`
-  font-size: 40px;
   color: ${color.seashell};
+  font-size: 40px;
   font-weight: 700;
+  margin-bottom: 30px;
+`;
+
+const By = styled.p`
+  color: ${color.white};
+  font-size: 13px;
+  font-weight: 400;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+`;
+
+const Text = styled.p`
+  color: ${color.white};
+  font-size: 17px;
+  font-weight: 400;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  line-height: 23px;
+  margin-bottom: 30px;
 `;
 
 const Slider = ({ settings, nodes }) => {
@@ -96,16 +116,20 @@ const Slider = ({ settings, nodes }) => {
       <Slick {...slickSettings}>
         {nodes.map((slide, index) => (
           <Slide key={index}>
-            <img
-              src={slide.img.src}
-              alt={slide.img.alt}
-              className="image-item"
-            />
+            {slide.img && (
+              <img
+                src={slide.img.src}
+                alt={slide.img.alt}
+                className="image-item"
+              />
+            )}
             <Content>
               <div className="container">
                 <Box>
                   <Heading>{slide.heading}</Heading>
-                  <a href="/">link</a>
+                  {slide.by && <By>{slide.by}</By>}
+                  {slide.text && <Text>{slide.text}</Text>}
+                  <LinkButton to={slide.cta.link} label={slide.cta.label} />
                 </Box>
               </div>
             </Content>

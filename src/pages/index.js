@@ -1,9 +1,20 @@
 import React from "react";
+import styled from "styled-components";
 
 // Components
 import Layout from "../components/Layout";
 import Block from "../components/Block";
 import Slider from "../components/Slider";
+
+const StyledIndexPage = styled.div`
+  .recent-posts {
+    .slick-slider {
+      h1 {
+        margin-bottom: 0px !important;
+      }
+    }
+  }
+`;
 
 const IndexPage = () => {
   const nav = [
@@ -69,7 +80,7 @@ const IndexPage = () => {
             alt: "Do you want to improve your business processes?",
           },
           cta: {
-            label: "Read more",
+            label: "Contact Us",
             link: "/blog/improve-your-business-processes",
           },
         },
@@ -80,7 +91,7 @@ const IndexPage = () => {
             alt: "Problems with the industry and government?",
           },
           cta: {
-            label: "Read more",
+            label: "Look our services",
             link: "/blog/problems-with-the-industry-and-government",
           },
         },
@@ -92,7 +103,7 @@ const IndexPage = () => {
             alt: "Recruiting for skilled positions is becoming increasingly competitive...",
           },
           cta: {
-            label: "Read more",
+            label: "Contact Us",
             link: "/blog/recruiting-for-skilled-positions",
           },
         },
@@ -103,7 +114,7 @@ const IndexPage = () => {
             alt: "Do you want to know where our symbol comes from?",
           },
           cta: {
-            label: "Read more",
+            label: "Press here!",
             link: "/blog/where-does-our-symbol-come-from",
           },
         },
@@ -112,6 +123,71 @@ const IndexPage = () => {
     recentPost: {
       bgColor: "bg-chateau",
       heading: "Recent posts by our president ...",
+      slides: [
+        {
+          heading: "Living our own Lives!",
+          by: "by Thomas Agrait | December 13, 2021 | Uncategorized | Comments",
+          text: "On December 15, 1933, Jung responded to a woman who had asked his guidance on, quite simply, how to live. Two generations after the young Nietzsche admonished that “no one can build you the bridge on which you, and only you, must cross the river of life,” Jung...",
+          img: {
+            src: "/images/homepagePostsUpdated/slide1.jpeg",
+            alt: "Do you want to improve your business processes?",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/living-our-own-lives",
+          },
+        },
+        {
+          heading: "Virtual Inspection",
+          by: "by Thomas Agrait | June 3, 2021 | Uncategorized | Comments",
+          text: "Here is a quick update on FDA Virtual Inspection Program;   FDA's long-awaited guidance on remote interactive facility evaluations is finally here: In November 2020, Pink Sheet reported that during an IPAC-RS virtual roundtable, deputy director of FDA’s Office of...",
+          img: {
+            src: "/images/homepagePostsUpdated/slide2.jpeg",
+            alt: "Problems with the industry and government?",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/3812-2",
+          },
+        },
+        {
+          heading:
+            "Recruiting for skilled positions is becoming increasingly competitive...",
+          by: "by Thomas Agrait | April 3, 2021 | Uncategorized | Comments",
+          img: {
+            src: "/images/homepagePostsUpdated/slide3.jpeg",
+            alt: "Recruiting for skilled positions is becoming increasingly competitive...",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/it-doesnt-matter-how-many-times-you-fail-it-only-matters-that-you-dont-the-last-time-you-try",
+          },
+        },
+        {
+          heading: "Our Purpose at Lean Enterprise Consulting",
+          by: "by Thomas Agrait | October 6, 2021 | Uncategorized | Comments",
+          img: {
+            src: "/images/homepagePostsUpdated/slide4.jpeg",
+            alt: "Our Purpose at Lean Enterprise Consulting",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/our-purpose-at-lean-enterprise-consulting",
+          },
+        },
+        {
+          heading: "Facing Challenges!",
+          by: "by Thomas Agrait | June 6, 2020 | Uncategorized | Comments",
+          img: {
+            src: "/images/homepagePostsUpdated/slide5.jpeg",
+            alt: "Facing Challenges!",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/facing-challenges",
+          },
+        },
+      ],
     },
     services: {
       bgColor: "bg-chateau",
@@ -168,22 +244,31 @@ const IndexPage = () => {
   };
 
   return (
-    <Layout header={data.header} footer={data.footer}>
-      {/* Hero */}
-      <Slider nodes={data.hero.slides} />
-      {/* Recent posts */}
-      <Block bgColor={data.recentPost.bgColor}>
-        <h1 className="text-seashell text-center">{data.recentPost.heading}</h1>
-      </Block>
-      {/* Slider posts */}
-      {/* <Slider nodes={data.recentPost.slides} /> */}
-      {/* Services */}
-      <Block bgColor={data.recentPost.bgColor}>
-        <h1 className="text-seashell text-center">{data.services.heading}</h1>
-      </Block>
-      {/* Cards */}
-      <h1>#Cards</h1>
-    </Layout>
+    <StyledIndexPage>
+      <Layout header={data.header} footer={data.footer}>
+        {/* Hero */}
+        <Slider nodes={data.hero.slides} />
+        {/* Recent posts */}
+        <section className="recent-posts">
+          <Block bgColor={data.recentPost.bgColor}>
+            <h1 className="text-seashell text-center">
+              {data.recentPost.heading}
+            </h1>
+          </Block>
+          <Block>
+            <Slider nodes={data.recentPost.slides} />
+          </Block>
+        </section>
+        {/* Services */}
+        <Block bgColor={data.recentPost.bgColor}>
+          <h1 className="text-seashell text-center">{data.services.heading}</h1>
+        </Block>
+        {/* Cards */}
+        <Block>
+          <h2 className="text-center">expertise cards here!</h2>
+        </Block>
+      </Layout>
+    </StyledIndexPage>
   );
 };
 

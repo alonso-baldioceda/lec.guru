@@ -8,6 +8,7 @@ export const color = {
   marino: "#43749C",
   seashell: "#f1f1f1",
   transparent: "transparent",
+  wedgewood: "#44749c",
   white: "#FFFFFF",
 };
 
