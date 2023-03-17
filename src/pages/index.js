@@ -3,6 +3,7 @@ import React from "react";
 // Components
 import Layout from "../components/Layout";
 import Block from "../components/Block";
+import Slider from "../components/Slider";
 
 const IndexPage = () => {
   const nav = [
@@ -48,14 +49,73 @@ const IndexPage = () => {
       },
       nav: nav,
     },
+    hero: {
+      settings: {
+        arrows: true,
+        autoplay: true,
+        cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
+        dots: true,
+        fade: true,
+        infinite: true,
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        speed: 1000,
+      },
+      slides: [
+        {
+          heading: "Do you want to improve your business processes?",
+          img: {
+            src: "/images/homepageHero/slide1.jpeg",
+            alt: "Do you want to improve your business processes?",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/improve-your-business-processes",
+          },
+        },
+        {
+          heading: "Problems with the industry and government?",
+          img: {
+            src: "/images/homepageHero/slide2.jpeg",
+            alt: "Problems with the industry and government?",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/problems-with-the-industry-and-government",
+          },
+        },
+        {
+          heading:
+            "Recruiting for skilled positions is becoming increasingly competitive...",
+          img: {
+            src: "/images/homepageHero/slide3.jpeg",
+            alt: "Recruiting for skilled positions is becoming increasingly competitive...",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/recruiting-for-skilled-positions",
+          },
+        },
+        {
+          heading: "Do you want to know where our symbol comes from?",
+          img: {
+            src: "/images/homepageHero/slide4.jpeg",
+            alt: "Do you want to know where our symbol comes from?",
+          },
+          cta: {
+            label: "Read more",
+            link: "/blog/where-does-our-symbol-come-from",
+          },
+        },
+      ],
+    },
     recentPost: {
       bgColor: "bg-chateau",
       heading: "Recent posts by our president ...",
     },
     services: {
       bgColor: "bg-chateau",
-      heading:
-        "The unique goal of our Lean Enterprise Consulting experts is to make you successful",
+      heading: `"The unique goal of our Lean Enterprise Consulting experts is to make you successful"`,
     },
     footer: {
       business: {
@@ -109,14 +169,14 @@ const IndexPage = () => {
 
   return (
     <Layout header={data.header} footer={data.footer}>
-      {/* Parallax */}
-      <h1>#Parallax</h1>
+      {/* Hero */}
+      <Slider nodes={data.hero.slides} />
       {/* Recent posts */}
       <Block bgColor={data.recentPost.bgColor}>
         <h1 className="text-seashell text-center">{data.recentPost.heading}</h1>
       </Block>
-      {/* Slider */}
-      <h1>#Slider</h1>
+      {/* Slider posts */}
+      {/* <Slider nodes={data.recentPost.slides} /> */}
       {/* Services */}
       <Block bgColor={data.recentPost.bgColor}>
         <h1 className="text-seashell text-center">{data.services.heading}</h1>
