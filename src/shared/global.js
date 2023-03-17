@@ -38,9 +38,12 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
     font-style: normal;
     font-weight: bold;
+    padding-bottom: 10px;
   }
 
-  h1 {}
+  h1 {
+    font-size: 30px;
+  }
 
   h2 {}
 
@@ -80,48 +83,64 @@ const GlobalStyles = createGlobalStyle`
   /**** Backgrounds ****/
   /*********************/
 
+  .bg-black {
+    background-color: ${color.black};
+  }
+
   .bg-botti {
     background-color: ${color.botti};
+  }
+
+  .bg-chateau {
+    background-color: ${color.chateau};
   }
 
   .bg-marino {
     background-color: ${color.marino};
   } 
 
-  .bg-chateau {
-    background-color: ${color.chateau};
+  .bg-seashell {
+    background-color: ${color.seashell};
   }
 
   .bg-white {
     background-color: ${color.white};
   }
 
-  .bg-black {
-    background-color: ${color.black};
-  }
-
   /*********************/
   /***** Text Color ****/
   /*********************/
 
-  .text-botti {
-    color: ${color.botti};
+  .text-black {
+    color: ${color.black};
   }
 
-  .text-marino {
-    color: ${color.marino};
+  .text-botti {
+    color: ${color.botti};
   }
 
   .text-chateau {
     color: ${color.chateau};
   }
 
+  .text-marino {
+    color: ${color.marino};
+  }
+
+  .text-seashell {
+    color: ${color.seashell};
+  }
+
   .text-white {
     color: ${color.white};
   }
 
-  .text-black {
-    color: ${color.black};
+  /*********************/
+  /***** Text align ****/
+  /*********************/
+
+  .text-center {
+    text-align: center;
   }
 `;
 

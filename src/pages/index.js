@@ -2,6 +2,7 @@ import React from "react";
 
 // Components
 import Layout from "../components/Layout";
+import Block from "../components/Block";
 
 const IndexPage = () => {
   const nav = [
@@ -46,6 +47,15 @@ const IndexPage = () => {
         to: "/",
       },
       nav: nav,
+    },
+    recentPost: {
+      bgColor: "bg-chateau",
+      heading: "Recent posts by our president ...",
+    },
+    services: {
+      bgColor: "bg-chateau",
+      heading:
+        "The unique goal of our Lean Enterprise Consulting experts is to make you successful",
     },
     footer: {
       business: {
@@ -101,12 +111,16 @@ const IndexPage = () => {
     <Layout header={data.header} footer={data.footer}>
       {/* Parallax */}
       <h1>#Parallax</h1>
-      {/* Title */}
-      <h1>#Title</h1>
+      {/* Recent posts */}
+      <Block bgColor={data.recentPost.bgColor}>
+        <h1 className="text-seashell text-center">{data.recentPost.heading}</h1>
+      </Block>
       {/* Slider */}
       <h1>#Slider</h1>
-      {/* Title */}
-      <h1>#Title</h1>
+      {/* Services */}
+      <Block bgColor={data.recentPost.bgColor}>
+        <h1 className="text-seashell text-center">{data.services.heading}</h1>
+      </Block>
       {/* Cards */}
       <h1>#Cards</h1>
     </Layout>
