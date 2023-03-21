@@ -12,7 +12,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "deploy": "node bin/deploy.js && ./bin/deploy.sh"
   },
   "dependencies": {
     "@fontsource/lato": "^4.5.10",
@@ -39,5 +40,9 @@
     "sass": "^1.59.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
   }
 }

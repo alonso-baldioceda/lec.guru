@@ -8,10 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Styles
 const SliderWrapper = styled((props) => <section {...props} />)`
-  height: 320px;
+  min-height: 380px;
   margin: 0 auto;
   max-width: 2200px;
-  overflow: hidden;
   position: relative;
   width: 100%;
 
@@ -45,13 +44,17 @@ const SliderWrapper = styled((props) => <section {...props} />)`
 
     .slick-dots {
       position: absolute;
-      bottom: 0;
+      bottom: -30px;
       z-index: 100;
+
+      @media (min-width: 992px) {
+        padding-top: -40px;
+      }
 
       li {
         button {
           &:before {
-            font-size: 20px;
+            font-size: 15px;
           }
         }
       }

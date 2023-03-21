@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // Components
@@ -9,18 +9,25 @@ import Footer from "./footer/Footer";
 import GlobalStyle from "./../shared/global.js";
 
 const Main = styled.main`
-  padding-top: 82px;
+  padding-top: 72px;
 
-  @media (min-width: 981px) {
+  @media (min-width: 992px) {
     padding-top: 82px;
   }
 `;
 
 const Layout = ({ children, footer, header }) => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
       <GlobalStyle />
-      <Header brand={header.brand} nav={header.nav} top={header.top} />
+      <Header
+        brand={header.brand}
+        nav={header.nav}
+        top={header.top}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      />
       <Main className="main" id="main">
         {children}
       </Main>
@@ -29,6 +36,8 @@ const Layout = ({ children, footer, header }) => {
         copyright={footer.copyright}
         social={footer.social}
         contact={footer.contact}
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
       />
     </>
   );

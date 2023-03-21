@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Variables
-import { color, typography } from "./styles";
+import { color as colors, typography } from "./styles";
 
 const GlobalStyles = createGlobalStyle`
   /*********************/
@@ -45,7 +45,7 @@ const GlobalStyles = createGlobalStyle`
       }
 
       .decorator {
-        border-bottom: 6px solid ${color.rouge};
+        border-bottom: 6px solid ${colors.rouge};
       }
     }
   }
@@ -63,43 +63,43 @@ const GlobalStyles = createGlobalStyle`
   /*********************/
 
   .bg-marino {
-    background-color: ${color.marino} !important;
+    background-color: ${colors.marino} !important;
   }
 
   .bg-marino-light {
-    background-color: ${color.marinoLight} !important;
+    background-color: ${colors.marinoLight} !important;
   }
 
   .bg-marino-lighter {
-    background-color: ${color.marinoLighter} !important;
+    background-color: ${colors.marinoLighter} !important;
   }
 
   .bg-rouge {
-    background-color: ${color.rouge} !important;
+    background-color: ${colors.rouge} !important;
   }
 
   .bg-sycamore {
-    background-color: ${color.sycamore} !important;
+    background-color: ${colors.sycamore} !important;
   }
 
   .bg-sycamore-light {
-    background-color: ${color.sycamoreLight} !important;
+    background-color: ${colors.sycamoreLight} !important;
   }
 
   .bg-sycamore-lighter {
-    background-color: ${color.sycamoreLighter} !important;
+    background-color: ${colors.sycamoreLighter} !important;
   }
 
   .bg-casal {
-    background-color: ${color.casal} !important;
+    background-color: ${colors.casal} !important;
   }
 
   .bg-marino-lighter {
-    background-color: ${color.marinoLighter} !important;
+    background-color: ${colors.marinoLighter} !important;
   }
 
   .bgrouge-lighter {
-    background-color: ${color.rougeLighter} !important;
+    background-color: ${colors.rougeLighter} !important;
   }
 
   /*********************/
@@ -107,19 +107,19 @@ const GlobalStyles = createGlobalStyle`
   /*********************/
 
   .border-marino {
-    border-color: ${color.marino} !important;
+    border-color: ${colors.marino} !important;
   }
 
   .border-rouge {
-    border-color: ${color.rouge} !important;
+    border-color: ${colors.rouge} !important;
   }
 
   .border-sycamore {
-    border-color: ${color.sycamore} !important;
+    border-color: ${colors.sycamore} !important;
   }
 
   .border-casal {
-    border-color: ${color.casal} !important;
+    border-color: ${colors.casal} !important;
   }
 
   /*********************/
@@ -127,63 +127,63 @@ const GlobalStyles = createGlobalStyle`
   /*********************/
 
   .text-finn {
-    color: ${color.finn} !important;
+    color: ${colors.finn} !important;
   }
 
   .text-finn-light {
-    color: ${color.finnLight} !important;
+    color: ${colors.finnLight} !important;
   }
 
   .text-finn-lighter {
-    color: ${color.finnLighter} !important;
+    color: ${colors.finnLighter} !important;
   }
 
   .text-marino {
-    color: ${color.marino} !important;
+    color: ${colors.marino} !important;
   }
 
   .text-marino-light {
-    color: ${color.marinoLight} !important;
+    color: ${colors.marinoLight} !important;
   }
 
   .text-marino-lighter {
-    color: ${color.marinoLighter} !important;
+    color: ${colors.marinoLighter} !important;
   }
 
   .text-rouge {
-    color: ${color.rouge} !important;
+    color: ${colors.rouge} !important;
   }
 
   .text-rouge-light {
-    color: ${color.rougeLight} !important;
+    color: ${colors.rougeLight} !important;
   }
 
   .text-rouge-lighter {
-    color: ${color.rougeLighter} !important;
+    color: ${colors.rougeLighter} !important;
   }
 
   .text-sycamore {
-    color: ${color.sycamore} !important;
+    color: ${colors.sycamore} !important;
   }
 
   .text-sycamore-light {
-    color: ${color.sycamoreLight} !important;
+    color: ${colors.sycamoreLight} !important;
   }
 
   .text-sycamore-lighter {
-    color: ${color.sycamoreLighter} !important;
+    color: ${colors.sycamoreLighter} !important;
   }
 
   .text-casal {
-    color: ${color.casal} !important;
+    color: ${colors.casal} !important;
   }
 
   .text-casal-light {
-    color: ${color.casalLight} !important;
+    color: ${colors.casalLight} !important;
   }
 
   .text-casal-lighter {
-    color: ${color.casalLighter} !important;
+    color: ${colors.casalLighter} !important;
   }
 `;
 

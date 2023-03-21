@@ -13,7 +13,7 @@ import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import Slider from "../components/Slider.jsx";
-import SliderContentV1 from "../components/SliderContentV1.jsx";
+import CardV3 from "../components/CardV3.jsx";
 
 const StyledIndexPage = styled.div``;
 
@@ -56,6 +56,7 @@ const IndexPage = () => {
         },
       },
       brand: {
+        icon: "logo",
         alt: "Lean Enterprise Consulting",
         to: "/",
       },
@@ -139,13 +140,43 @@ const IndexPage = () => {
           autoplaySpeed: 5000,
           slidesToShow: 3,
           slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+              },
+            },
+            {
+              breakpoint: 576,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+              },
+            },
+          ],
         },
         nodes: [
           {
-            heading: "Do you want to improve your business processes?",
+            heading:
+              "5 Key Principles of Lean Management for Increased Efficiency",
             img: {
-              src: "/images/arm.png",
-              alt: "Do you want to improve your business processes?",
+              src: "/images/unclasified/5.jpg",
+              alt: "5 Key Principles of Lean Management for Increased Efficiency",
             },
             cta: {
               label: "Contact Us",
@@ -153,10 +184,11 @@ const IndexPage = () => {
             },
           },
           {
-            heading: "Problems with the industry and government?",
+            heading:
+              "Maximizing Productivity with Lean Six Sigma Methodologies",
             img: {
-              src: "/images/arm.png",
-              alt: "Problems with the industry and government?",
+              src: "/images/unclasified/6.jpg",
+              alt: "Maximizing Productivity with Lean Six Sigma Methodologies",
             },
             cta: {
               label: "Look our services",
@@ -165,10 +197,10 @@ const IndexPage = () => {
           },
           {
             heading:
-              "Recruiting for skilled positions is becoming increasingly competitive...",
+              "How to Apply Lean Thinking to Streamline Your Supply Chain",
             img: {
-              src: "/images/arm.png",
-              alt: "Recruiting for skilled positions is becoming increasingly competitive...",
+              src: "/images/unclasified/7.jpg",
+              alt: "How to Apply Lean Thinking to Streamline Your Supply Chain",
             },
             cta: {
               label: "Contact Us",
@@ -176,10 +208,11 @@ const IndexPage = () => {
             },
           },
           {
-            heading: "Do you want to improve your business processes?",
+            heading:
+              "The Benefits of Lean Manufacturing and Just-in-Time Production",
             img: {
-              src: "/images/arm.png",
-              alt: "Do you want to improve your business processes?",
+              src: "/images/unclasified/5.jpg",
+              alt: "The Benefits of Lean Manufacturing and Just-in-Time Production",
             },
             cta: {
               label: "Contact Us",
@@ -187,10 +220,10 @@ const IndexPage = () => {
             },
           },
           {
-            heading: "Problems with the industry and government?",
+            heading: "Using Lean Principles to Improve Healthcare Operations",
             img: {
-              src: "/images/arm.png",
-              alt: "Problems with the industry and government?",
+              src: "/images/unclasified/6.jpg",
+              alt: "Using Lean Principles to Improve Healthcare Operations",
             },
             cta: {
               label: "Look our services",
@@ -199,10 +232,10 @@ const IndexPage = () => {
           },
           {
             heading:
-              "Recruiting for skilled positions is becoming increasingly competitive...",
+              "Lean Startup: Applying Lean Methodologies to Entrepreneurship",
             img: {
-              src: "/images/arm.png",
-              alt: "Recruiting for skilled positions is becoming increasingly competitive...",
+              src: "/images/unclasified/7.jpg",
+              alt: "Lean Startup: Applying Lean Methodologies to Entrepreneurship",
             },
             cta: {
               label: "Contact Us",
@@ -399,18 +432,18 @@ const IndexPage = () => {
         </div>
         {/* Blog */}
         <div className={`${prefix}-blog`}>
-          <Container className="py-4 py-lg-5">
+          <Container className="pt-4 pb-5 py-lg-5">
             <Row className="justify-content-center">
               <Col lg={10}>
                 <h2 className="text-center my-3 my-lg-5 text-casal fs-1">
                   {data.blog.heading}
                 </h2>
                 <p className="mb-3 mb-lg-5">{data.blog.text}</p>
-                <div className="bg-marino-lighter">
+                <div className="mb-3 mb-lg-5">
                   <Slider settings={data.blog.slider.settings}>
                     {data.blog.slider.nodes.map((item, index) => (
                       <div key={index}>
-                        <SliderContentV1 {...item} />
+                        <CardV3 {...item} />
                       </div>
                     ))}
                   </Slider>
