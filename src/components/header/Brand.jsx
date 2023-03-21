@@ -5,17 +5,14 @@ import styled from "styled-components";
 
 // Variables
 import { prefix } from "./../../shared/styles.js";
+import { icons } from "./../../shared/icons.js";
 
 // Styles
 const StyledBrand = styled((props) => <div {...props} />)`
-  width: 156px;
-
-  @media (min-width: 981px) {
-    width: 200px;
-  }
+  height: 70px;
 
   img {
-    max-width: 100% !important;
+    max-width: 80px !important;
     width: 100% !important;
   }
 `;
@@ -23,14 +20,7 @@ const StyledBrand = styled((props) => <div {...props} />)`
 const Brand = ({ alt, to }) => {
   return (
     <StyledBrand className={`${prefix}-brand`}>
-      <GatsbyLink to={to}>
-        <StaticImage
-          src="./../../images/logo.jpeg"
-          alt={alt ? alt : ""}
-          placeholder="blurred"
-          layout="fullWidth"
-        />
-      </GatsbyLink>
+      <img src="images/logo.svg" alt="" />
     </StyledBrand>
   );
 };

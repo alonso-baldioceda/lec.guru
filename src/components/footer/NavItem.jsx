@@ -7,35 +7,25 @@ import { prefix, color } from "./../../shared/styles.js";
 
 // Styles
 const StyledNavItem = styled((props) => <GatsbyLink {...props} />)`
-  color: ${color.white};
-  display: flex;
-  font-size: 15px;
-  line-height: 23px;
-  position: relative;
   text-decoration: none;
 
-  &:hover {
+  span {
+    border-bottom: 2px solid ${color.transparent};
     color: ${color.white};
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      border-color: ${color.sycamore};
+      color: ${color.white};
+    }
   }
 `;
 
-const Bullet = styled.span`
-  position: relative;
-  margin-right: 10px;
-
-  &::before {
-    content: "•";
-  }
-`;
-
-const Label = styled.span`
-  color: ${color.white};
-`;
-
-const NavItem = ({ to, label }) => (
-  <StyledNavItem className={`${prefix}-footer-nav-item`} to={to}>
-    <Bullet />
-    <Label>{label}</Label>
+const NavItem = ({ link, label }) => (
+  <StyledNavItem className={`d-block ${prefix}-footer-nav-item`} to={link}>
+    <span>{label}</span>
   </StyledNavItem>
 );
 

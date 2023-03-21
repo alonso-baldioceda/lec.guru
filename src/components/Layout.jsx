@@ -5,14 +5,14 @@ import styled from "styled-components";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 
-// Styles
+// Global Styles
 import GlobalStyle from "./../shared/global.js";
 
 const Main = styled.main`
-  padding-top: 106px;
+  padding-top: 82px;
 
   @media (min-width: 981px) {
-    padding-top: 132px;
+    padding-top: 82px;
   }
 `;
 
@@ -26,10 +26,9 @@ const Layout = ({ children, footer, header }) => {
       </Main>
       <Footer
         nav={footer.nav}
-        contact={footer.contact}
-        business={footer.business}
-        blog={footer.blog}
         copyright={footer.copyright}
+        social={footer.social}
+        contact={footer.contact}
       />
     </>
   );

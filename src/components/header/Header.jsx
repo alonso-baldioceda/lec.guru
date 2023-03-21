@@ -7,7 +7,6 @@ import { prefix } from "./../../shared/styles.js";
 // Components
 import Brand from "./Brand";
 import Nav from "./Nav";
-import Top from "./Top";
 
 // Styles
 const StyledHeader = styled.header`
@@ -37,7 +36,6 @@ const HideNav = styled.div`
 
 const Header = ({ brand, nav, top }) => (
   <StyledHeader className={`bg-marino ${prefix}-header`}>
-    <Top phone={top.phone} email={top.email} />
     <Container>
       <Brand {...brand} />
       <HideNav className="hide-nav">

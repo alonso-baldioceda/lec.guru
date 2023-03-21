@@ -7,18 +7,18 @@ import { prefix, color } from "./../../shared/styles.js";
 
 // Styles
 const StyledNavItem = styled((props) => <GatsbyLink {...props} />)`
-  color: ${color.botti};
-  font-size: 19px;
-  font-weight: 600;
+  border: 2px solid transparent;
+  color: ${color.white};
+  font-size: 16px;
   letter-spacing: 1px;
   line-height: 14px;
-  margin: 0;
-  padding: 0;
-  transition: all 0.4s ease-in-out;
+  padding-bottom: 4px;
+  transition: all 0.25s ease-out;
   text-decoration: none;
 
   &:hover {
-    opacity: 0.7;
+    color: ${color.white};
+    border-bottom: 2px solid #fff;
   }
 `;
 

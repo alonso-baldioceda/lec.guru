@@ -21,7 +21,7 @@ const StyledNav = styled.nav`
 
 const Nav = ({ nav }) => (
   <StyledNav className={`${prefix}-nav-desktop`}>
-    <ul>
+    <ul className="mb-0 p-0">
       {nav.map((item, index) => (
         <li key={index}>
           <NavItem to={item.link} label={item.label} />
