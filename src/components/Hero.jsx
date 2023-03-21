@@ -76,11 +76,11 @@ const Hero = ({ cta, heading, img, text, small }) => (
               <h2 className="mb-2 mb-md-3 fw-bold">{text}</h2>
               <div className="d-flex justify-content-between bg-sycamore-lighter mb-3 mb-lg-4 py-2 rounded rounded-4">
                 <div className="d-flex align-items-center d-none d-md-block">
-                  <div className="d-flex align-items-center justify-content-center">
+                  <div className="d-flex align-items-center justify-content-center h-100">
                     <i className="bi bi-megaphone fs-1 text-sycamore px-3"></i>
                   </div>
                 </div>
-                <p className="text-center text-lg-start text-dark fs-6 mx-2 mb-0 py-2">
+                <p className="text-center text-md-start text-dark fs-6 mx-2 mx-md-0 mb-0 py-2">
                   {small}
                 </p>
               </div>
