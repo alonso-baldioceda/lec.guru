@@ -13,8 +13,12 @@ import BubbleMobile from "./BubbleMobile.jsx";
 // Styles
 const HeroContainer = styled.section`
   text-align: center;
-  height: 88vh;
+  height: 60vh;
   position: relative;
+
+  @media (min-width: 768px) {
+    height: 88vh;
+  }
 
   .transparent {
     background-color: rgba(255, 255, 255, 0.95);
