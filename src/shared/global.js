@@ -1,13 +1,13 @@
 import { createGlobalStyle } from "styled-components";
+import "@fontsource/lato";
+import "@fontsource/lato/700.css";
+import "@fontsource/lato/900.css";
+import "@fontsource/lato/900-italic.css";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Variables
-import { color } from "./styles";
-
-// Constants
-// Please note that the fontUrl is commented out because it is not used in this project.
-// We can use it in the future if we want to import a font from Google Fonts.
-// export const fontUrl =
-//   "https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700";
+import { color as colors, typography } from "./styles";
 
 const GlobalStyles = createGlobalStyle`
   /*********************/
@@ -17,12 +17,14 @@ const GlobalStyles = createGlobalStyle`
   /* Reset */
   * {
     box-sizing: border-box;
+    font-family: ${typography.type.marino};
+    /* font-size: 1.0625rem; */
+    font-size: 1.03125rem;
     margin: 0;
     padding: 0;
   }
 
   body {
-    font-family: "PT Serif", Georgia, "Times New Roman", serif;
     font-size: 1.125rem;
     font-weight: 400;
     margin: 0;
@@ -35,112 +37,153 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-family: 'Montserrat', Helvetica, Arial, Lucida, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    padding-bottom: 10px;
-  }
+    font-weight: ${typography.weight.black} !important;
 
-  h1 {
-    font-size: 30px;
-  }
+    &.underlined {
+      i {
+        font-weight: 700 !important;
+      }
 
-  h2 {}
-
-  h3 {}
-
-  h4 {
-    font-size: 21px;
-    line-height: 1em;
-  }
-
-  h5 {}
-  
-  h6 {}
-
-  /* h1 {
-    @media (min-width: <number>px) {
+      .decorator {
+        border-bottom: 6px solid ${colors.rouge};
+      }
     }
-  } */
-
-  p {
-    font-size: 13px;
-    line-height: 1.5em;
   }
 
-  /*********************/
-  /**** Grid ****/
-  /*********************/
+  .font-bold {
+    font-weight: 700 !important;
+  }
 
-  .container {
-    position: relative;
-    width: 80%;
-    max-width: 1080px;
-    margin: 0 auto;
+  .font-italic {
+    font-style: italic !important;
   }
 
   /*********************/
   /**** Backgrounds ****/
   /*********************/
 
-  .bg-black {
-    background-color: ${color.black};
-  }
-
-  .bg-botti {
-    background-color: ${color.botti};
-  }
-
-  .bg-chateau {
-    background-color: ${color.chateau};
-  }
-
   .bg-marino {
-    background-color: ${color.marino};
-  } 
-
-  .bg-seashell {
-    background-color: ${color.seashell};
+    background-color: ${colors.marino} !important;
   }
 
-  .bg-white {
-    background-color: ${color.white};
+  .bg-marino-light {
+    background-color: ${colors.marinoLight} !important;
+  }
+
+  .bg-marino-lighter {
+    background-color: ${colors.marinoLighter} !important;
+  }
+
+  .bg-rouge {
+    background-color: ${colors.rouge} !important;
+  }
+
+  .bg-sycamore {
+    background-color: ${colors.sycamore} !important;
+  }
+
+  .bg-sycamore-light {
+    background-color: ${colors.sycamoreLight} !important;
+  }
+
+  .bg-sycamore-lighter {
+    background-color: ${colors.sycamoreLighter} !important;
+  }
+
+  .bg-casal {
+    background-color: ${colors.casal} !important;
+  }
+
+  .bg-marino-lighter {
+    background-color: ${colors.marinoLighter} !important;
+  }
+
+  .bgrouge-lighter {
+    background-color: ${colors.rougeLighter} !important;
+  }
+
+  /*********************/
+  /****** Border *******/
+  /*********************/
+
+  .border-marino {
+    border-color: ${colors.marino} !important;
+  }
+
+  .border-rouge {
+    border-color: ${colors.rouge} !important;
+  }
+
+  .border-sycamore {
+    border-color: ${colors.sycamore} !important;
+  }
+
+  .border-casal {
+    border-color: ${colors.casal} !important;
   }
 
   /*********************/
   /***** Text Color ****/
   /*********************/
 
-  .text-black {
-    color: ${color.black};
+  .text-finn {
+    color: ${colors.finn} !important;
   }
 
-  .text-botti {
-    color: ${color.botti};
+  .text-finn-light {
+    color: ${colors.finnLight} !important;
   }
 
-  .text-chateau {
-    color: ${color.chateau};
+  .text-finn-lighter {
+    color: ${colors.finnLighter} !important;
   }
 
   .text-marino {
-    color: ${color.marino};
+    color: ${colors.marino} !important;
   }
 
-  .text-seashell {
-    color: ${color.seashell};
+  .text-marino-light {
+    color: ${colors.marinoLight} !important;
   }
 
-  .text-white {
-    color: ${color.white};
+  .text-marino-lighter {
+    color: ${colors.marinoLighter} !important;
   }
 
-  /*********************/
-  /***** Text align ****/
-  /*********************/
+  .text-rouge {
+    color: ${colors.rouge} !important;
+  }
 
-  .text-center {
-    text-align: center;
+  .text-rouge-light {
+    color: ${colors.rougeLight} !important;
+  }
+
+  .text-rouge-lighter {
+    color: ${colors.rougeLighter} !important;
+  }
+
+  .text-sycamore {
+    color: ${colors.sycamore} !important;
+  }
+
+  .text-sycamore-light {
+    color: ${colors.sycamoreLight} !important;
+  }
+
+  .text-sycamore-lighter {
+    color: ${colors.sycamoreLighter} !important;
+  }
+
+  .text-casal {
+    color: ${colors.casal} !important;
+  }
+
+  .text-casal-light {
+    color: ${colors.casalLight} !important;
+  }
+
+  .text-casal-lighter {
+    color: ${colors.casalLighter} !important;
   }
 `;
 

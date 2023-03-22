@@ -1,17 +1,16 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 // Variables
 import { prefix } from "./../../shared/styles.js";
 
 // Styles
-const StyledBrand = styled((props) => <div {...props} />)`
-  width: 156px;
+const StyledBrand = styled((props) => <GatsbyLink {...props} />)`
+  width: 60px;
 
-  @media (min-width: 981px) {
-    width: 200px;
+  @media (min-width: 992px) {
+    width: 70px;
   }
 
   img {
@@ -20,17 +19,10 @@ const StyledBrand = styled((props) => <div {...props} />)`
   }
 `;
 
-const Brand = ({ alt, to }) => {
+const Brand = ({ alt, icon, to }) => {
   return (
-    <StyledBrand className={`${prefix}-brand`}>
-      <GatsbyLink to={to}>
-        <StaticImage
-          src="./../../images/logo.jpeg"
-          alt={alt ? alt : ""}
-          placeholder="blurred"
-          layout="fullWidth"
-        />
-      </GatsbyLink>
+    <StyledBrand className={`${prefix}-brand`} to={to}>
+      <img src={`images/${icon}.svg`} alt={alt} />
     </StyledBrand>
   );
 };
