@@ -49,7 +49,7 @@ const Hero = ({ cta, heading, img, text, small }) => (
       <BackgroundImage src={img} />
       <div className="position-absolute top-50 start-50 translate-middle w-100">
         <div className="mx-2 mx-lg-3">
-          <Container fuild>
+          <Container className="fluid">
             <Row className="justify-content-center">
               <Col
                 xs={12}

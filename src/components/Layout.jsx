@@ -18,6 +18,7 @@ const Main = styled.main`
 
 const Layout = ({ children, footer, header }) => {
   const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <GlobalStyle />

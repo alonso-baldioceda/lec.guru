@@ -98,7 +98,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${colors.marinoLighter} !important;
   }
 
-  .bgrouge-lighter {
+  .bg-rouge-lighter {
     background-color: ${colors.rougeLighter} !important;
   }
 
