@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 
 // Variables
@@ -10,89 +11,16 @@ import Layout from "../components/Layout";
 
 const StyledServicesPage = styled.div``;
 
-const ServicesPage = () => {
-  const nav = [
-    {
-      label: "Home",
-      link: "/",
-    },
-    {
-      label: "About Us",
-      link: "/about",
-    },
-    {
-      label: "Services",
-      link: "/services",
-    },
-    {
-      label: "Executive Advisors",
-      link: "/executive-advisors",
-    },
-    {
-      label: "Contact",
-      link: "/contact",
-    },
-    {
-      label: "Blog",
-      link: "/blog",
-    },
-  ];
-
-  const data = {
-    header: {
-      top: {
-        phone: { label: "Call now", href: "+19542583117", icon: "call" },
-        email: {
-          label: "contact@lec.guru",
-          href: "contact@lec.guru",
-          icon: "envelope",
-        },
-      },
-      brand: {
-        icon: "logo",
-        alt: "Lean Enterprise Consulting",
-        to: "/",
-      },
-      nav: nav,
-    },
-    footer: {
-      nav: { heading: "Pages", nav: nav },
-      social: {
-        heading: "Follow Us",
-        links: [
-          {
-            icon: "facebook",
-            link: "https://www.facebook.com/",
-          },
-          {
-            icon: "linkedin",
-            link: "https://www.linkedin.com/",
-          },
-          {
-            icon: "twitter",
-            link: "https://twitter.com/",
-          },
-          {
-            icon: "instagram",
-            link: "https://www.instagram.com/",
-          },
-        ],
-      },
-      contact: {
-        heading: "Contact Us",
-        address: "Fort Lauderdale, FL. USA",
-        phone: "Phone: +954-258-3117",
-        email: "Email: contact@lec.guru",
-      },
-      copyright:
-        "© 2008 - 2022 Lean Enterprise Consulting, Inc. | All Rights Reserved.",
-    },
-  };
+const ServicesPage = ({ data }) => {
+  const { allDataJson } = data || {};
+  const { edges } = allDataJson || {};
+  const { node } = edges[0] || {};
+  const { header, footer } = node || {};
 
   return (
     <StyledServicesPage>
-      <Layout header={data.header} footer={data.footer}>
-        hola!!
+      <Layout header={header} footer={footer}>
+        Services!!
       </Layout>
     </StyledServicesPage>
   );
@@ -100,4 +28,125 @@ const ServicesPage = () => {
 
 export default ServicesPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Services</title>;
+
+export const query = graphql`
+  query {
+    allDataJson {
+      edges {
+        node {
+          about {
+            heading
+            mission {
+              heading
+              text
+            }
+            company {
+              heading
+              text
+            }
+          }
+          blog {
+            heading
+            slider {
+              nodes {
+                cta {
+                  label
+                  link
+                }
+                heading
+                img {
+                  alt
+                  src
+                }
+              }
+            }
+            text
+          }
+          footer {
+            contact {
+              address
+              email
+              heading
+              phone
+            }
+            copyright
+            nav {
+              heading
+              nav {
+                label
+                link
+              }
+            }
+            social {
+              heading
+              links {
+                icon
+                link
+              }
+            }
+          }
+          header {
+            brand {
+              to
+            }
+            nav {
+              label
+              link
+            }
+            top {
+              email {
+                href
+                icon
+                label
+              }
+              phone {
+                href
+                icon
+                label
+              }
+            }
+          }
+          hero {
+            cta {
+              label
+              link
+            }
+            heading
+            img
+            small
+            text
+          }
+          services {
+            cards {
+              cta
+              heading
+              icon
+              link
+              text
+            }
+            heading
+            text
+          }
+          team {
+            cards {
+              img
+              job
+              link
+              name
+              social {
+                heading
+                links {
+                  icon
+                  link
+                }
+              }
+              text
+            }
+            heading
+          }
+        }
+      }
+    }
+  }
+`;

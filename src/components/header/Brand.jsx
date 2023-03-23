@@ -1,6 +1,7 @@
 import React from "react";
 import { Link as GatsbyLink } from "gatsby";
 import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image";
 
 // Variables
 import { prefix } from "./../../shared/styles.js";
@@ -19,10 +20,17 @@ const StyledBrand = styled((props) => <GatsbyLink {...props} />)`
   }
 `;
 
-const Brand = ({ alt, icon, to }) => {
+const Brand = ({ to }) => {
   return (
     <StyledBrand className={`${prefix}-brand`} to={to}>
-      <img src={`images/${icon}.svg`} alt={alt} />
+      <StaticImage
+        src="./../../images/logo.svg"
+        alt="LEAN Entreprise Consulting"
+        placeholder="blurred"
+        layout="fixed"
+        width={60}
+        height={60}
+      />
     </StyledBrand>
   );
 };

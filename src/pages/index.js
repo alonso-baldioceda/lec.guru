@@ -1,7 +1,7 @@
 import React from "react";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import { graphql } from "gatsby";
 
 // Variables
 import { color, prefix } from "./../shared/styles.js";
@@ -163,7 +163,7 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Homepage</title>;
 
 export const query = graphql`
   query {
@@ -223,8 +223,6 @@ export const query = graphql`
           }
           header {
             brand {
-              alt
-              icon
               to
             }
             nav {
