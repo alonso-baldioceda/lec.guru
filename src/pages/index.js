@@ -27,7 +27,7 @@ const IndexPage = ({ data }) => {
   let validNode = null;
 
   if (edges[0].node.homepage === null) {
-    const { node } = edges[0] || {};
+    const { node } = edges[1] || {};
     validNode = node;
   } else {
     const { node } = edges[0] || {};
@@ -110,7 +110,7 @@ const IndexPage = ({ data }) => {
         <div className={`${prefix}-blog`}>
           <Container className="pt-4 pb-5 py-lg-5">
             <Row className="justify-content-center">
-              <Col lg={10}>
+              <Col lg={19}>
                 <h2 className="text-center my-3 my-lg-5 text-casal fs-1">
                   {blog.heading}
                 </h2>
@@ -135,7 +135,7 @@ const IndexPage = ({ data }) => {
           <div className="py-3 py-lg-5">
             <Container className="py-4 py-lg-5">
               <Row className="justify-content-center">
-                <Col xs={11} lg={10}>
+                <Col xs={11} lg={7}>
                   <h2
                     className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined"
                     dangerouslySetInnerHTML={{
