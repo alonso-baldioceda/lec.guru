@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/lato";
+import "@fontsource/lato/300.css";
 import "@fontsource/lato/700.css";
 import "@fontsource/lato/900.css";
 import "@fontsource/lato/900-italic.css";
@@ -19,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-family: ${typography.type.marino};
     /* font-size: 1.0625rem; */
-    font-size: 1.03125rem;
+    font-size: 1rem;
     margin: 0;
     padding: 0;
   }
@@ -94,12 +95,32 @@ const GlobalStyles = createGlobalStyle`
     background-color: ${colors.casal} !important;
   }
 
+  .bg-casal-light {
+    background-color: ${colors.casalLight} !important;
+  }
+
+  .bg-casal-lighter {
+    background-color: ${colors.casalLighter} !important;
+  }
+
   .bg-marino-lighter {
     background-color: ${colors.marinoLighter} !important;
   }
 
-  .bgrouge-lighter {
+  .bg-rouge-lighter {
     background-color: ${colors.rougeLighter} !important;
+  }
+
+  .bg-finn {
+    background-color: ${colors.finn} !important;
+  }
+
+  .bg-finn-light {
+    background-color: ${colors.finnLight} !important;
+  }
+
+  .bg-finn-lighter {
+    background-color: ${colors.finnLighter} !important;
   }
 
   /*********************/

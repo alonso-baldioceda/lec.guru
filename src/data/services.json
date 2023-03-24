@@ -1,0 +1,354 @@
+{
+  "services": {
+    "header": {
+      "top": {
+        "phone": {
+          "label": "Call now",
+          "href": "+19542583117",
+          "icon": "call"
+        },
+        "email": {
+          "label": "contact@lec.guru",
+          "href": "contact@lec.guru",
+          "icon": "envelope"
+        }
+      },
+      "brand": {
+        "icon": "logo",
+        "alt": "Lean Enterprise Consulting",
+        "to": "/"
+      },
+      "nav": [
+        { "label": "Home", "link": "/" },
+        { "label": "About Us", "link": "/about" },
+        { "label": "Services", "link": "/services" },
+        { "label": "Executive Advisors", "link": "/executive-advisors" },
+        { "label": "Contact", "link": "/contact" },
+        { "label": "Blog", "link": "/blog" }
+      ]
+    },
+    "services": [
+      {
+        "title": "<i class=\"fs-1\">Streamline Your Success with</i><br/><span class='decorator fs-1'>LEAN Enterprise Consulting</span>",
+        "subtitle": "Streamline Your Success with LEAN Enterprise Consulting Services for Efficient Operations",
+        "details": [
+          {
+            "title": "Lean Processes",
+            "introduction": "Our LEAN Processing service identifies business inefficiencies and waste, and uses LEAN principles to increase productivity and decrease costs. Our LEAN experts collaborate with you to create a tailored plan.",
+            "details": [
+              {
+                "title": "Process Analysis",
+                "description": "Our team will analyze your business processes using various tools and techniques to identify areas of inefficiency and waste."
+              },
+              {
+                "title": "LEAN Implementation",
+                "description": "We will develop a plan based on our analysis to implement LEAN principles into your processes using tools such as Kaizen events, 5S, and standardized work. We'll work with your team to ensure a smooth implementation and provide training."
+              },
+              {
+                "title": "Continuous Improvement",
+                "description": "Our team will help you establish a culture of continuous improvement within your organization, providing ongoing support and guidance to sustain improvements and make further gains."
+              },
+              {
+                "title": "Metrics and Reporting",
+                "description": "We'll establish metrics and reporting mechanisms to track progress and measure the impact of our LEAN Processing service, helping you identify further opportunities for improvement and make data-driven decisions."
+              },
+              {
+                "title": "Customized Solutions",
+                "description": "We'll tailor our LEAN Processing service to meet your specific needs, developing a customized solution whether you need help with a specific process or want to implement LEAN principles throughout your organization."
+              }
+            ]
+          },
+          {
+            "title": "Visual Managment",
+            "introduction": "Visual management is a key component of lean management, which aims to streamline processes and increase efficiency by improving communication and collaboration.",
+            "details": [
+              {
+                "title": "Visual Management Overview",
+                "description": "A comprehensive overview of Visual Management principles and how they can be applied to improve business performance."
+              },
+              {
+                "title": "Visual Management Assessment",
+                "description": "We will develop a plan based on our analysis to implement LEAN principles into your processes using tools such as Kaizen events, 5S, and standardized work. We'll work with your team to ensure a smooth implementation and provide training."
+              },
+              {
+                "title": "Visual Management Implementation",
+                "description": "Customized implementation of visual management tools and techniques in your organization to enhance communication, collaboration, and productivity."
+              },
+              {
+                "title": "Kanban Board Development",
+                "description": "Design and development of customized kanban boards to visualize work processes, manage workflow, and track progress."
+              },
+              {
+                "title": "Performance Metrics Development",
+                "description": "Development of performance metrics and key performance indicators (KPIs) to track progress and measure success in achieving organizational goals."
+              },
+              {
+                "title": "Gemba Walks",
+                "description": "Conducting Gemba walks with management and staff to identify waste, observe processes, and identify opportunities for improvement."
+              },
+              {
+                "title": "Visual Communication Tools",
+                "description": "Developing and implementing visual communication tools, such as visual standard work instructions, to enhance understanding and consistency in work processes."
+              },
+              {
+                "title": "Lean Culture Development",
+                "description": "Promoting a lean culture throughout the organization by implementing visual management practices, engaging employees in continuous improvement, and fostering a mindset of continuous improvement."
+              },
+              {
+                "title": "Training and Coaching",
+                "description": "Providing training and coaching to employees and management on visual management principles and techniques to support ongoing improvement efforts."
+              },
+              {
+                "title": "Continuous Improvement Support",
+                "description": "Providing ongoing support to ensure the sustained success of visual management initiatives, including continuous improvement efforts and regular review and evaluation of progress."
+              }
+            ]
+          },
+          {
+            "title": "S5 Method",
+            "introduction": "5S method implementation reduces waste, improves efficiency, and creates a safer, organized work environment. Our consultants customize solutions for your organization.",
+            "details": [
+              {
+                "title": "Sort (Seiri)",
+                "description": "This step involves identifying and separating necessary items from unnecessary items. This reduces clutter and makes it easier to find and access important items. Our consultants will help you categorize items and create a plan for disposing of unnecessary items."
+              },
+              {
+                "title": "Set in Order (Seiton)",
+                "description": "This step involves organizing necessary items in a way that promotes efficient and easy access. Our consultants will help you determine the most efficient placement of items based on frequency of use and accessibility. This reduces time wasted searching for items and helps to streamline your processes."
+              },
+              {
+                "title": "Shine (Seiso)",
+                "description": "This step involves regularly cleaning and maintaining the work environment to ensure that it is safe, organized, and visually appealing. Our consultants will help you develop a cleaning and maintenance plan that fits the needs of your organization."
+              },
+              {
+                "title": "Standardize (Seiketsu)",
+                "description": "This step involves establishing standard procedures and practices to ensure that the 5S method is consistently applied and maintained. Our consultants will help you develop a plan for training employees and establishing protocols to ensure that the 5S method becomes a part of your organizational culture."
+              },
+              {
+                "title": "Sustain (Shitsuke)",
+                "description": "This step involves creating a culture of continuous improvement and sustaining the gains made from implementing the 5S method. Our consultants will help you establish a system for ongoing evaluation and improvement to ensure that the 5S method continues to be effective in the long term."
+              }
+            ]
+          },
+          {
+            "title": "Keyzen Phylosophy",
+            "introduction": "Keysen Philosophy is a service from our Lean consultancy that applies Keysenian economic theory, which believes government intervention can stabilize and grow the economy by managing aggregate demand.",
+            "details": [
+              {
+                "title": "Consultancy on government policies",
+                "description": "We provide advice on how government policies can impact your business and how you can adjust your operations accordingly."
+              },
+              {
+                "title": "Strategic planning",
+                "description": "We help you develop strategic plans that take into account economic trends and government policies, allowing you to make informed decisions about the future of your business."
+              },
+              {
+                "title": "Demand forecasting",
+                "description": "We provide tools and techniques for forecasting demand for your products or services, allowing you to optimize your production processes and supply chain management."
+              },
+              {
+                "title": "Investment analysis",
+                "description": "We can help you evaluate potential investments based on their economic impact and potential returns."
+              },
+              {
+                "title": "Risk assessment",
+                "description": "We provide risk assessment services to help you identify potential risks and develop mitigation strategies that align with the Keysenian economic theory."
+              },
+              {
+                "title": "Business cycle analysis",
+                "description": "We analyze the business cycle to help you understand where your business stands in relation to the overall economic trends."
+              },
+              {
+                "title": "Performance metrics development",
+                "description": "We help you develop performance metrics that reflect the principles of the Keysenian economic theory, allowing you to measure the impact of your business decisions on the economy."
+              },
+              {
+                "title": "Training and education",
+                "description": "We provide training and education to help you and your team understand the principles of the Keysenian economic theory and how to apply them to your business operations."
+              }
+            ]
+          },
+          {
+            "title": "Value Stream Mapping",
+            "introduction": "Value stream mapping (VSM) is a powerful tool used in Lean manufacturing and management to identify waste and improve processes.",
+            "details": [
+              {
+                "title": "Identify the value stream",
+                "description": "The first step in Value Stream Mapping is to identify the value stream, which is the entire process from start to finish that adds value to the customer."
+              },
+              {
+                "title": "Analyze the value stream",
+                "description": "Once the value stream is identified, the next step is to analyze it. This includes mapping out the flow of materials, information, and people through the process, as well as identifying areas of waste and inefficiency."
+              },
+              {
+                "title": "Identify areas for improvement",
+                "description": "Based on the analysis, areas for improvement are identified. These could include reducing lead times, eliminating waste, improving quality, and increasing efficiency."
+              },
+              {
+                "title": "Develop an improvement plan",
+                "description": "Once areas for improvement are identified, an improvement plan is developed. This plan includes specific actions to be taken, who is responsible for each action, and a timeline for completion."
+              },
+              {
+                "title": "Implement improvements",
+                "description": "The improvement plan is put into action, with regular monitoring and tracking to ensure progress is being made."
+              },
+              {
+                "title": "Measure results",
+                "description": "After the improvements are implemented, results are measured. This includes tracking key performance indicators (KPIs) to ensure that the improvements are leading to tangible results, such as increased efficiency, improved quality, and reduced lead times."
+              },
+              {
+                "title": "Continuously improve",
+                "description": "Value Stream Mapping is an ongoing process, and it's important to continuously monitor and improve processes to ensure they remain efficient and effective."
+              }
+            ]
+          },
+          {
+            "title": "Design of Experiments",
+            "introduction": "Design of experiments (DOE) is a powerful tool used in Lean manufacturing and management to improve processes, products, and services.",
+            "details": [
+              {
+                "title": "Define the problem",
+                "description": "The first step in Design of Experiments is to define the problem that needs to be solved. This could be related to a process, product, or service."
+              },
+              {
+                "title": "Identify the factors",
+                "description": "Once the problem is defined, the next step is to identify the factors that may affect the outcome. These could be related to the process inputs, such as temperature or pressure, or to the product or service features, such as color or size."
+              },
+              {
+                "title": "Determine the levels",
+                "description": "For each factor, the levels need to be determined. This means deciding on the range of values that will be tested for each factor."
+              },
+              {
+                "title": "Develop the experimental plan",
+                "description": "Based on the factors and levels, an experimental plan is developed. This plan includes the design of the experiment, such as the number of runs, and the order in which the runs will be conducted."
+              },
+              {
+                "title": "Conduct the experiment",
+                "description": "With the experimental plan in place, the experiment is conducted. This involves collecting data on the outcome variable(s) while systematically varying the input factors."
+              },
+              {
+                "title": "Analyze the data",
+                "description": "Once the experiment is complete, the data is analyzed to determine the effects of each factor on the outcome. This can be done using statistical methods such as analysis of variance (ANOVA) or regression analysis."
+              },
+              {
+                "title": "Draw conclusions and make recommendations",
+                "description": "Based on the data analysis, conclusions are drawn and recommendations are made. This could include changes to the process, product, or service design to improve quality, reduce waste, or increase efficiency."
+              },
+              {
+                "title": "Implement the recommendations",
+                "description": "The recommendations are put into action, with regular monitoring and tracking to ensure progress is being made."
+              },
+              {
+                "title": "Continuously improve",
+                "description": "Design of Experiments is an ongoing process, and it's important to continuously monitor and improve processes, products, and services to ensure they remain efficient and effective."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "blog": {
+      "heading": "Our Blog",
+      "text": "Explore the latest in lean manufacturing and management on our blog. We share best practices and the latest developments to help you reach your organization's full potential. Join us on your lean journey!",
+      "slider": {
+        "nodes": [
+          {
+            "heading": "5 Key Principles of Lean Management for Increased Efficiency",
+            "img": {
+              "src": "/images/unclasified/5.jpg",
+              "alt": "5 Key Principles of Lean Management for Increased Efficiency"
+            },
+            "cta": {
+              "label": "Contact Us",
+              "link": "/blog/improve-your-business-processes"
+            }
+          },
+          {
+            "heading": "Maximizing Productivity with Lean Six Sigma Methodologies",
+            "img": {
+              "src": "/images/unclasified/6.jpg",
+              "alt": "Maximizing Productivity with Lean Six Sigma Methodologies"
+            },
+            "cta": {
+              "label": "Look our services",
+              "link": "/blog/problems-with-the-industry-and-government"
+            }
+          },
+          {
+            "heading": "How to Apply Lean Thinking to Streamline Your Supply Chain",
+            "img": {
+              "src": "/images/unclasified/7.jpg",
+              "alt": "How to Apply Lean Thinking to Streamline Your Supply Chain"
+            },
+            "cta": {
+              "label": "Contact Us",
+              "link": "/blog/recruiting-for-skilled-positions"
+            }
+          },
+          {
+            "heading": "The Benefits of Lean Manufacturing and Just-in-Time Production",
+            "img": {
+              "src": "/images/unclasified/5.jpg",
+              "alt": "The Benefits of Lean Manufacturing and Just-in-Time Production"
+            },
+            "cta": {
+              "label": "Contact Us",
+              "link": "/blog/improve-your-business-processes"
+            }
+          },
+          {
+            "heading": "Using Lean Principles to Improve Healthcare Operations",
+            "img": {
+              "src": "/images/unclasified/6.jpg",
+              "alt": "Using Lean Principles to Improve Healthcare Operations"
+            },
+            "cta": {
+              "label": "Look our services",
+              "link": "/blog/problems-with-the-industry-and-government"
+            }
+          },
+          {
+            "heading": "Lean Startup: Applying Lean Methodologies to Entrepreneurship",
+            "img": {
+              "src": "/images/unclasified/7.jpg",
+              "alt": "Lean Startup: Applying Lean Methodologies to Entrepreneurship"
+            },
+            "cta": {
+              "label": "Contact Us",
+              "link": "/blog/recruiting-for-skilled-positions"
+            }
+          }
+        ]
+      }
+    },
+    "footer": {
+      "nav": {
+        "heading": "Pages",
+        "nav": [
+          { "label": "Home", "link": "/" },
+          { "label": "About Us", "link": "/about" },
+          { "label": "Services", "link": "/services" },
+          { "label": "Executive Advisors", "link": "/executive-advisors" },
+          { "label": "Contact", "link": "/contact" },
+          { "label": "Blog", "link": "/blog" }
+        ]
+      },
+      "social": {
+        "heading": "Follow Us",
+        "links": [
+          { "icon": "facebook", "link": "https://www.facebook.com/" },
+          { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+          { "icon": "twitter", "link": "https://twitter.com/" },
+          { "icon": "instagram", "link": "https://www.instagram.com/" }
+        ]
+      },
+      "contact": {
+        "heading": "Contact Us",
+        "address": "Fort Lauderdale, FL. USA",
+        "phone": "Phone: +954-258-3117",
+        "email": "Email: contact@lec.guru"
+      },
+      "copyright": "© 2008 - 2022 Lean Enterprise Consulting, Inc. | All Rights Reserved."
+    }
+  }
+}
