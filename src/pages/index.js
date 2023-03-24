@@ -15,6 +15,7 @@ import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";
+import RichText from "../components/RickText.jsx";
 
 const StyledIndexPage = styled.div``;
 
@@ -22,7 +23,8 @@ const IndexPage = ({ data }) => {
   const { allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const { node } = edges[0] || {};
-  const { header, footer, hero, services, blog, about, team } = node || {};
+  const { homepage } = node || {};
+  const { header, footer, hero, services, blog, about, team } = homepage || {};
 
   const blogSliderSettings = {
     dots: true,
@@ -170,105 +172,50 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          about {
-            heading
-            mission {
+          homepage {
+            about {
               heading
+              mission {
+                heading
+                text
+              }
+              company {
+                heading
+                text
+              }
+            }
+            blog {
+              heading
+              slider {
+                nodes {
+                  cta {
+                    label
+                    link
+                  }
+                  heading
+                  img {
+                    alt
+                    src
+                  }
+                }
+              }
               text
             }
-            company {
-              heading
-              text
-            }
-          }
-          blog {
-            heading
-            slider {
-              nodes {
-                cta {
+            footer {
+              contact {
+                address
+                email
+                heading
+                phone
+              }
+              copyright
+              nav {
+                heading
+                nav {
                   label
                   link
                 }
-                heading
-                img {
-                  alt
-                  src
-                }
               }
-            }
-            text
-          }
-          footer {
-            contact {
-              address
-              email
-              heading
-              phone
-            }
-            copyright
-            nav {
-              heading
-              nav {
-                label
-                link
-              }
-            }
-            social {
-              heading
-              links {
-                icon
-                link
-              }
-            }
-          }
-          header {
-            brand {
-              to
-            }
-            nav {
-              label
-              link
-            }
-            top {
-              email {
-                href
-                icon
-                label
-              }
-              phone {
-                href
-                icon
-                label
-              }
-            }
-          }
-          hero {
-            cta {
-              label
-              link
-            }
-            heading
-            img
-            small
-            text
-          }
-          services {
-            cards {
-              cta
-              heading
-              icon
-              link
-              text
-            }
-            heading
-            text
-          }
-          team {
-            cards {
-              img
-              job
-              link
-              name
               social {
                 heading
                 links {
@@ -276,9 +223,66 @@ export const query = graphql`
                   link
                 }
               }
+            }
+            header {
+              brand {
+                to
+              }
+              nav {
+                label
+                link
+              }
+              top {
+                email {
+                  href
+                  icon
+                  label
+                }
+                phone {
+                  href
+                  icon
+                  label
+                }
+              }
+            }
+            hero {
+              cta {
+                label
+                link
+              }
+              heading
+              img
+              small
               text
             }
-            heading
+            services {
+              cards {
+                cta
+                heading
+                icon
+                link
+                text
+              }
+              heading
+              text
+            }
+            team {
+              cards {
+                img
+                job
+                link
+                name
+                social {
+                  heading
+                  links {
+                    icon
+                    link
+                  }
+                }
+                text
+              }
+              heading
+            }
           }
         }
       }

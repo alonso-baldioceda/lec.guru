@@ -1,0 +1,140 @@
+{
+  "services": {
+    "header": {
+      "top": {
+        "phone": {
+          "label": "Call now",
+          "href": "+19542583117",
+          "icon": "call"
+        },
+        "email": {
+          "label": "contact@lec.guru",
+          "href": "contact@lec.guru",
+          "icon": "envelope"
+        }
+      },
+      "brand": {
+        "icon": "logo",
+        "alt": "Lean Enterprise Consulting",
+        "to": "/"
+      },
+      "nav": [
+        { "label": "Home", "link": "/" },
+        { "label": "About Us", "link": "/about" },
+        { "label": "Services", "link": "/services" },
+        { "label": "Executive Advisors", "link": "/executive-advisors" },
+        { "label": "Contact", "link": "/contact" },
+        { "label": "Blog", "link": "/blog" }
+      ]
+    },
+    "services": [
+      {
+        "title": "<i class=\"fs-1\">Streamline Your Success with</i><br/><span class='decorator fs-1'>LEAN Enterprise Consulting</span>",
+        "subtitle": "Streamline Your Success with LEAN Enterprise Consulting Services for Efficient Operations",
+        "details": [
+          {
+            "title": "Lean Processes",
+            "introduction": "Our LEAN Processing service is designed to help businesses identify inefficiencies and waste in their processes, and implement LEAN principles to improve productivity and reduce costs. Our team of LEAN experts will work closely with you to understand your business needs and develop a customized plan to streamline your processes.",
+            "details": [
+              {
+                "title": "Process Analysis",
+                "description": "Our team will analyze your business processes using various tools and techniques to identify areas of inefficiency and waste."
+              },
+              {
+                "title": "LEAN Implementation",
+                "description": "We will develop a plan based on our analysis to implement LEAN principles into your processes using tools such as Kaizen events, 5S, and standardized work. We'll work with your team to ensure a smooth implementation and provide training."
+              },
+              {
+                "title": "Continuous Improvement",
+                "description": "Our team will help you establish a culture of continuous improvement within your organization, providing ongoing support and guidance to sustain improvements and make further gains."
+              },
+              {
+                "title": "Metrics and Reporting",
+                "description": "We'll establish metrics and reporting mechanisms to track progress and measure the impact of our LEAN Processing service, helping you identify further opportunities for improvement and make data-driven decisions."
+              },
+              {
+                "title": "Customized Solutions",
+                "description": "We'll tailor our LEAN Processing service to meet your specific needs, developing a customized solution whether you need help with a specific process or want to implement LEAN principles throughout your organization."
+              }
+            ]
+          },
+          {
+            "title": "Visual Managment",
+            "introduction": "Visual management is a key component of lean management, which aims to streamline processes and increase efficiency by improving communication and collaboration.",
+            "details": [
+              {
+                "title": "Visual Management Overview",
+                "description": "A comprehensive overview of Visual Management principles and how they can be applied to improve business performance."
+              },
+              {
+                "title": "Visual Management Assessment",
+                "description": "We will develop a plan based on our analysis to implement LEAN principles into your processes using tools such as Kaizen events, 5S, and standardized work. We'll work with your team to ensure a smooth implementation and provide training."
+              },
+              {
+                "title": "Visual Management Implementation",
+                "description": "Customized implementation of visual management tools and techniques in your organization to enhance communication, collaboration, and productivity."
+              },
+              {
+                "title": "Kanban Board Development",
+                "description": "Design and development of customized kanban boards to visualize work processes, manage workflow, and track progress."
+              },
+              {
+                "title": "Performance Metrics Development",
+                "description": "Development of performance metrics and key performance indicators (KPIs) to track progress and measure success in achieving organizational goals."
+              },
+              {
+                "title": "Gemba Walks",
+                "description": "Conducting Gemba walks with management and staff to identify waste, observe processes, and identify opportunities for improvement."
+              },
+              {
+                "title": "Visual Communication Tools",
+                "description": "Developing and implementing visual communication tools, such as visual standard work instructions, to enhance understanding and consistency in work processes."
+              },
+              {
+                "title": "Lean Culture Development",
+                "description": "Promoting a lean culture throughout the organization by implementing visual management practices, engaging employees in continuous improvement, and fostering a mindset of continuous improvement."
+              },
+              {
+                "title": "Training and Coaching",
+                "description": "Providing training and coaching to employees and management on visual management principles and techniques to support ongoing improvement efforts."
+              },
+              {
+                "title": "Continuous Improvement Support",
+                "description": "Providing ongoing support to ensure the sustained success of visual management initiatives, including continuous improvement efforts and regular review and evaluation of progress."
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "footer": {
+      "nav": {
+        "heading": "Pages",
+        "nav": [
+          { "label": "Home", "link": "/" },
+          { "label": "About Us", "link": "/about" },
+          { "label": "Services", "link": "/services" },
+          { "label": "Executive Advisors", "link": "/executive-advisors" },
+          { "label": "Contact", "link": "/contact" },
+          { "label": "Blog", "link": "/blog" }
+        ]
+      },
+      "social": {
+        "heading": "Follow Us",
+        "links": [
+          { "icon": "facebook", "link": "https://www.facebook.com/" },
+          { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+          { "icon": "twitter", "link": "https://twitter.com/" },
+          { "icon": "instagram", "link": "https://www.instagram.com/" }
+        ]
+      },
+      "contact": {
+        "heading": "Contact Us",
+        "address": "Fort Lauderdale, FL. USA",
+        "phone": "Phone: +954-258-3117",
+        "email": "Email: contact@lec.guru"
+      },
+      "copyright": "© 2008 - 2022 Lean Enterprise Consulting, Inc. | All Rights Reserved."
+    }
+  }
+}

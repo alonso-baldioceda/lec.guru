@@ -77,7 +77,6 @@ const StyledSpan = styled.span`
 `;
 
 const MenuClose = ({ isOpen, setIsOpen }) => {
-  console.log("isOpen", isOpen);
   return (
     <StyledMenuClose
       className={classnames(`${prefix}-menu-close`)}
