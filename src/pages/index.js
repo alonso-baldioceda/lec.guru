@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -15,16 +16,29 @@ import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";
-import RichText from "../components/RickText.jsx";
+// import RichText from "../components/RickText.jsx";
 
 const StyledIndexPage = styled.div``;
 
 const IndexPage = ({ data }) => {
-  const { allDataJson } = data || {};
+  const { hero: heroImg, blogImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
-  const { node } = edges[0] || {};
-  const { homepage } = node || {};
+
+  let validNode = null;
+
+  if (edges[0].node.homepage === null) {
+    const { node } = edges[0] || {};
+    validNode = node;
+  } else {
+    const { node } = edges[0] || {};
+    validNode = node;
+  }
+
+  const { homepage } = validNode || {};
   const { header, footer, hero, services, blog, about, team } = homepage || {};
+
+  const heroImage = getImage(heroImg);
+  const heroSrc = heroImage.images.fallback.src;
 
   const blogSliderSettings = {
     dots: true,
@@ -65,11 +79,17 @@ const IndexPage = ({ data }) => {
     ],
   };
 
+  blog.slider.nodes.forEach((item, index) => {
+    const image = getImage(blogImages.edges[index]?.node.childImageSharp);
+    const fallbackImage = image?.images.fallback.src;
+    item.image = fallbackImage;
+  });
+
   return (
     <StyledIndexPage>
       <Layout header={header} footer={footer}>
         {/* Hero */}
-        <Hero {...hero} />
+        <Hero {...hero} src={heroSrc} />
         {/* Services */}
         <div className={`bg-marino-lighter ${prefix}-services`}>
           <Container className="py-4 py-lg-5">
@@ -115,7 +135,7 @@ const IndexPage = ({ data }) => {
           <div className="py-3 py-lg-5">
             <Container className="py-4 py-lg-5">
               <Row className="justify-content-center">
-                <Col lg={8}>
+                <Col xs={11} lg={10}>
                   <h2
                     className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined"
                     dangerouslySetInnerHTML={{
@@ -169,6 +189,35 @@ export const Head = () => <title>Homepage</title>;
 
 export const query = graphql`
   query {
+    hero: file(relativePath: { eq: "unclasified/4.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 3000
+          placeholder: BLURRED
+          formats: [AUTO, WEBP, AVIF]
+        )
+      }
+    }
+    blogImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "unclasified/blog" }
+      }
+      sort: { order: ASC, fields: name }
+    ) {
+      totalCount
+      edges {
+        node {
+          base
+          name
+          id
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+      }
+    }
+
     allDataJson {
       edges {
         node {

@@ -24,15 +24,16 @@ const StyledCardV3 = styled.div`
   }
 `;
 
-const CardV3 = ({ cta, heading, img }) => {
+const CardV3 = ({ cta, heading, image, img }) => {
   // Trim the heading to 40 characters
   const trimmedHeading = heading.substring(0, 60);
+
+  // console.log("image", image);
 
   return (
     <StyledCardV3 className={classnames(`m-2 ${prefix}-card-v3`)}>
       <Card className="rounded rounded-4">
         <Card.Img width="100%" src={img.src} alt={img.alt} />
-
         <Card.Body className="m-2">
           <Card.Title tag="h6" className="font-bold">
             {trimmedHeading}...
