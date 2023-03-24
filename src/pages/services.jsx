@@ -41,6 +41,17 @@ const StyledServicesPage = styled.div`
 const ServicesPage = ({ data }) => {
   const { blogImages, hero, allDataJson } = data || {};
   const { edges } = allDataJson || {};
+
+  let validNode = null;
+
+  if (edges[0].node.services === null) {
+    const { node } = edges[1] || {};
+    validNode = node;
+  } else {
+    const { node } = edges[0] || {};
+    validNode = node;
+  }
+
   const { node } = edges[1] || {};
   const { services } = node || {};
   const { blog, header, footer, services: servicesData } = services || {};
