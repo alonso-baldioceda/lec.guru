@@ -233,7 +233,7 @@ export const query = graphql`
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
         relativeDirectory: { eq: "unclasified/blog" }
       }
-      sort: { order: ASC, fields: name }
+      sort: { name: ASC }
     ) {
       totalCount
       edges {

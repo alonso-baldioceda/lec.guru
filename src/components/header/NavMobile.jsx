@@ -47,14 +47,19 @@ const StyledNavMobile = styled.div`
   }
 `;
 
-const NavMobile = ({ nav, isOpen }) => (
+const NavMobile = ({ nav, isOpen, setIsOpen }) => (
   <StyledNavMobile
     className={classnames({ open: isOpen }, `${prefix}-nav-mobile`)}
   >
     <ul className="m-0 p-5">
       {nav.map((item, index) => (
         <li key={index}>
-          <NavItem to={item.link} label={item.label} />
+          <NavItem
+            to={item.link}
+            label={item.label}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+          />
         </li>
       ))}
     </ul>

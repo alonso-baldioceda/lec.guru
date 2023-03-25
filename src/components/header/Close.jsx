@@ -83,6 +83,7 @@ const MenuClose = ({ isOpen, setIsOpen }) => {
       onClick={() => {
         document.body.style.overflow = isOpen === true ? "scroll" : "hidden";
         setIsOpen(!isOpen);
+        console.log("isOpen", isOpen);
       }}
     >
       <div className={classnames({ "is-open": isOpen }, "menu-close-bars")}>
