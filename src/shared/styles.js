@@ -2,7 +2,7 @@ export const prefix = "lec";
 
 // Colors
 
-export const color = {
+export const colors = {
   black: "#000000",
   casal: "#2f5c6d",
   casalLight: "#b8d6e0",
@@ -29,8 +29,10 @@ export const typography = {
     primary: '"Lato", "Helvetica Neue", Helvetica, Arial, sans-serif',
     code: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace',
   },
-  weight: {
+  weights: {
+    light: "300",
     regular: "400",
+    bold: "700",
     black: "900",
   },
 };

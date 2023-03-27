@@ -5,7 +5,7 @@ import styled from "styled-components";
 import NavItem from "./NavItem";
 
 // Variables
-import { prefix, color } from "../../shared/styles.js";
+import { prefix, colors } from "../../shared/styles.js";
 
 // Styles
 const StyledNavDesktop = styled.nav`
@@ -19,7 +19,7 @@ const StyledNavDesktop = styled.nav`
 
     .${prefix}-nav-item {
       border: 2px solid transparent;
-      color: ${color.white};
+      color: ${colors.white};
       font-size: 16px;
       letter-spacing: 1px;
       line-height: 14px;
@@ -28,8 +28,8 @@ const StyledNavDesktop = styled.nav`
       text-decoration: none;
 
       &:hover {
-        color: ${color.white};
-        border-bottom: 2px solid ${color.white};
+        color: ${colors.white};
+        border-bottom: 2px solid ${colors.white};
       }
     }
   }

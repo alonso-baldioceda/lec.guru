@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 // Variables
-import { color, prefix } from "./../shared/styles.js";
+import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import BackgroundImage from "../components/BackgroundImage";
@@ -131,7 +131,7 @@ const IndexPage = ({ data }) => {
         {/* About us */}
         <div className={`${prefix}-about position-relative`}>
           <BackgroundImage src="images/unclasified/4.jpg" />
-          <Mask bgColor={color.sycamoreLight} opacity={90} />
+          <Mask bgColor={colors.sycamoreLight} opacity={90} />
           <div className="py-3 py-lg-5">
             <Container className="py-4 py-lg-5">
               <Row className="justify-content-center">
@@ -146,15 +146,19 @@ const IndexPage = ({ data }) => {
               </Row>
               <Row>
                 <Col sm={6} className="px-4 px-lg-5">
-                  <h3 className="mt-4 mb-4 text-dark text-center font-italic">
-                    {about.company.heading}
-                  </h3>
+                  <i>
+                    <h3 className="mt-4 mb-4 text-dark text-center">
+                      {about.company.heading}
+                    </h3>
+                  </i>
                   <p className="text-dark text-center">{about.company.text}</p>
                 </Col>
                 <Col sm={6} className="px-4 px-lg-5">
-                  <h3 className="mt-4 mb-4 text-dark text-center font-italic">
-                    {about.mission.heading}
-                  </h3>
+                  <i>
+                    <h3 className="mt-4 mb-4 text-dark text-center">
+                      {about.mission.heading}
+                    </h3>
+                  </i>
                   <p className="text-dark text-center">{about.mission.text}</p>
                 </Col>
               </Row>

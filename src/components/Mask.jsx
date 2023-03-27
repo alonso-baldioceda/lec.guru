@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { prefix, color } from "./../shared/styles.js";
+import { prefix, colors } from "./../shared/styles.js";
 
 // Styles
 const StyledMask = styled((props) => <div {...props} />)`
@@ -36,7 +36,7 @@ const Mask = ({ bgColor, opacity }) => {
   };
 
   const newColorValue = hexToRGB(
-    bgColor ? bgColor : color.black,
+    bgColor ? bgColor : colors.black,
     opacity ? opacity : 0
   );
 

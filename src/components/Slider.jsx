@@ -62,11 +62,11 @@ const SliderWrapper = styled((props) => <section {...props} />)`
   }
 `;
 
-const Slider = ({ settings, children, controlsColor }) => {
+const Slider = ({ settings, children, controlsColors }) => {
   return (
     <SliderWrapper
       className={classnames(`${prefix}-slider`)}
-      controlscolor={controlsColor ? controlsColor : ""}
+      // controlscolors={controlsColors ? controlsColors : ""}
     >
       <Slick {...settings}>{children}</Slick>
     </SliderWrapper>

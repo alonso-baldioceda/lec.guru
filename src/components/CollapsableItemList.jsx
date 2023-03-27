@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { prefix, color } from "./../shared/styles.js";
+import { prefix, colors } from "./../shared/styles.js";
 import classnames from "classnames";
 
 // Styles
 const StyledCollapsableItemList = styled.li`
-  border-bottom: 1px solid ${color.sycamore};
+  border-bottom: 1px solid ${colors.sycamore};
 
   &:last-child {
     border-bottom: none;
@@ -16,7 +16,7 @@ const StyledCollapsableItemList = styled.li`
     text-decoration: none;
 
     .collapsable {
-      color: ${color.rouge};
+      color: ${colors.rouge};
       font-size: 15px;
       height: 0;
 

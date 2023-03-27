@@ -6,7 +6,7 @@ import classnames from "classnames";
 import NavItem from "./NavItem";
 
 // Variables
-import { prefix, color } from "../../shared/styles.js";
+import { prefix, colors } from "../../shared/styles.js";
 
 // Styles
 const StyledNavMobile = styled.div`
@@ -38,7 +38,7 @@ const StyledNavMobile = styled.div`
       }
 
       a {
-        color: ${color.black} !important;
+        color: ${colors.black} !important;
         font-size: 32px;
         font-weight: 900;
         text-decoration: none;

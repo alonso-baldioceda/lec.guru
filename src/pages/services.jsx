@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Masonry from "react-masonry-css";
 
 // Variables
-import { color, prefix } from "./../shared/styles.js";
+import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import Layout from "../components/Layout";
@@ -33,7 +33,7 @@ const StyledServicesPage = styled.div`
   /* Style your items */
   .my-masonry-grid_column > div {
     /* change div to reference your elements you put in <Masonry> */
-    background: ${color.sycamore};
+    background: ${colors.sycamore};
     margin-bottom: 30px;
   }
 `;
@@ -52,8 +52,7 @@ const ServicesPage = ({ data }) => {
     validNode = node;
   }
 
-  const { node } = edges[1] || {};
-  const { services } = node || {};
+  const { services } = validNode || {};
   const { blog, header, footer, services: servicesData } = services || {};
   const { title, details } = servicesData[0] || {};
 
@@ -120,13 +119,13 @@ const ServicesPage = ({ data }) => {
           {/* Hero */}
           <div className="position-relative" style={{ height: "460px" }}>
             <BackgroundImage src={heroSrc} />
-            {/* <Mask bgColor={color.finnLight} opacity={30} /> */}
+            {/* <Mask bgColor={colors.finnLight} opacity={30} /> */}
             <div className="position-absolute top-50 start-50 translate-middle w-100 mt-n5">
               <Container>
                 <Row className="justify-content-center">
                   <Col xs={12} xl={8}>
                     <div className="p-3 p-md-5 rounded rounded-4 position-relative overflow-hidden">
-                      <Mask bgColor={color.white} opacity={90} />
+                      <Mask bgColor={colors.white} opacity={90} />
                       <h2 className="text-center underlined">
                         <RichText text={title} />
                       </h2>

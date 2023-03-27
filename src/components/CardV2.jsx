@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
 
 // Variables
-import { color, prefix } from "../shared/styles.js";
+import { colors, prefix } from "../shared/styles.js";
 
 // Components
 import SocialItem from "./SocialItem.jsx";
@@ -13,10 +13,10 @@ import SocialItem from "./SocialItem.jsx";
 
 const StyledCardV2 = styled.div`
   .card {
-    background-color: ${color.softMarino} !important;
+    background-color: ${colors.softMarino} !important;
 
     img {
-      border: 6px solid ${color.white};
+      border: 6px solid ${colors.white};
       border-radius: 50%;
       transition: transform 0.3s ease;
     }
@@ -28,14 +28,14 @@ const StyledCardV2 = styled.div`
     }
 
     .${prefix}-social-item {
-      color: ${color.marino} !important;
+      color: ${colors.marino} !important;
 
       i {
         font-size: 1.25rem !important;
       }
 
       &:hover {
-        color: ${color.rouge} !important;
+        color: ${colors.rouge} !important;
       }
     }
   }
@@ -46,10 +46,10 @@ const Link = styled((props) => <GatsbyLink {...props} />)`
   cursor: pointer;
 
   .card {
-    background-color: ${color.softMarino} !important;
+    background-color: ${colors.softMarino} !important;
 
     img {
-      border: 6px solid ${color.white};
+      border: 6px solid ${colors.white};
       border-radius: 50%;
       transition: transform 0.3s ease;
     }
@@ -61,22 +61,22 @@ const Link = styled((props) => <GatsbyLink {...props} />)`
     }
 
     .${prefix}-social-item {
-      color: ${color.marino} !important;
+      color: ${colors.marino} !important;
 
       i {
         font-size: 1.25rem !important;
       }
 
       &:hover {
-        color: ${color.rouge} !important;
+        color: ${colors.rouge} !important;
       }
     }
   }
 `;
 
 const ImageContainer = styled.div`
-  background-color: ${color.white};
-  border: 6px solid ${color.marino};
+  background-color: ${colors.white};
+  border: 6px solid ${colors.marino};
   border-radius: 50%;
   height: 100%;
   overflow: hidden;

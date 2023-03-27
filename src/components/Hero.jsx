@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
 // Variables
-import { color, prefix } from "./../shared/styles.js";
+import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import BackgroundImage from "./BackgroundImage.jsx";
@@ -32,13 +32,13 @@ const HeroContainer = styled.section`
   }
 
   a {
-    background-color: ${color.rouge};
-    color: ${color.white};
+    background-color: ${colors.rouge};
+    color: ${colors.white};
     letter-spacing: 1px;
 
     &:hover {
-      background-color: ${color.rouge};
-      color: ${color.black};
+      background-color: ${colors.rouge};
+      color: ${colors.black};
     }
   }
 `;
