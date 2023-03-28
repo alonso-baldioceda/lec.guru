@@ -23,18 +23,8 @@ const StyledIndexPage = styled.div``;
 const IndexPage = ({ data }) => {
   const { hero: heroImg, blogImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
-
-  let validNode = null;
-
-  if (edges[0].node.homepage === null) {
-    const { node } = edges[1] || {};
-    validNode = node;
-  } else {
-    const { node } = edges[0] || {};
-    validNode = node;
-  }
-
-  const { homepage } = validNode || {};
+  const node = edges[0].node.homepage === null ? edges[1].node : edges[0].node;
+  const { homepage } = node || {};
   const { header, footer, hero, services, blog, about, team } = homepage || {};
 
   const heroImage = getImage(heroImg);

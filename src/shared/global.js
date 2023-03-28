@@ -44,17 +44,6 @@ const GlobalStyles = createGlobalStyle`
 
   ${() => {
     let styles = "";
-    for (const weight in typography.weights) {
-      styles += `
-        .font-${weight} {
-          font-weight: ${typography.weights[weight]} !important;
-        }
-      `;
-    }
-  }}
-
-  ${() => {
-    let styles = "";
     for (const color in colors) {
       const camelToDash = color
         .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2")
@@ -73,6 +62,14 @@ const GlobalStyles = createGlobalStyle`
         color: ${colors[color]} !important;
       }
     `;
+    }
+
+    for (const weight in typography.weights) {
+      styles += `
+        .font-${weight} {
+          font-weight: ${typography.weights[weight]} !important;
+        }
+      `;
     }
 
     return styles;
