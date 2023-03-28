@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link as GatsbyLink } from "gatsby";
 
 // Variables
-import { color, prefix } from "../shared/styles.js";
+import { colors, prefix } from "../shared/styles.js";
 
 // Styles
 const StyledLink = styled(GatsbyLink)`
@@ -12,13 +12,13 @@ const StyledLink = styled(GatsbyLink)`
 
   .card {
     border-radius: 10px;
-    border: 4px solid ${color.rouge};
-    color: ${color.black};
+    border: 3px solid ${colors.rouge};
+    color: ${colors.black};
     height: 100%;
     transition: all 0.25s ease-out;
 
     &:hover {
-      background-color: ${color.rougeLighter};
+      background-color: ${colors.rougeLighter};
     }
   }
 `;

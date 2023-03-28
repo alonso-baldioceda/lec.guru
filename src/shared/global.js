@@ -1,14 +1,17 @@
 import { createGlobalStyle } from "styled-components";
-import "@fontsource/lato";
+import "@fontsource/lato/300-italic.css";
 import "@fontsource/lato/300.css";
+import "@fontsource/lato/400-italic.css";
+import "@fontsource/lato/400.css";
+import "@fontsource/lato/700-italic.css";
 import "@fontsource/lato/700.css";
-import "@fontsource/lato/900.css";
 import "@fontsource/lato/900-italic.css";
+import "@fontsource/lato/900.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Variables
-import { color as colors, typography } from "./styles";
+import { colors, typography } from "./styles";
 
 const GlobalStyles = createGlobalStyle`
   /*********************/
@@ -18,16 +21,9 @@ const GlobalStyles = createGlobalStyle`
   /* Reset */
   * {
     box-sizing: border-box;
-    font-family: ${typography.type.marino};
-    /* font-size: 1.0625rem; */
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    font-size: 1.125rem;
-    font-weight: 400;
+    font-family: ${typography.type.primary};
+    font-size: 1.0625rem;  
+    font-weight: ${typography.weights.regular};  
     margin: 0;
     padding: 0;
   }
@@ -38,174 +34,46 @@ const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
-    font-weight: ${typography.weight.black} !important;
+    font-weight: ${typography.weights.black} !important;
 
-    &.underlined {
-      i {
-        font-weight: 700 !important;
-      }
-
-      .decorator {
-        border-bottom: 6px solid ${colors.rouge};
-      }
+    .decorator {
+      border-bottom: 6px solid ${colors.rouge};
+      font-weight: ${typography.weights.black} !important;
     }
   }
 
-  .font-bold {
-    font-weight: 700 !important;
-  }
+  ${() => {
+    let styles = "";
+    for (const color in colors) {
+      const camelToDash = color
+        .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2")
+        .toLowerCase();
 
-  .font-italic {
-    font-style: italic !important;
-  }
+      styles += `
+      .bg-${camelToDash} {
+        background-color: ${colors[color]} !important;
+      }
 
-  /*********************/
-  /**** Backgrounds ****/
-  /*********************/
+      .border-${camelToDash} {
+        border-color: ${colors[color]} !important;
+      }
 
-  .bg-marino {
-    background-color: ${colors.marino} !important;
-  }
+      .text-${camelToDash} {
+        color: ${colors[color]} !important;
+      }
+    `;
+    }
 
-  .bg-marino-light {
-    background-color: ${colors.marinoLight} !important;
-  }
+    for (const weight in typography.weights) {
+      styles += `
+        .font-${weight} {
+          font-weight: ${typography.weights[weight]} !important;
+        }
+      `;
+    }
 
-  .bg-marino-lighter {
-    background-color: ${colors.marinoLighter} !important;
-  }
-
-  .bg-rouge {
-    background-color: ${colors.rouge} !important;
-  }
-
-  .bg-sycamore {
-    background-color: ${colors.sycamore} !important;
-  }
-
-  .bg-sycamore-light {
-    background-color: ${colors.sycamoreLight} !important;
-  }
-
-  .bg-sycamore-lighter {
-    background-color: ${colors.sycamoreLighter} !important;
-  }
-
-  .bg-casal {
-    background-color: ${colors.casal} !important;
-  }
-
-  .bg-casal-light {
-    background-color: ${colors.casalLight} !important;
-  }
-
-  .bg-casal-lighter {
-    background-color: ${colors.casalLighter} !important;
-  }
-
-  .bg-marino-lighter {
-    background-color: ${colors.marinoLighter} !important;
-  }
-
-  .bg-rouge-lighter {
-    background-color: ${colors.rougeLighter} !important;
-  }
-
-  .bg-finn {
-    background-color: ${colors.finn} !important;
-  }
-
-  .bg-finn-light {
-    background-color: ${colors.finnLight} !important;
-  }
-
-  .bg-finn-lighter {
-    background-color: ${colors.finnLighter} !important;
-  }
-
-  /*********************/
-  /****** Border *******/
-  /*********************/
-
-  .border-marino {
-    border-color: ${colors.marino} !important;
-  }
-
-  .border-rouge {
-    border-color: ${colors.rouge} !important;
-  }
-
-  .border-sycamore {
-    border-color: ${colors.sycamore} !important;
-  }
-
-  .border-casal {
-    border-color: ${colors.casal} !important;
-  }
-
-  /*********************/
-  /***** Text Color ****/
-  /*********************/
-
-  .text-finn {
-    color: ${colors.finn} !important;
-  }
-
-  .text-finn-light {
-    color: ${colors.finnLight} !important;
-  }
-
-  .text-finn-lighter {
-    color: ${colors.finnLighter} !important;
-  }
-
-  .text-marino {
-    color: ${colors.marino} !important;
-  }
-
-  .text-marino-light {
-    color: ${colors.marinoLight} !important;
-  }
-
-  .text-marino-lighter {
-    color: ${colors.marinoLighter} !important;
-  }
-
-  .text-rouge {
-    color: ${colors.rouge} !important;
-  }
-
-  .text-rouge-light {
-    color: ${colors.rougeLight} !important;
-  }
-
-  .text-rouge-lighter {
-    color: ${colors.rougeLighter} !important;
-  }
-
-  .text-sycamore {
-    color: ${colors.sycamore} !important;
-  }
-
-  .text-sycamore-light {
-    color: ${colors.sycamoreLight} !important;
-  }
-
-  .text-sycamore-lighter {
-    color: ${colors.sycamoreLighter} !important;
-  }
-
-  .text-casal {
-    color: ${colors.casal} !important;
-  }
-
-  .text-casal-light {
-    color: ${colors.casalLight} !important;
-  }
-
-  .text-casal-lighter {
-    color: ${colors.casalLighter} !important;
-  }
+    return styles;
+  }}
 `;
 
 export default GlobalStyles;

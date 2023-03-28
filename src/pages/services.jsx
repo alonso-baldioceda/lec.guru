@@ -6,7 +6,7 @@ import { getImage } from "gatsby-plugin-image";
 import Masonry from "react-masonry-css";
 
 // Variables
-import { color, prefix } from "./../shared/styles.js";
+import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import Layout from "../components/Layout";
@@ -33,7 +33,7 @@ const StyledServicesPage = styled.div`
   /* Style your items */
   .my-masonry-grid_column > div {
     /* change div to reference your elements you put in <Masonry> */
-    background: ${color.sycamore};
+    background: ${colors.sycamore};
     margin-bottom: 30px;
   }
 `;
@@ -41,21 +41,11 @@ const StyledServicesPage = styled.div`
 const ServicesPage = ({ data }) => {
   const { blogImages, hero, allDataJson } = data || {};
   const { edges } = allDataJson || {};
-
-  let validNode = null;
-
-  if (edges[0].node.services === null) {
-    const { node } = edges[1] || {};
-    validNode = node;
-  } else {
-    const { node } = edges[0] || {};
-    validNode = node;
-  }
-
-  const { node } = edges[1] || {};
-  const { services } = node || {};
-  const { blog, header, footer, services: servicesData } = services || {};
-  const { title, details } = servicesData[0] || {};
+  const node =
+    edges[0].node.servicespage === null ? edges[1].node : edges[0].node;
+  const { servicespage } = node || {};
+  const { blog, header, footer, services } = servicespage || {};
+  const { title, details } = services[0] || {};
 
   const heroImage = getImage(hero);
   const heroSrc = heroImage.images.fallback.src;
@@ -120,13 +110,13 @@ const ServicesPage = ({ data }) => {
           {/* Hero */}
           <div className="position-relative" style={{ height: "460px" }}>
             <BackgroundImage src={heroSrc} />
-            {/* <Mask bgColor={color.finnLight} opacity={30} /> */}
+            {/* <Mask bgColor={colors.finnLight} opacity={30} /> */}
             <div className="position-absolute top-50 start-50 translate-middle w-100 mt-n5">
               <Container>
                 <Row className="justify-content-center">
                   <Col xs={12} xl={8}>
                     <div className="p-3 p-md-5 rounded rounded-4 position-relative overflow-hidden">
-                      <Mask bgColor={color.white} opacity={90} />
+                      <Mask bgColor={colors.white} opacity={90} />
                       <h2 className="text-center underlined">
                         <RichText text={title} />
                       </h2>
@@ -233,7 +223,7 @@ export const query = graphql`
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
         relativeDirectory: { eq: "unclasified/blog" }
       }
-      sort: { order: ASC, fields: name }
+      sort: { name: ASC }
     ) {
       totalCount
       edges {
@@ -250,7 +240,7 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          services {
+          servicespage {
             blog {
               heading
               slider {

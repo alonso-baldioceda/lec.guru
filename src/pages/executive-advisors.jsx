@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Variables
-// import { color, prefix } from "./../shared/styles.js";
+// import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 

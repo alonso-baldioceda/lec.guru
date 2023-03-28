@@ -3,7 +3,7 @@ import styled from "styled-components";
 import classnames from "classnames";
 
 // Variables
-import { prefix, color } from "./../../shared/styles.js";
+import { prefix, colors } from "./../../shared/styles.js";
 
 // Styles
 const StyledMenuClose = styled.div`
@@ -20,7 +20,7 @@ const StyledMenuClose = styled.div`
     z-index: 1000;
 
     span {
-      background: ${color.white};
+      background: ${colors.white};
     }
 
     &.is-open {
