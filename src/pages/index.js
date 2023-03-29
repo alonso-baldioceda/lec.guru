@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
@@ -18,14 +18,16 @@ import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";
 // import RichText from "../components/RickText.jsx";
 
+// Styles
 const StyledIndexPage = styled.div``;
 
 const IndexPage = ({ data }) => {
   const { hero: heroImg, blogImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
-  const node = edges[0].node.homepage === null ? edges[1].node : edges[0].node;
-  const { homepage } = node || {};
-  const { header, footer, hero, services, blog, about, team } = homepage || {};
+  const node = edges[0].node;
+  const { common, homepage } = node || {};
+  const { header, footer, blog, team } = common || {};
+  const { hero, services, about } = homepage || {};
 
   const heroImage = getImage(heroImg);
   const heroSrc = heroImage.images.fallback.src;
@@ -214,17 +216,46 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          homepage {
-            about {
+          common {
+            header {
+              brand {
+                alt
+                icon
+                to
+              }
+              nav {
+                label
+                link
+              }
+              top {
+                email {
+                  href
+                  icon
+                  label
+                }
+                phone {
+                  href
+                  icon
+                  label
+                }
+              }
+            }
+            team {
+              cards {
+                img
+                job
+                link
+                name
+                social {
+                  heading
+                  links {
+                    icon
+                    link
+                  }
+                }
+                text
+              }
               heading
-              mission {
-                heading
-                text
-              }
-              company {
-                heading
-                text
-              }
             }
             blog {
               heading
@@ -266,25 +297,17 @@ export const query = graphql`
                 }
               }
             }
-            header {
-              brand {
-                to
+          }
+          homepage {
+            about {
+              company {
+                heading
+                text
               }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
+              heading
+              mission {
+                heading
+                text
               }
             }
             hero {
@@ -308,6 +331,37 @@ export const query = graphql`
               heading
               text
             }
+          }
+        }
+      }
+    }
+    allDataJson {
+      edges {
+        node {
+          common {
+            header {
+              brand {
+                alt
+                icon
+                to
+              }
+              nav {
+                label
+                link
+              }
+              top {
+                email {
+                  href
+                  icon
+                  label
+                }
+                phone {
+                  href
+                  icon
+                  label
+                }
+              }
+            }
             team {
               cards {
                 img
@@ -324,6 +378,80 @@ export const query = graphql`
                 text
               }
               heading
+            }
+            blog {
+              heading
+              slider {
+                nodes {
+                  cta {
+                    label
+                    link
+                  }
+                  heading
+                  img {
+                    alt
+                    src
+                  }
+                }
+              }
+              text
+            }
+            footer {
+              contact {
+                address
+                email
+                heading
+                phone
+              }
+              copyright
+              nav {
+                heading
+                nav {
+                  label
+                  link
+                }
+              }
+              social {
+                heading
+                links {
+                  icon
+                  link
+                }
+              }
+            }
+          }
+          homepage {
+            about {
+              company {
+                heading
+                text
+              }
+              heading
+              mission {
+                heading
+                text
+              }
+            }
+            hero {
+              cta {
+                label
+                link
+              }
+              heading
+              img
+              small
+              text
+            }
+            services {
+              cards {
+                cta
+                heading
+                icon
+                link
+                text
+              }
+              heading
+              text
             }
           }
         }

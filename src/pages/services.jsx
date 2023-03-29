@@ -41,10 +41,10 @@ const StyledServicesPage = styled.div`
 const ServicesPage = ({ data }) => {
   const { blogImages, hero, allDataJson } = data || {};
   const { edges } = allDataJson || {};
-  const node =
-    edges[0].node.servicespage === null ? edges[1].node : edges[0].node;
-  const { servicespage } = node || {};
-  const { blog, header, footer, services } = servicespage || {};
+  const node = edges[0].node || {};
+  const { common, servicespage } = node || {};
+  const { header, footer, blog } = common || {};
+  const { services } = servicespage || {};
   const { title, details } = services[0] || {};
 
   const heroImage = getImage(hero);
@@ -240,7 +240,24 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          servicespage {
+          common {
+            team {
+              cards {
+                img
+                job
+                link
+                name
+                social {
+                  heading
+                  links {
+                    icon
+                    link
+                  }
+                }
+                text
+              }
+              heading
+            }
             blog {
               heading
               slider {
@@ -304,14 +321,16 @@ export const query = graphql`
                 }
               }
             }
+          }
+          servicespage {
             services {
               details {
-                title
-                introduction
                 details {
                   description
                   title
                 }
+                introduction
+                title
               }
               subtitle
               title
