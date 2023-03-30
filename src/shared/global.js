@@ -42,6 +42,8 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+
+
   ${() => {
     let styles = "";
     for (const color in colors) {
@@ -56,6 +58,8 @@ const GlobalStyles = createGlobalStyle`
 
       .border-${camelToDash} {
         border-color: ${colors[color]} !important;
+        border-style: solid;
+        border-width: 4px;
       }
 
       .text-${camelToDash} {

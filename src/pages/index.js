@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
@@ -83,20 +83,22 @@ const IndexPage = ({ data }) => {
         {/* Hero */}
         <Hero {...hero} src={heroSrc} />
         {/* Services */}
-        <div className={`bg-marino-lighter ${prefix}-services`}>
-          <Container className="py-4 py-lg-5">
-            <h2 className="text-center my-4 my-lg-5 fs-1">
-              {services.heading}
-            </h2>
-            <p className="text-center mb-4 mb-lg-5 fs-5">{services.text}</p>
-            <Row>
-              {services.cards.map((card, index) => (
-                <Col sm={6} lg={4} key={index} className="mb-4 mb-lg-5">
-                  <CardV1 {...card} />
-                </Col>
-              ))}
-            </Row>
-          </Container>
+        <div className={`${prefix}-services`}>
+          <div className="bg-marino-lighter">
+            <Container className="py-4 py-lg-5">
+              <h2 className="text-center my-4 my-lg-5 fs-1">
+                {services.heading}
+              </h2>
+              <p className="text-center mb-4 mb-lg-5 fs-5">{services.text}</p>
+              <Row>
+                {services.cards.map((card, index) => (
+                  <Col sm={6} lg={4} key={index} className="mb-4 mb-lg-5">
+                    <CardV1 {...card} />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </div>
         </div>
         {/* Blog */}
         <div className={`${prefix}-blog`}>
@@ -209,128 +211,6 @@ export const query = graphql`
           id
           childImageSharp {
             gatsbyImageData(width: 500)
-          }
-        }
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
-            team {
-              cards {
-                img
-                job
-                link
-                name
-                social {
-                  heading
-                  links {
-                    icon
-                    link
-                  }
-                }
-                text
-              }
-              heading
-            }
-            blog {
-              heading
-              slider {
-                nodes {
-                  cta {
-                    label
-                    link
-                  }
-                  heading
-                  img {
-                    alt
-                    src
-                  }
-                }
-              }
-              text
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
-          }
-          homepage {
-            about {
-              company {
-                heading
-                text
-              }
-              heading
-              mission {
-                heading
-                text
-              }
-            }
-            hero {
-              cta {
-                label
-                link
-              }
-              heading
-              img
-              small
-              text
-            }
-            services {
-              cards {
-                cta
-                heading
-                icon
-                link
-                text
-              }
-              heading
-              text
-            }
           }
         }
       }

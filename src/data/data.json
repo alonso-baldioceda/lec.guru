@@ -492,5 +492,29 @@
         ]
       }
     ]
+  },
+  "contactpage": {
+    "heading": "Contact Us",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "phone": "Phone",
+    "subject": "Subject",
+    "message": "Message",
+    "submitting": "submitting",
+    "submit": "Submit",
+    "validation": {
+      "firstNameRequired": "First name required",
+      "lastNameRequired": "Last name required",
+      "emailRequired": "Email required",
+      "emailInvalid": "Invalid email address",
+      "phoneRequired": "Phone required",
+      "subjectRequired": "Subject required",
+      "messageRequired": "Message required",
+      "successHeader": "Message sent :)",
+      "successBody": "We will come back to you if required, thanks!",
+      "errorHeader": "Something happened :(",
+      "errorBody": "Please try again, thanks!!"
+    }
   }
 }

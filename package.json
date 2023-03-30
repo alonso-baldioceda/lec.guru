@@ -18,10 +18,13 @@
   "dependencies": {
     "@fontsource/lato": "^4.5.10",
     "@mdx-js/react": "^2.3.0",
+    "@react-google-maps/api": "^2.18.1",
+    "axios": "^1.3.4",
     "babel-plugin-styled-components": "^2.0.7",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.3",
     "classnames": "^2.3.2",
+    "formik": "^2.2.9",
     "gatsby": "^5.7.0",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
@@ -41,7 +44,8 @@
     "react-slick": "^0.29.0",
     "sass": "^1.59.3",
     "slick-carousel": "^1.8.1",
-    "styled-components": "^5.3.9"
+    "styled-components": "^5.3.9",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "fs": "^0.0.1-security",

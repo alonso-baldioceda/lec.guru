@@ -3,7 +3,6 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
-import Masonry from "react-masonry-css";
 
 // Variables
 import { colors, prefix } from "./../shared/styles.js";
@@ -16,27 +15,9 @@ import RichText from "../components/RickText.jsx";
 import CollapsableItemList from "../components/CollapsableItemList.jsx";
 import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";
+import BrickWall from "../components/BrickWall.jsx";
 
-const StyledServicesPage = styled.div`
-  .my-masonry-grid {
-    display: -webkit-box; /* Not needed if autoprefixing */
-    display: -ms-flexbox; /* Not needed if autoprefixing */
-    display: flex;
-    margin-left: -30px; /* gutter size offset */
-    width: auto;
-  }
-  .my-masonry-grid_column {
-    padding-left: 30px; /* gutter size */
-    background-clip: padding-box;
-  }
-
-  /* Style your items */
-  .my-masonry-grid_column > div {
-    /* change div to reference your elements you put in <Masonry> */
-    background: ${colors.sycamore};
-    margin-bottom: 30px;
-  }
-`;
+const StyledServicesPage = styled.div``;
 
 const ServicesPage = ({ data }) => {
   const { blogImages, hero, allDataJson } = data || {};
@@ -141,35 +122,26 @@ const ServicesPage = ({ data }) => {
               <Container>
                 <Row>
                   <Col xs={12}>
-                    <Masonry
-                      breakpointCols={masonryBreakpoint}
-                      className="my-masonry-grid"
-                      columnClassName="my-masonry-grid_column"
-                    >
-                      {details.map((detail, index) => {
-                        return (
-                          <div
-                            className="bg-sycamore-lighter rounded rounded-4 p-4 p-sm-5 px-lg-4 py-lg-5"
-                            key={index}
-                          >
-                            <h3 className="text-center mb-4 mb-lg-4 font-bold text-sycamore">
-                              {detail.title}
-                            </h3>
-                            <p className="mb-2 text-center">
-                              {detail.introduction}
-                            </p>
-                            <ul className="list-unstyled mb-0 ">
-                              {detail.details.map((detail, index) => (
-                                <CollapsableItemList
-                                  key={index}
-                                  item={detail}
-                                />
-                              ))}
-                            </ul>
-                          </div>
-                        );
-                      })}
-                    </Masonry>
+                    <BrickWall conf={masonryBreakpoint}>
+                      {details.map((detail, index) => (
+                        <div
+                          className="bg-sycamore-lighter rounded rounded-4 p-4 p-sm-5 px-lg-4 py-lg-5"
+                          key={index}
+                        >
+                          <h3 className="text-center mb-4 mb-lg-4 font-bold text-sycamore">
+                            {detail.title}
+                          </h3>
+                          <p className="mb-2 text-center">
+                            {detail.introduction}
+                          </p>
+                          <ul className="list-unstyled mb-0 ">
+                            {detail.details.map((detail, index) => (
+                              <CollapsableItemList key={index} item={detail} />
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </BrickWall>
                   </Col>
                 </Row>
               </Container>
@@ -179,7 +151,7 @@ const ServicesPage = ({ data }) => {
           <div className={`${prefix}-blog`}>
             <Container className="mb-5">
               <Row className="justify-content-center">
-                <Col lg={12}>
+                <Col lg={10}>
                   <h2 className="text-center mb-3 mb-lg-5 text-casal fs-1">
                     {blog.heading}
                   </h2>
