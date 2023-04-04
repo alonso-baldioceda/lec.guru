@@ -11,7 +11,7 @@ import { colors, prefix } from "./../shared/styles.js";
 import Layout from "../components/Layout";
 import BackgroundImage from "../components/BackgroundImage";
 import Mask from "../components/Mask";
-import RichText from "../components/RickText.jsx";
+import RichText from "../components/RichText.jsx";
 import CollapsableItemList from "../components/CollapsableItemList.jsx";
 import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";

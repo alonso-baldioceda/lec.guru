@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { prefix } from "./../shared/styles.js";
+import { prefix } from "../shared/styles.js";
 
 // Styles
 const StyledRichText = styled((props) => <div {...props} />)``;

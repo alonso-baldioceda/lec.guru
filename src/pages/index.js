@@ -16,7 +16,7 @@ import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import Slider from "../components/Slider.jsx";
 import CardV3 from "../components/CardV3.jsx";
-// import RichText from "../components/RickText.jsx";
+// import RichText from "../components/RichText.jsx";
 
 // Styles
 const StyledIndexPage = styled.div``;

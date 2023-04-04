@@ -29,7 +29,7 @@
     },
     "blog": {
       "heading": "Our Blog",
-      "text": "Here you will find the lattest articles and resources on the world of lean manufacturing and lean management. Whether you're just starting your lean journey or looking to take your current processes to the next level, our blog section is the perfect resource for you. Join us as we explore the latest trends and best practices in lean consulting and help you unlock the full potential of your organization. Thank you for visiting and we look forward to partnering with you on your lean journey!",
+      "text": "Here you will find the latest articles and resources on the world of lean manufacturing and lean management. Whether you're just starting your lean journey or looking to take your current processes to the next level, our blog section is the perfect resource for you. Join us as we explore the latest trends and best practices in lean consulting and help you unlock the full potential of your organization. Thank you for visiting and we look forward to partnering with you on your lean journey!",
       "slider": {
         "nodes": [
           {
@@ -238,9 +238,9 @@
         },
         {
           "icon": "arrow-repeat",
-          "heading": "Kaizen phylosophy",
+          "heading": "Kaizen philosophy",
           "text": "We implement the Kaizen philosophy of continuous improvement, which focuses on identifying and eliminating waste and improving processes constantly.",
-          "link": "/services#kaizen-phylosophy",
+          "link": "/services#kaizen-philosophy",
           "cta": "Read more"
         },
         {
@@ -269,6 +269,39 @@
         "heading": "Our Mission",
         "text": "Our mission is to help organizations achieve their full potential through the implementation of Lean Process Improvement techniques. We believe that every organization has the potential to be more efficient, more productive, and more successful. We are committed to providing our clients with the highest level of service and expertise. Our goal is to build long-term relationships with our clients and help them achieve sustainable improvements in their processes."
       }
+    }
+  },
+  "aboutpage": {
+    "heading": "About us",
+    "text": "<p class='mb-3'>Created in 2008, Lean Enterprise Consulting, Inc., has become a global key player in Validation, Regulatory Support, Process Improvement, Engineering and Tech Education, through the delivery of high-quality services that help organizations meet the growing challenges of quality, safety, regulatory, environmental protection and social responsibility. As a trusted partner, Lean Enterprise Consulting, offers innovative solutions that go beyond simple compliance with regulations and standards, fostering an increased ability to reduce risk, improve performance and promote sustainable development.</p><p class='mb-3'>Lean Enterprise Consulting, Inc. focuses on supporting Life Sciences and general industry by aiming its delivery of services to the highest levels of customer satisfaction, striving on each and every task to exceed customers expectations. Lean Enterprise Consulting, Inc. started in business to collaborate with its client-base into achieving greater productivity and experience significant cost reduction</p><p class='mb-0'>However, as this company has interacted in partnership with its customers, its has gained important knowledge and acquired an enhanced perspective on how to help them increase their profits and become more competitive. That is has evolved into a fundamental Value-Added Promise, which translates into tangible benefits for the client. Lean Enterprise Consulting, Inc. interventions transform customers´ needs and opportunities into measurable results.</p>",
+    "testimonials": {
+      "heading": "<i class=\"fs-1\">What people </i><span class=\"fs-1 decorator\">say</span> <i class=\"fs-1 font-regular\">about <i> <span class='fs-1 decorator'>our work</span>",
+      "list": [
+        {
+          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
+          "alt": "some text here",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
+          "alt": "some text here",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
+          "alt": "some text here",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
+          "alt": "some text here",
+          "name": "John Doe",
+          "position": "CEO"
+        }
+      ]
     }
   },
   "servicespage": {
@@ -304,7 +337,7 @@
             ]
           },
           {
-            "title": "Visual Managment",
+            "title": "Visual Management",
             "introduction": "Visual management is a key component of lean management, which aims to streamline processes and increase efficiency by improving communication and collaboration.",
             "details": [
               {
@@ -376,7 +409,7 @@
             ]
           },
           {
-            "title": "Keyzen Phylosophy",
+            "title": "Keyzen philosophy",
             "introduction": "Keysen Philosophy is a service from our Lean consultancy that applies Keysenian economic theory, which believes government intervention can stabilize and grow the economy by managing aggregate demand.",
             "details": [
               {
@@ -494,15 +527,19 @@
     ]
   },
   "contactpage": {
-    "heading": "Contact Us",
-    "firstName": "First name",
-    "lastName": "Last name",
+    "address": "123 Main St, San Francisco, CA 94110",
+    "description": "Contact us for any question, comment or collaboration. We are happy to listen and help you.",
     "email": "Email address",
-    "phone": "Phone",
-    "subject": "Subject",
+    "firstName": "First name",
+    "heading": "Contact Us",
+    "lastName": "Last name",
     "message": "Message",
-    "submitting": "submitting",
+    "phone": "Phone",
+    "phoneNumber": "954-258-3117",
+    "sendMessage": "Send a Message",
+    "subject": "Subject",
     "submit": "Submit",
+    "submitting": "submitting",
     "validation": {
       "firstNameRequired": "First name required",
       "lastNameRequired": "Last name required",
