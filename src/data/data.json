@@ -492,5 +492,65 @@
         ]
       }
     ]
+  },
+  "executiveAdisorsPage": {
+    "cards": [
+      {
+        "name": "Miguel Rodriguez",
+        "title": "Executive Advisor profile",
+        "bio": "<p>Miguel is a manufacturing, quality systems and program management consultant, with over 30 years of experience in Pharmaceutical and Medical Device operations, assessing organizations critical business requirements, identifying deficiencies and potential opportunities, and developing innovative and cost-effective solutions for enhancing competitiveness.</p> <p>Prior to joining LEC, Miguel spent first part of his career working for pharmaceutical companies (Baxter and Procter and Gamble) in manufacturing, engineering, quality systems and project management roles in United States and Puerto Rico. During the last 15 years, Miguel has also worked with Medical Device companies (Medtronic, St Jude Medical, Oscor Inc.) in technical and leadership positions as Director of Operations, General Manager and COO, in US, Puerto Rico and Dominican Republic.</p> <p>He has a broad range of experiences in manufacturing technologies and products such as:<p><ul><li>Liquids, Emulsions and Creams (Health and Beauty Care Products)</li><li>Solid Dose Manufacturing/Products (Analgesics)</li><li>Catheters, Guiding Sheaths and Introducers (Vascular / Peripheral applications)</li><li>Pacemakers and ICD’s (Cardiac Rhythm)</li><li>Implantable Leads (Pain, Heart, DBS)</li><li>Mechanical/Tissue Valves (Heart valve repair/replacement)</li><li>Diabetes Infusion Pumps and accessories (reservoirs/sensors)</li><li>Implantable drug infusion pumps (pain management)</li></ul> <p>He received his Bachelor of Science degree in Industrial Engineering (BSIE) from the University of Puerto Rico. Has participated in several development programs on statistics (University of Tennessee), Leadership Development Program (Wharton Business School), Advanced Program/Project Management (Procter &amp; Gamble). During the last few years, Miguel has provided consulting support and advice to Pharmaceutical/Medical Device companies in the United States, Puerto Rico and Caribbean in areas related to Quality Systems and Remediation Strategies, Business Strategy Development and Deployment, Manufacturing Operations, Lean Manufacturing Systems, and Program/Project Management.</p> ",
+        "social": {
+          "heading": "Follow Us",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Eddie Ignacio ",
+        "title": "Executive Advisor profile",
+        "bio": "<p>Eddie Ignacio is a highly diverse operational leader with over 40 years’ experience in the electronic, chemical, conversion, consumer lighting, access retail &amp; professional product, and pharmaceutical / medical device industries. Prior to starting with Lean Enterprise Consulting Inc., Eddie was part of several major companies including: Intel, Western Digital, Johnson & Johnson, General Electric and WernerCo. He is recognized for transforming global operations systems profitably and productively. Throughout his career held both domestic and international assignments with assignments held in Puerto Rico, USA, Mexico, Ireland, Italy, Brazil, Netherlands and Switzerland.</p> <p>Eddie has a Bachelor of Science: Electrical Engineering from the university of Puerto Rico (Mayaguez Branch). He is a certified Six-Sigma Master Black Belt since 1995 who has trained over 250 professionals around the world. Fully Bilingual: English and Spanish In his last role as Executive Vice-President of Operations / Chief Operating Officer, Eddie was responsible for establishing short / long term business objectives and optimizing human capital at all levels. His areas of expertise include, amongst other things, the following:</p> <ul><li>Worldwide Operations &amp; Manufacturing</li><li>Global Procurement &amp; Sourcing</li><li>Start-ups &amp; turnarounds</li><li> Global Logistics &amp; Supply Chain</li><li> Lean Manufacturing &amp; Six-Sigma</li><li> Quality Assurance &amp; Process Excellence</li><li>Acquisitions &amp; Joint Ventures</li><li>Regulatory Compliance</li></ul> <p>As an internal and external consultant, Eddie has been providing training and consulting advice to companies in the United States, Asia Pacific and Europe in areas related to Six-Sigma, technical writing, operational principles, ISO Quality Systems, leadership, and others.</p>",
+        "social": {
+          "heading": "Follow Us",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Roberto Correa",
+        "title": "Executive Advisor profile",
+        "bio": "<p>Roberto Correa has extensive experience in Medical Device Operations and Quality System Operations including Supplier Quality Management, Manufacturing Management, Strategic Planning and Development, Organizational Alignment and Development.</p> <p>Prior to starting with Lean Enterprise Consulting Inc., Roberto was part of two major companies: Johnson & Johnson – a global leader in health products where he gained his medical devices experience during his 34 year association working in Brazil, United States, Mexico and Puerto Rico and project management in Germany, France, Scotland, Netherlands, Mauritius, India, and China, and them with CR BARD a multinational medical device company during his 4 year association working in United States, Mexico and Puerto Rico .</p> <p>Device specific experience includes a broad range of class I, II and II products as:</p> <ul><li>Urology products (Foley Catheters &amp; Catheter Accessories, Urinary Collection Products, Urological Monitoring Systems, Wound Drainage and Drainage Tubes)</li><li>Peripheral Vascular systems (Vascular Grafts, Angioplasty Catheters, Stents, Implanted Ports, Enteral Feeding Devices, Central Venous Catheters)</li><li>Access Systems (Dialysis Catheters, PICC Lines)</li><li>Wound closure systems (Surgical Sutures, staples, and topical glue)</li><li> Breast Implants and Surgical meshes.</li></ul> <p>He received his Bachelor of Science degree in Civil Engineering from the FVE (Brazil) and MBA from Fundacao Getulio Vargas (Brazil)./</p> <p>As a consultant, Roberto has been providing training and consulting advice to medical device companies in the United States and Latin America in areas related to Quality Systems Strategy, quality systems requirements (ISO / FDA / ANVISA) , QS assessment and compliance, compliance gaps remediation, quality metrics, and human error reduction, regular FDA inspections, audit programs, , supplier selection and management.</p>",
+        "social": {
+          "heading": "Follow Us",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Thomas Agrait",
+        "title": "Executive Advisor profile",
+        "bio": "<p>“ Coaching organizations and its associates in making skillful choices to reach their desired personal & business results.”</p> <p>Thomas H. Agrait, president of Lean Enterprise Consulting Inc. brings the best of two approaches to his work with clients: a very extensive experience in Process Excellence and unique individual expertise in evoking excellence in his counseling clients by creatively and with an experienced judgment integrating Neuroscience to all his projects, component which evoke natural and individual excellence on all his project team members toward the different assignments. This approach, very well orchestrated, has the power to aligning high-impact behavior at every level of the organizations toward achieving breakthrough execution.He believes that Corporations are victims of the great training robbery. American companies spend enormous amounts of money on employee training and education—$160 billion in the United States and close to $356 billion globally in 2015 alone—but they are not getting a good return on their investment. For the most part, the learning doesn’t lead to better organizational performance, because people soon revert to their old ways of doing things.</br>Dr. Agrait partners with worldwide clients to assist them envision, strategize and implement changes—- including Leadership programs, from crystal clear vision, strategies and goals to aligning individuals and multiple teams around a common purpose and press forward to execute in order to achieve their goals. Over the last 25 years, he has worked with a wide spectrum of clients from Pharmaceuticals, Medical Devices, Insurance Companies, Integrated Logistic companies to foreign and US local community/non profit groups.</p> <p>Specialties: Lean Six Sigma Practitioner in Pharmaceutical, Biotech , Medical Devices, Health and Services Companies</p>",
+        "social": {
+          "heading": "Follow Us",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      }
+    ]
   }
 }

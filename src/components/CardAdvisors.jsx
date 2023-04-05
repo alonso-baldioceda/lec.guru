@@ -1,49 +1,73 @@
 import React from "react";
 import styled from "styled-components";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link as GatsbyLink } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 // Variables
-import { color, prefix } from "../shared/styles.js";
+import { colors, prefix } from "../shared/styles.js";
 
 // Components
 import SocialItem from "./SocialItem.jsx";
+import RichText from "../components/RickText.jsx";
 
 // Styles
+const StyledExecutiveAdvisorsPage = styled.div`
+    .${prefix}-social-item {
+      color: ${colors.marino} !important;
 
-const CardAdvisors = () => {
-  const teamMembers = [
-    {
-      name: "Miguel Rodriguez ",
-      Image: "",
-      title: "Executive Advisor profile",
-      bio: "Miguel is a manufacturing, quality systems and program management consultant, with over 30 years of experience in Pharmaceutical and Medical Device operations, assessing organizations critical business requirements, identifying deficiencies and potential opportunities, and developing innovative and cost-effective solutions for enhancing competitiveness.",
-    },
-    /*{
-      name: "Eddie Ignacio ",
-      title: "Executive Advisor profile",
-      bio: "Jane Smith is the CTO of our company. She has a PhD in computer science and has worked on some of the most innovative projects in the industry.",
-    },
-    // Add more team members here*/
-  ];
+      i {
+        font-size: 1.90rem !important;
+      }
 
+      &:hover {
+        color: ${colors.rouge} !important;
+      }
+    }
+  }
+`;
+
+const ImageContainer = styled.div`
+  background-color: ${colors.white};
+  border: 6px solid ${colors.marino};
+  border-radius: 50%;
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+`;
+
+const CardAdvisors = ({ image, name, title, bio, social }) => {
+  console.log(social);
   return (
-    <Row>
-      {teamMembers.map((member) => (
-        <Col md={4} key={member.name}>
-          <Card.Img width="100%" src={member.Image.src} />
-          <Card className="mb-4">
-            <Card.Body>
-              <Card.Title className="font-bold">{member.name}</Card.Title>
-              <Card.Subtitle className="mb-2 text-muted font-bold">
-                {member.title}
-              </Card.Subtitle>
-              <Card.Text>{member.bio}</Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      ))}
-    </Row>
+    <Col md={20} key={name}>
+      <Card className="mb-4">
+        <Card.Body>
+          <ImageContainer className="mb-3 p-1 p-lg-2">
+            <GatsbyImage
+              className="rounded-circle"
+              variant="top"
+              image={image}
+              alt="Dinosaur"
+            />
+          </ImageContainer>
+          <Card.Title className="text-uppercase fw-bold text-center text-dark fs-5">
+            {name}
+          </Card.Title>
+          <Card.Subtitle className="text-marino text-center fw-bold mb-3 mt-2">
+            {title}
+          </Card.Subtitle>
+          <Card.Text xl={6} className="text-start text-dark">
+            <RichText text={bio} />
+          </Card.Text>
+          <StyledExecutiveAdvisorsPage>
+            <div className="d-flex justify-content-center mt-4">
+              {social.links.map((item, index) => (
+                <SocialItem key={index} link={item.link} icon={item.icon} />
+              ))}
+            </div>
+          </StyledExecutiveAdvisorsPage>
+        </Card.Body>
+      </Card>
+    </Col>
   );
 };
 
