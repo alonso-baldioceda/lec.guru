@@ -1,6 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -22,7 +22,7 @@ import CardV3 from "../components/CardV3.jsx";
 const StyledIndexPage = styled.div``;
 
 const IndexPage = ({ data }) => {
-  const { hero: heroImg, blogImages, allDataJson } = data || {};
+  const { hero: heroImg, clientsImages, blogImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const node = edges[0].node;
   const { common, homepage } = node || {};
@@ -77,6 +77,8 @@ const IndexPage = ({ data }) => {
     item.image = fallbackImage;
   });
 
+  console.log(clientsImages.edges);
+
   return (
     <StyledIndexPage>
       <Layout header={header} footer={footer}>
@@ -100,63 +102,75 @@ const IndexPage = ({ data }) => {
             </Container>
           </div>
         </div>
-        {/* Blog */}
-        <div className={`${prefix}-blog`}>
-          <Container className="pt-4 pb-5 py-lg-5">
-            <Row className="justify-content-center">
-              <Col lg={19}>
-                <h2 className="text-center my-3 my-lg-5 text-casal fs-1">
-                  {blog.heading}
-                </h2>
-                <p className="mb-3 mb-lg-5">{blog.text}</p>
-                <div className="mb-3 mb-lg-5">
-                  <Slider settings={blogSliderSettings}>
-                    {blog.slider.nodes.map((item, index) => (
-                      <div key={index}>
-                        <CardV3 {...item} />
-                      </div>
-                    ))}
-                  </Slider>
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        {/* About us */}
-        <div className={`${prefix}-about position-relative`}>
-          <BackgroundImage src="images/unclasified/4.jpg" />
-          <Mask bgColor={colors.sycamoreLight} opacity={90} />
-          <div className="py-3 py-lg-5">
-            <Container className="py-4 py-lg-5">
+        {/* Clients */}
+        <div className={`${prefix}-clients`}>
+          <div className="my-3 my-md-5">
+            <Container>
               <Row className="justify-content-center">
-                <Col xs={11} lg={7}>
-                  <h2
-                    className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined"
-                    dangerouslySetInnerHTML={{
-                      __html: about.heading,
-                    }}
-                  />
+                <Col xs={12}>
+                  <h1 className="my-4 my-md-5 text-center">
+                    Some of our clients
+                  </h1>
                 </Col>
-              </Row>
-              <Row>
-                <Col sm={6} className="px-4 px-lg-5">
-                  <i>
-                    <h3 className="mt-4 mb-4 text-dark text-center">
-                      {about.company.heading}
-                    </h3>
-                  </i>
-                  <p className="text-dark text-center">{about.company.text}</p>
-                </Col>
-                <Col sm={6} className="px-4 px-lg-5">
-                  <i>
-                    <h3 className="mt-4 mb-4 text-dark text-center">
-                      {about.mission.heading}
-                    </h3>
-                  </i>
-                  <p className="text-dark text-center">{about.mission.text}</p>
-                </Col>
+                {clientsImages.edges.map((client) => {
+                  const image = getImage(client.node.childImageSharp);
+
+                  return (
+                    <Col
+                      key={client.id}
+                      sm={4}
+                      className="text-center my-3 d-flex align-items-center justify-content-center"
+                      style={{ height: "60px" }}
+                    >
+                      <GatsbyImage image={image} alt="client" />
+                    </Col>
+                  );
+                })}
               </Row>
             </Container>
+          </div>
+        </div>
+        {/* About us */}
+        <div className={`${prefix}-about`}>
+          <div className=" position-relative">
+            <BackgroundImage src="images/unclasified/4.jpg" />
+            <Mask bgColor={colors.sycamoreLight} opacity={90} />
+            <div className="py-3 py-lg-5">
+              <Container className="py-4 py-lg-5">
+                <Row className="justify-content-center">
+                  <Col xs={11} lg={7}>
+                    <h2
+                      className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined"
+                      dangerouslySetInnerHTML={{
+                        __html: about.heading,
+                      }}
+                    />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col sm={6} className="px-4 px-lg-5">
+                    <i>
+                      <h3 className="mt-4 mb-4 text-dark text-center">
+                        {about.company.heading}
+                      </h3>
+                    </i>
+                    <p className="text-dark text-center">
+                      {about.company.text}
+                    </p>
+                  </Col>
+                  <Col sm={6} className="px-4 px-lg-5">
+                    <i>
+                      <h3 className="mt-4 mb-4 text-dark text-center">
+                        {about.mission.heading}
+                      </h3>
+                    </i>
+                    <p className="text-dark text-center">
+                      {about.mission.text}
+                    </p>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
         {/* Our experts */}
@@ -173,6 +187,28 @@ const IndexPage = ({ data }) => {
                   <CardV2 {...card} />
                 </Col>
               ))}
+            </Row>
+          </Container>
+        </div>
+        {/* Blog */}
+        <div className={`${prefix}-blog`}>
+          <Container className="pt-0 pb-5">
+            <Row className="justify-content-center">
+              <Col lg={19}>
+                <h2 className="text-center mb-3 mb-lg-5 text-casal fs-1">
+                  {blog.heading}
+                </h2>
+                <p className="mb-3 mb-lg-5">{blog.text}</p>
+                <div className="mb-3 mb-lg-5">
+                  <Slider settings={blogSliderSettings}>
+                    {blog.slider.nodes.map((item, index) => (
+                      <div key={index}>
+                        <CardV3 {...item} />
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
+              </Col>
             </Row>
           </Container>
         </div>
@@ -196,6 +232,26 @@ export const query = graphql`
         )
       }
     }
+    clientsImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "clients" }
+      }
+      sort: { name: ASC }
+    ) {
+      totalCount
+      edges {
+        node {
+          base
+          name
+          id
+          childImageSharp {
+            gatsbyImageData(width: 200)
+          }
+        }
+      }
+    }
+
     blogImages: allFile(
       filter: {
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
