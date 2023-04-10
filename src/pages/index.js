@@ -77,8 +77,6 @@ const IndexPage = ({ data }) => {
     item.image = fallbackImage;
   });
 
-  console.log(clientsImages.edges);
-
   return (
     <StyledIndexPage>
       <Layout header={header} footer={footer}>
@@ -112,12 +110,12 @@ const IndexPage = ({ data }) => {
                     Some of our clients
                   </h1>
                 </Col>
-                {clientsImages.edges.map((client) => {
+                {clientsImages.edges.map((client, index) => {
                   const image = getImage(client.node.childImageSharp);
 
                   return (
                     <Col
-                      key={client.id}
+                      key={index}
                       sm={4}
                       className="text-center my-3 d-flex align-items-center justify-content-center"
                       style={{ height: "60px" }}
@@ -251,7 +249,6 @@ export const query = graphql`
         }
       }
     }
-
     blogImages: allFile(
       filter: {
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }

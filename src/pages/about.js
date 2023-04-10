@@ -44,35 +44,43 @@ const AboutPage = ({ data }) => {
 
   return (
     <Layout header={header} footer={footer}>
-      <div className="bg-sycamore-lighter py-5">
-        <Container>
-          <Row>
-            <Col md={12}>
-              <h1 className="mb-5">{aboutpage.heading}</h1>
-              <RichText text={aboutpage.text} />
-            </Col>
-          </Row>
-        </Container>
+      {/* History */}
+      <div className="bg-sycamore-lighter">
+        <div className="py-5">
+          <div className="my-3">
+            <Container>
+              <Row>
+                <Col md={12}>
+                  <h1 className="mb-5">{aboutpage.heading}</h1>
+                  <RichText text={aboutpage.text} />
+                </Col>
+              </Row>
+            </Container>
+          </div>
+        </div>
       </div>
+      {/* Testimonials */}
       <div className="position-relative">
         <BackgroundImage src={testimonialBg} />
         <Mask bgColor={colors.marino} opacity={95} />
         <div className="py-5">
-          <Container>
-            <Row>
-              <Col md={12}>
-                <h2 className="mb-5 text-white text-center">
-                  <RichText text={aboutpage.testimonials.heading} />
-                </h2>
-                <Slider settings={testimonialSliderSettings}>
-                  {aboutpage.testimonials.list &&
-                    aboutpage.testimonials.list.map((testimonial, index) => (
-                      <CardV4 key={index} {...testimonial} />
-                    ))}
-                </Slider>
-              </Col>
-            </Row>
-          </Container>
+          <div className="my-3">
+            <Container>
+              <Row>
+                <Col md={12}>
+                  <h2 className="mb-5 text-white text-center">
+                    <RichText text={aboutpage.testimonials.heading} />
+                  </h2>
+                  <Slider settings={testimonialSliderSettings}>
+                    {aboutpage.testimonials.list &&
+                      aboutpage.testimonials.list.map((testimonial, index) => (
+                        <CardV4 key={index} {...testimonial} />
+                      ))}
+                  </Slider>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
       </div>
     </Layout>

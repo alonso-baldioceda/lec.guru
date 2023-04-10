@@ -5,12 +5,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
 
 // Variables
-import { colors, prefix } from "./../shared/styles.js";
+import { colors, prefix } from "../shared/styles.js";
 
 // Components
-import Layout from "../components/Layout";
-import BackgroundImage from "../components/BackgroundImage";
-import Mask from "../components/Mask";
+import Layout from "../components/Layout.jsx";
+import BackgroundImage from "../components/BackgroundImage.jsx";
+import Mask from "../components/Mask.jsx";
 import RichText from "../components/RichText.jsx";
 import CollapsableItemList from "../components/CollapsableItemList.jsx";
 import Slider from "../components/Slider.jsx";

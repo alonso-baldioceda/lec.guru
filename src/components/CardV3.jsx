@@ -25,10 +25,9 @@ const StyledCardV3 = styled.div`
 `;
 
 const CardV3 = ({ cta, heading, image, img }) => {
+  // TODO: use excerpt
   // Trim the heading to 40 characters
   const trimmedHeading = heading.substring(0, 60);
-
-  // console.log("image", image);
 
   return (
     <StyledCardV3 className={classnames(`m-2 ${prefix}-card-v3`)}>

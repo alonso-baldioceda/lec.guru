@@ -8,7 +8,6 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components",
-    "gatsby-transformer-json",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -16,6 +15,7 @@ module.exports = {
         path: `${__dirname}/src/data/`,
       },
     },
+    "gatsby-transformer-json",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {

@@ -526,6 +526,22 @@
       }
     ]
   },
+  "blogpage": {
+    "posts": [
+      {
+        "title": "Primer post",
+        "slug": "primer-post",
+        "date": "2023-04-05",
+        "content": "Este es el primer post de mi blog."
+      },
+      {
+        "title": "Segundo post",
+        "slug": "segundo-post",
+        "date": "2023-04-06",
+        "content": "Este es el segundo post de mi blog."
+      }
+    ]
+  },
   "contactpage": {
     "address": "123 Main St, San Francisco, CA 94110",
     "description": "Contact us for any question, comment or collaboration. We are happy to listen and help you.",
