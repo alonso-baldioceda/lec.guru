@@ -1,17 +1,17 @@
 const path = require("path");
 
-exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions;
+// exports.createSchemaCustomization = ({ actions }) => {
+//   const { createTypes } = actions;
 
-  createTypes(`
-    type BlogPost implements Node {
-      title: String!
-      slug: String!
-      date: Date! @dateformat
-      content: String!
-    }
-  `);
-};
+//   createTypes(`
+//     type BlogPost implements Node {
+//       title: String!
+//       slug: String!
+//       date: Date! @dateformat
+//       content: String!
+//     }
+//   `);
+// };
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;

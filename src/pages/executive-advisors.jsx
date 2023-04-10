@@ -1,5 +1,9 @@
 import React from "react";
 import styled from "styled-components";
+<<<<<<< Updated upstream
+=======
+import { Container, Row, Col } from "react-bootstrap";
+>>>>>>> Stashed changes
 
 // Variables
 // import { colors, prefix } from "./../shared/styles.js";
@@ -91,8 +95,32 @@ const ExecutiveAdvisorsPage = () => {
 
   return (
     <StyledExecutiveAdvisorsPage>
+<<<<<<< Updated upstream
       <Layout header={data.header} footer={data.footer}>
         hola!!
+=======
+      <Layout header={header} footer={footer}>
+        <div className={`${prefix}-team-advisors`}>
+          <div className="my-4 my-lg-5">
+            <Container>
+              <Row>
+                {cards.map((advisor, index) => (
+                  <Col md={6} key={index} className="mb-4 mb-lg-5">
+                    <CardAdvisors
+                      key={index}
+                      name={advisor.name}
+                      title={advisor.title}
+                      bio={advisor.bio}
+                      image={advisor.image}
+                      social={advisor.social}
+                    />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </div>
+        </div>
+>>>>>>> Stashed changes
       </Layout>
     </StyledExecutiveAdvisorsPage>
   );
@@ -101,3 +129,115 @@ const ExecutiveAdvisorsPage = () => {
 export default ExecutiveAdvisorsPage;
 
 export const Head = () => <title>Home Page</title>;
+<<<<<<< Updated upstream
+=======
+
+export const query = graphql`
+  query {
+    teamImages: allFile(
+      filter: {
+        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
+        relativeDirectory: { eq: "team" }
+      }
+      sort: { name: ASC }
+    ) {
+      totalCount
+      edges {
+        node {
+          base
+          name
+          id
+          childImageSharp {
+            gatsbyImageData(width: 500)
+          }
+        }
+      }
+    }
+    allDataJson {
+      edges {
+        node {
+          common {
+            header {
+              brand {
+                alt
+                icon
+                to
+              }
+              nav {
+                label
+                link
+              }
+              top {
+                email {
+                  href
+                  icon
+                  label
+                }
+                phone {
+                  href
+                  icon
+                  label
+                }
+              }
+            }
+            team {
+              cards {
+                img
+                job
+                link
+                name
+                social {
+                  heading
+                  links {
+                    icon
+                    link
+                  }
+                }
+                text
+              }
+              heading
+            }
+            footer {
+              contact {
+                address
+                email
+                heading
+                phone
+              }
+              copyright
+              nav {
+                heading
+                nav {
+                  label
+                  link
+                }
+              }
+              social {
+                heading
+                links {
+                  icon
+                  link
+                }
+              }
+            }
+          }
+          executiveAdisorsPage {
+            cards {
+              name
+              bio
+              title
+              social {
+                heading
+                links {
+                  icon
+                  link
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+>>>>>>> Stashed changes

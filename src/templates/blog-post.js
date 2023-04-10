@@ -44,32 +44,3 @@ const BlogPost = ({ data }) => {
 // `;
 
 export default BlogPost;
-
-// export const query = graphql`
-//   query PortfolioItemQUery($slug: String!) {
-//     item: contentfulPortfolio(slug: { eq: $slug }) {
-//       description {
-//         description
-//       }
-//       gallery {
-//         id
-//         localFile {
-//           childImageSharp {
-//             gatsbyImageData(width: 900, quality: 50)
-//           }
-//         }
-//         title
-//       }
-//       name
-//       related {
-//         ...PortfolioCard
-//       }
-//       summary
-//       thumbnail {
-//         localFile {
-//           publicURL
-//         }
-//       }
-//     }
-//   }
-// `;
