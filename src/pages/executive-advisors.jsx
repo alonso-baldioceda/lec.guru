@@ -63,7 +63,7 @@ export const query = graphql`
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
         relativeDirectory: { eq: "team" }
       }
-      sort: { order: ASC, fields: name }
+      sort: { name: ASC }
     ) {
       totalCount
       edges {

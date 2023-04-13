@@ -1,49 +1,37 @@
 const path = require("path");
-
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions;
-
-//   createTypes(`
-//     type BlogPost implements Node {
-//       title: String!
-//       slug: String!
-//       date: Date! @dateformat
-//       content: String!
-//     }
-//   `);
-// };
+const { slash } = require(`gatsby-core-utils`);
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  const blogPostTemplate = path.resolve("./src/templates/blog-post.js");
-
-  const result = await graphql(`
-    query MyQuery {
-      allDataJson {
-        edges {
-          node {
-            blogpage {
-              posts {
-                slug
-              }
-            }
-          }
+  // query content for WordPress posts
+  const {
+    data: {
+      allWpPost: { nodes: allPosts },
+    },
+  } = await graphql(`
+    query {
+      allWpPost {
+        nodes {
+          id
+          uri
         }
       }
     }
   `);
 
-  const posts = JSON.parse(
-    JSON.stringify(result.data.allDataJson.edges[0].node.blogpage.posts)
-  );
+  const postTemplate = path.resolve("./src/templates/blog-post.js");
 
-  posts.forEach(({ slug }) => {
+  allPosts.forEach((post) => {
     createPage({
-      path: `/blog/${slug}`,
-      component: blogPostTemplate,
+      // will be the url for the page
+      path: `/blog${post.uri}`,
+      // specify the component template of your choice
+      component: slash(postTemplate),
+      // In the ^template's GraphQL query, 'id' will be available
+      // as a GraphQL variable to query for this post's data.
       context: {
-        slug: slug,
+        id: post.id,
       },
     });
   });

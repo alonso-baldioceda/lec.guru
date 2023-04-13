@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 // Variables
-import { colors, typography } from "./styles";
+import { colors, typography, prefix } from "./styles";
 
 const GlobalStyles = createGlobalStyle`
   /*********************/
@@ -43,6 +43,73 @@ const GlobalStyles = createGlobalStyle`
   }
 
 
+  .${prefix}-blog-post {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-bottom: 1rem;
+    }
+
+    blockquote {
+      background: ${colors.marinoLighter};
+      border-left: 6px solid ${colors.marino};
+      border-radius: 4px;
+      color: #555555;
+      font-size: 1.25em;
+      font-style: italic;
+      line-height: 1.6;
+      margin: 3rem auto;
+      padding: 1.2em 30px;
+      position: relative;
+
+      @media (min-width: 992px) {
+        width: 80%;
+      }
+
+      &:before {
+        color: black;
+        content: open-quote;
+        font-size: 8em;
+        line-height: .1em;
+        margin-left: -1rem;
+        margin-right: .25em;
+        opacity:0.60;
+        vertical-align: -.4em;
+      }
+
+      &:after {
+        color: transparent;
+        content: close-quote;
+        font-size: 0em;
+      }
+
+      P {
+        color: ${colors.black};
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    ul, ol {
+      ul, ol {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+      }
+    }
+
+    figure {
+      figcaption {
+        font-size: .95rem !important;
+        font-style: italic;
+      }
+    }
+
+  }
 
   ${() => {
     let styles = "";

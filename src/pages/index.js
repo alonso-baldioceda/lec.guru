@@ -221,7 +221,7 @@ export const Head = () => <title>Homepage</title>;
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "unclasified/4.jpg" }) {
+    hero: file(relativePath: { eq: "unclasified/tt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 3000

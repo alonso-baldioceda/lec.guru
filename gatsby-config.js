@@ -7,6 +7,28 @@ module.exports = {
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        url:
+          // process.env.WPGRAPHQL_URL ||
+          `http://lec.local/graphql`,
+        schema: {
+          perPage: 50,
+          requestConcurrency: 5,
+          previewRequestConcurrency: 2,
+        },
+        develop: {
+          hardCacheMediaFiles: false,
+          hardCacheData: false,
+        },
+        html: {
+          useGatsbyImage: true,
+          imageMaxWidth: 1920,
+          fallbackImageMaxWidth: 800,
+        },
+      },
+    },
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",

@@ -93,7 +93,7 @@ export const Head = () => <title>About us</title>;
 
 export const query = graphql`
   query {
-    testimonialBackground: file(relativePath: { eq: "unclasified/4.jpg" }) {
+    testimonialBackground: file(relativePath: { eq: "unclasified/tt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 3000
