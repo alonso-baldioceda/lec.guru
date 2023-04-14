@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
   const { edges } = allDataJson || {};
   const node = edges[0].node;
   const { common, homepage } = node || {};
-  const { header, footer, blog, team } = common || {};
+  const { blog, team } = common || {};
   const { hero, services, about } = homepage || {};
 
   const heroImage = getImage(heroImg);
@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <StyledIndexPage>
-      <Layout header={header} footer={footer}>
+      <Layout>
         {/* Hero */}
         <Hero {...hero} src={heroSrc} />
         {/* Services */}
@@ -272,29 +272,6 @@ export const query = graphql`
       edges {
         node {
           common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
             team {
               cards {
                 img
@@ -328,29 +305,6 @@ export const query = graphql`
                 }
               }
               text
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
             }
           }
           homepage {

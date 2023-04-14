@@ -18,8 +18,7 @@ const AboutPage = ({ data }) => {
   const { testimonialBackground, testimonialImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const node = edges[0].node;
-  const { common, aboutpage } = node || {};
-  const { header, footer } = common || {};
+  const { aboutpage } = node || {};
 
   const testimonialSliderSettings = {
     dots: true,
@@ -43,7 +42,7 @@ const AboutPage = ({ data }) => {
   });
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout>
       {/* History */}
       <div className="bg-sycamore-lighter">
         <div className="py-5">
@@ -124,54 +123,6 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
-          }
           aboutpage {
             heading
             text

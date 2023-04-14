@@ -11,11 +11,10 @@ const ContactPage = ({ data }) => {
   const { allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const node = edges[0].node;
-  const { common, contactpage } = node || {};
-  const { header, footer } = common || {};
+  const { contactpage } = node || {};
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout>
       <div className="px-2 px-ld-0">
         <Container className="rounded rounded-4 my-4 my-md-5 overflow-hidden">
           <Row className="bg-marino-lighter">
@@ -70,54 +69,6 @@ export const query = graphql`
     allDataJson {
       edges {
         node {
-          common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
-          }
           contactpage {
             address
             description

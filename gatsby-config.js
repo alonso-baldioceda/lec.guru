@@ -14,7 +14,7 @@ module.exports = {
           // process.env.WPGRAPHQL_URL ||
           `http://lec.local/graphql`,
         schema: {
-          perPage: 50,
+          perPage: 5,
           requestConcurrency: 5,
           previewRequestConcurrency: 2,
         },

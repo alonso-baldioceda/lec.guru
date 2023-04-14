@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "./header/Header";
@@ -19,13 +20,78 @@ const Main = styled.main`
 const Layout = ({ children, footer, header }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const data = useStaticQuery(graphql`
+    query LayoutQuery {
+      allDataJson {
+        edges {
+          node {
+            common {
+              header {
+                brand {
+                  alt
+                  icon
+                  to
+                }
+                nav {
+                  label
+                  link
+                }
+                top {
+                  email {
+                    href
+                    icon
+                    label
+                  }
+                  phone {
+                    href
+                    icon
+                    label
+                  }
+                }
+              }
+              footer {
+                contact {
+                  address
+                  email
+                  heading
+                  phone
+                }
+                copyright
+                nav {
+                  heading
+                  nav {
+                    label
+                    link
+                  }
+                }
+                social {
+                  heading
+                  links {
+                    icon
+                    link
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  const { allDataJson } = data || {};
+  const { edges } = allDataJson || {};
+  const node = edges[0].node;
+  const { common } = node || {};
+  const { header: headerData, footer: footerData } = common || {};
+
   return (
     <>
       <GlobalStyle />
       <Header
-        brand={header.brand}
-        nav={header.nav}
-        top={header.top}
+        brand={headerData.brand}
+        nav={headerData.nav}
+        top={headerData.top}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
@@ -33,10 +99,10 @@ const Layout = ({ children, footer, header }) => {
         {children}
       </Main>
       <Footer
-        nav={footer.nav}
-        copyright={footer.copyright}
-        social={footer.social}
-        contact={footer.contact}
+        nav={footerData.nav}
+        copyright={footerData.copyright}
+        social={footerData.social}
+        contact={footerData.contact}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />

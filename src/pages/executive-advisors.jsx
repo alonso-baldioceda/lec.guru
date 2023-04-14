@@ -17,25 +17,22 @@ const ExecutiveAdvisorsPage = ({ data }) => {
   const { teamImages, allDataJson } = data || {};
   const { edges } = allDataJson;
   const { node } = edges[0];
-  const { common, executiveAdisorsPage } = node;
+  const { executiveAdisorsPage } = node;
   const { cards } = executiveAdisorsPage;
-  const { header, footer } = common;
 
   cards.forEach((item, index) => {
     const image = getImage(teamImages.edges[index]?.node.childImageSharp);
     item.image = image;
-    console.log(image);
   });
   return (
     <StyledExecutiveAdvisorsPage>
-      <Layout header={header} footer={footer}>
+      <Layout>
         <div className={`${prefix}-teamAdvisors`}>
           <Container className="pt-auto pt-lg-auto">
             <Row className="my-4 my-lg-5 ps-5 me-5">
               {cards.map((advisor, index) => (
-                <Col sm={6} key={index} className="mb-4 mb-lg-5 ">
+                <Col sm={6} key={index} className="mb-4 mb-lg-5">
                   <CardAdvisors
-                    key={index}
                     name={advisor.name}
                     title={advisor.title}
                     bio={advisor.bio}
@@ -81,29 +78,6 @@ export const query = graphql`
       edges {
         node {
           common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
             team {
               cards {
                 img
@@ -120,29 +94,6 @@ export const query = graphql`
                 text
               }
               heading
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
             }
           }
           executiveAdisorsPage {

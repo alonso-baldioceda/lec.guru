@@ -107,15 +107,6 @@ const ServicesPage = ({ data }) => {
               </Container>
             </div>
           </div>
-          {/* <Container className="py-4 py-lg-5">
-            <Row className="justify-content-center">
-              <Col xs={8}>
-                <h2 className="text-center underlined">
-                  <RichText text={title} />
-                </h2>
-              </Col>
-            </Row>
-          </Container> */}
           {/* Services */}
           <div className="py-3">
             <div className="py-4 py-lg-5">
@@ -246,52 +237,6 @@ export const query = graphql`
                 }
               }
               text
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
             }
           }
           servicespage {

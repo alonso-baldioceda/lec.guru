@@ -9,25 +9,25 @@ import RichText from "../components/RichText";
 // Utils
 import { formatAuthorName, getRecentPosts } from "./../shared/utils";
 
-const BlogPage = ({ data }) => {
-  // TODO: remove blogImages from query
-  const { allWpCategory, allWpPost, allDataJson } = data || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node;
-  const { common } = node || {};
-  const { header, footer } = common || {};
+const BlogPage = ({ data, pageContext }) => {
+  const { currentPage, totalPages, basePath } = pageContext;
 
-  const lastPosts = getRecentPosts(allWpPost);
+  const prevPagePath =
+    currentPage === 2 ? `${basePath}` : `${basePath}/${currentPage - 1}`;
+  const nextPagePath = `${basePath}/${currentPage + 1}`;
+
+  // TODO: remove blogImages from query
+  const { allWpCategory, allWpPost } = data || {};
+  // const lastPosts = getRecentPosts(allWpPost);
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout>
       <Container>
         <Row className="justify-content-between">
           <Col xs={12}>
             <div className="mt-5">
               <h1 className="mb-3">Blog</h1>
               {allWpCategory?.nodes.map((category, index) => {
-                console.log(category);
                 if (category.count !== null) {
                   return (
                     <Link
@@ -75,7 +75,7 @@ const BlogPage = ({ data }) => {
             <hr />
             <div className="my-5">
               <h3 className="mb-3">Recent Posts</h3>
-              {lastPosts.map((node, index) => {
+              {/* {lastPosts.map((node, index) => {
                 return (
                   <div key={index} className="mb-3">
                     <Link to={node.slug} className="text-decoration-none">
@@ -83,17 +83,52 @@ const BlogPage = ({ data }) => {
                     </Link>
                   </div>
                 );
-              })}
+              })} */}
             </div>
           </Col>
           <Col xs={12}>
             <hr />
-            <div className="my-5 d-flex">
-              <div className="me-auto">
-                <Link to="/" className="text-decoration-none">
-                  <i className="bi bi-arrow-left"></i> Older Posts
-                </Link>
-              </div>
+            <div className="my-5">
+              <nav aria-label="Page navigation example">
+                <ul className="pagination">
+                  <li
+                    className={`page-item ${
+                      currentPage === 1 ? "disabled" : ""
+                    }`}
+                  >
+                    <Link
+                      to={prevPagePath}
+                      className="page-link"
+                      aria-label="Previous"
+                    >
+                      <span className="sr-only">Previous</span>
+                    </Link>
+                  </li>
+                  {Array.from({ length: totalPages }).map((_, i) => (
+                    <li className="page-item" key={`pagination-number${i + 1}`}>
+                      <Link
+                        to={`/blog/${i === 0 ? "" : i + 1}`}
+                        className="page-link"
+                      >
+                        {i + 1}
+                      </Link>
+                    </li>
+                  ))}
+                  <li
+                    className={`page-item ${
+                      currentPage === totalPages ? "disabled" : ""
+                    }`}
+                  >
+                    <Link
+                      to={nextPagePath}
+                      className="page-link"
+                      aria-label="Next"
+                    >
+                      <span className="sr-only">Next</span>
+                    </Link>
+                  </li>
+                </ul>
+              </nav>
             </div>
           </Col>
         </Row>
@@ -103,7 +138,7 @@ const BlogPage = ({ data }) => {
 };
 
 export const query = graphql`
-  query {
+  query ($skip: Int!, $limit: Int!) {
     blogImages: allFile(
       filter: {
         extension: { regex: "/(jpg)|(png)|(jpeg)/" }
@@ -131,7 +166,7 @@ export const query = graphql`
         id
       }
     }
-    allWpPost {
+    allWpPost(sort: { date: DESC }, skip: $skip, limit: $limit) {
       nodes {
         id
         uri
@@ -153,60 +188,6 @@ export const query = graphql`
             }
             firstName
             lastName
-          }
-        }
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
           }
         }
       }

@@ -3,15 +3,12 @@ const { slash } = require(`gatsby-core-utils`);
 
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions;
+  const blogTemplate = path.resolve("./src/pages/blog.js");
 
-  // query content for WordPress posts
-  const {
-    data: {
-      allWpPost: { nodes: allPosts },
-    },
-  } = await graphql(`
-    query {
+  const result = await graphql(`
+    {
       allWpPost {
+        totalCount
         nodes {
           id
           uri
@@ -20,9 +17,29 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
+  const postsPerPage = 5;
+  const totalPages = Math.ceil(result.data.allWpPost.totalCount / postsPerPage);
+
+  Array.from({ length: totalPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: blogTemplate,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        totalPages,
+        currentPage: i + 1,
+        totalPages: totalPages,
+        basePath: "/blog",
+      },
+    });
+  });
+
   const postTemplate = path.resolve("./src/templates/blog-post.js");
 
-  allPosts.forEach((post) => {
+  const posts = result.data.allWpPost.nodes;
+
+  posts.forEach((post, i) => {
     createPage({
       // will be the url for the page
       path: `/blog${post.uri}`,
@@ -32,6 +49,12 @@ exports.createPages = async ({ actions, graphql }) => {
       // as a GraphQL variable to query for this post's data.
       context: {
         id: post.id,
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        totalPages,
+        currentPage: i + 1,
+        totalPages: totalPages,
+        basePath: "/blog",
       },
     });
   });
