@@ -168,8 +168,6 @@ const ServicesPage = ({ data }) => {
 
 export default ServicesPage;
 
-export const Head = () => <title>Services</title>;
-
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "unclasified/12.jpg" }) {

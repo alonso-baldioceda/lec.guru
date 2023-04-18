@@ -62,8 +62,6 @@ const ContactPage = ({ data }) => {
 
 export default ContactPage;
 
-export const Head = () => <title>Contact</title>;
-
 export const query = graphql`
   query {
     allDataJson {

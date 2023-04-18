@@ -3,11 +3,11 @@ import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+
 // Variables
-import { colors, prefix } from "./../shared/styles.js";
+import { prefix } from "./../shared/styles.js";
 
 // Components
-
 import Layout from "../components/Layout";
 import CardAdvisors from "../components/CardAdvisors";
 
@@ -24,6 +24,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
     const image = getImage(teamImages.edges[index]?.node.childImageSharp);
     item.image = image;
   });
+  
   return (
     <StyledExecutiveAdvisorsPage>
       <Layout>
@@ -50,8 +51,6 @@ const ExecutiveAdvisorsPage = ({ data }) => {
 };
 
 export default ExecutiveAdvisorsPage;
-
-export const Head = () => <title>Home Page</title>;
 
 export const query = graphql`
   query {

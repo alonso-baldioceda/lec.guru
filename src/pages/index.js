@@ -217,8 +217,6 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Homepage</title>;
-
 export const query = graphql`
   query {
     hero: file(relativePath: { eq: "unclasified/tt.jpg" }) {

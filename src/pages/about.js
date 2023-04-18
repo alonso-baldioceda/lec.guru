@@ -88,8 +88,6 @@ const AboutPage = ({ data }) => {
 
 export default AboutPage;
 
-export const Head = () => <title>About us</title>;
-
 export const query = graphql`
   query {
     testimonialBackground: file(relativePath: { eq: "unclasified/tt.jpg" }) {
