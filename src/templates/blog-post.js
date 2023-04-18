@@ -8,6 +8,7 @@ import { colors, prefix } from "./../shared/styles.js";
 import Layout from "../components/Layout";
 import BackgroundImage from "../components/BackgroundImage";
 import Mask from "../components/Mask";
+import LatestPosts from "../components/LatestPosts.jsx";
 
 // Utils
 import { formatAuthorName } from "./../shared/utils.js";
@@ -22,7 +23,11 @@ const Panel = styled.div`
   width: 50%;
 `;
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
+  const { previous, next } = pageContext;
+
+  console.log("data", pageContext, previous, next);
+
   const { wpPost, allDataJson } = data || {};
   const { title, content, date, featuredImage, author, categories } =
     wpPost || {};
@@ -68,9 +73,15 @@ const BlogPost = ({ data }) => {
         </div>
         <div className="my-5">
           <Container>
-            <Row>
-              <Col md={9}>
+            <Row className="justify-content-between">
+              <Col md={7}>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
+              </Col>
+              <Col md={4}>
+                <div className="mb-5">
+                  <h3 className="mb-3">Recent Posts</h3>
+                  <LatestPosts />
+                </div>
               </Col>
             </Row>
           </Container>

@@ -5,20 +5,19 @@ import { graphql, Link } from "gatsby";
 // Components
 import Layout from "../components/Layout";
 import RichText from "../components/RichText";
+import LatestPosts from "../components/LatestPosts";
+import BlogPagination from "../components/BlogPagination";
 
 // Utils
-import { formatAuthorName, getRecentPosts } from "./../shared/utils";
+import { formatAuthorName } from "./../shared/utils";
 
 const BlogPage = ({ data, pageContext }) => {
-  const { currentPage, totalPages, basePath } = pageContext;
+  const { currentPage, numPages } = pageContext;
 
-  const prevPagePath =
-    currentPage === 2 ? `${basePath}` : `${basePath}/${currentPage - 1}`;
-  const nextPagePath = `${basePath}/${currentPage + 1}`;
+  const prevPagePath = currentPage === 2 ? `/blog` : `/blog/${currentPage - 1}`;
+  const nextPagePath = `/blog/${currentPage + 1}`;
 
-  // TODO: remove blogImages from query
   const { allWpCategory, allWpPost } = data || {};
-  // const lastPosts = getRecentPosts(allWpPost);
 
   return (
     <Layout>
@@ -49,86 +48,42 @@ const BlogPage = ({ data, pageContext }) => {
           <Col md={7}>
             <hr />
             <div className="my-5">
-              {allWpPost?.nodes.map((node, index) => {
-                return (
-                  <div key={index} className="mb-5">
-                    <Link to={node.slug} className="text-decoration-none">
-                      <h3 className="text-black">{node.title}</h3>
-                      <p className="mb-2 text-black">
-                        by {formatAuthorName(node.author)} | {node.date}
-                      </p>
-                      <RichText text={node.excerpt} />
-                      <button
-                        className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mb-md-0 mx-0"
-                        href="#"
-                        role="button"
-                      >
-                        Read More
-                      </button>
-                    </Link>
-                  </div>
-                );
-              })}
+              {allWpPost?.nodes.map((node, index) => (
+                <div key={index} className="mb-5">
+                  <Link to={node.slug} className="text-decoration-none">
+                    <h3 className="text-black">{node.title}</h3>
+                    <p className="mb-2 text-black">
+                      by {formatAuthorName(node.author)} | {node.date}
+                    </p>
+                    <RichText text={node.excerpt} />
+                    <button
+                      className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mb-md-0 mx-0"
+                      href="#"
+                      role="button"
+                    >
+                      Read More
+                    </button>
+                  </Link>
+                </div>
+              ))}
             </div>
           </Col>
           <Col md={4}>
             <hr />
             <div className="my-5">
               <h3 className="mb-3">Recent Posts</h3>
-              {/* {lastPosts.map((node, index) => {
-                return (
-                  <div key={index} className="mb-3">
-                    <Link to={node.slug} className="text-decoration-none">
-                      <h6 className="text-black">{node.title}</h6>
-                    </Link>
-                  </div>
-                );
-              })} */}
+              <LatestPosts />
             </div>
           </Col>
           <Col xs={12}>
             <hr />
             <div className="my-5">
-              <nav aria-label="Page navigation example">
-                <ul className="pagination">
-                  <li
-                    className={`page-item ${
-                      currentPage === 1 ? "disabled" : ""
-                    }`}
-                  >
-                    <Link
-                      to={prevPagePath}
-                      className="page-link"
-                      aria-label="Previous"
-                    >
-                      <span className="sr-only">Previous</span>
-                    </Link>
-                  </li>
-                  {Array.from({ length: totalPages }).map((_, i) => (
-                    <li className="page-item" key={`pagination-number${i + 1}`}>
-                      <Link
-                        to={`/blog/${i === 0 ? "" : i + 1}`}
-                        className="page-link"
-                      >
-                        {i + 1}
-                      </Link>
-                    </li>
-                  ))}
-                  <li
-                    className={`page-item ${
-                      currentPage === totalPages ? "disabled" : ""
-                    }`}
-                  >
-                    <Link
-                      to={nextPagePath}
-                      className="page-link"
-                      aria-label="Next"
-                    >
-                      <span className="sr-only">Next</span>
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
+              <BlogPagination
+                currentPage={currentPage}
+                prevPagePath={prevPagePath}
+                numPages={numPages}
+                nextPagePath={nextPagePath}
+              />
             </div>
           </Col>
         </Row>
@@ -139,25 +94,6 @@ const BlogPage = ({ data, pageContext }) => {
 
 export const query = graphql`
   query ($skip: Int!, $limit: Int!) {
-    blogImages: allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "unclasified/blog" }
-      }
-      sort: { name: ASC }
-    ) {
-      totalCount
-      edges {
-        node {
-          base
-          name
-          id
-          childImageSharp {
-            gatsbyImageData(width: 500)
-          }
-        }
-      }
-    }
     allWpCategory {
       nodes {
         name

@@ -16,16 +16,7 @@ module.exports = {
         schema: {
           perPage: 5,
           requestConcurrency: 5,
-          previewRequestConcurrency: 2,
-        },
-        develop: {
-          hardCacheMediaFiles: false,
-          hardCacheData: false,
-        },
-        html: {
-          useGatsbyImage: true,
-          imageMaxWidth: 1920,
-          fallbackImageMaxWidth: 800,
+          previewRequestConcurrency: 5,
         },
       },
     },

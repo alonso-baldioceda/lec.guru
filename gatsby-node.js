@@ -17,44 +17,41 @@ exports.createPages = async ({ actions, graphql }) => {
     }
   `);
 
-  const postsPerPage = 5;
-  const totalPages = Math.ceil(result.data.allWpPost.totalCount / postsPerPage);
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`);
+    return;
+  }
 
-  Array.from({ length: totalPages }).forEach((_, i) => {
+  const postsPerPage = 5;
+  const numPages = Math.ceil(result.data.allWpPost.totalCount / postsPerPage);
+
+  Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
-      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      path: i === 0 ? `/blog/` : `/blog/${i + 1}`,
       component: blogTemplate,
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
-        totalPages,
+        numPages,
         currentPage: i + 1,
-        totalPages: totalPages,
-        basePath: "/blog",
       },
     });
   });
 
+  const posts = result.data.allWpPost.nodes;
   const postTemplate = path.resolve("./src/templates/blog-post.js");
 
-  const posts = result.data.allWpPost.nodes;
-
   posts.forEach((post, i) => {
+    const previous = i === posts.length - 1 ? null : posts[i + 1].previous;
+    const next = i === 0 ? null : posts[i - 1].next;
+
     createPage({
-      // will be the url for the page
       path: `/blog${post.uri}`,
-      // specify the component template of your choice
       component: slash(postTemplate),
-      // In the ^template's GraphQL query, 'id' will be available
-      // as a GraphQL variable to query for this post's data.
       context: {
         id: post.id,
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        totalPages,
-        currentPage: i + 1,
-        totalPages: totalPages,
-        basePath: "/blog",
+        previous,
+        next,
       },
     });
   });
