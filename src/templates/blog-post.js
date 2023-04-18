@@ -28,16 +28,12 @@ const BlogPost = ({ data, pageContext }) => {
 
   console.log("data", pageContext, previous, next);
 
-  const { wpPost, allDataJson } = data || {};
+  const { wpPost } = data || {};
   const { title, content, date, featuredImage, author, categories } =
     wpPost || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node;
-  const { common } = node || {};
-  const { header, footer } = common || {};
 
   return (
-    <Layout header={header} footer={footer}>
+    <Layout>
       <StyledBlogPost className={`${prefix}-blog-post`}>
         <div className="position-relative" style={{ height: "300px" }}>
           {featuredImage && (
@@ -120,60 +116,6 @@ export const query = graphql`
       categories {
         nodes {
           name
-        }
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          common {
-            header {
-              brand {
-                alt
-                icon
-                to
-              }
-              nav {
-                label
-                link
-              }
-              top {
-                email {
-                  href
-                  icon
-                  label
-                }
-                phone {
-                  href
-                  icon
-                  label
-                }
-              }
-            }
-            footer {
-              contact {
-                address
-                email
-                heading
-                phone
-              }
-              copyright
-              nav {
-                heading
-                nav {
-                  label
-                  link
-                }
-              }
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
-          }
         }
       }
     }

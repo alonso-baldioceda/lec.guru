@@ -1,9 +1,9 @@
 const path = require("path");
 const { slash } = require(`gatsby-core-utils`);
 
-exports.createPages = async ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions;
-  const blogTemplate = path.resolve("./src/pages/blog.js");
+  const blogTemplate = path.resolve("./src/templates/blog.js");
 
   const result = await graphql(`
     {

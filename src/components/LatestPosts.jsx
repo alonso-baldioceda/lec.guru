@@ -23,7 +23,7 @@ const LatestPosts = () => {
     <div>
       {lastPosts.map((node, index) => (
         <div key={index} className="mb-3">
-          <Link to={node.slug} className="text-decoration-none">
+          <Link to={`/blog/${node.slug}`} className="text-decoration-none">
             <h6 className="text-black">{node.title}</h6>
           </Link>
         </div>

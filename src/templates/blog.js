@@ -9,7 +9,7 @@ import LatestPosts from "../components/LatestPosts";
 import BlogPagination from "../components/BlogPagination";
 
 // Utils
-import { formatAuthorName } from "./../shared/utils";
+import { formatAuthorName } from "../shared/utils";
 
 const BlogPage = ({ data, pageContext }) => {
   const { currentPage, numPages } = pageContext;
