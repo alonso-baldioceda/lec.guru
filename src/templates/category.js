@@ -1,20 +1,23 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { graphql, Link } from "gatsby";
+import { Container, Row, Col } from "react-bootstrap";
 
 // Components
 import Layout from "../components/Layout";
+import RichText from "../components/RichText";
 import BlockLatestPosts from "../components/BlockLatestPosts";
-import BlogPagination from "../components/BlogPagination";
 import BlockList from "../components/BlockList";
+import BlogPagination from "../components/BlogPagination";
 
-const BlogPage = ({ data, pageContext }) => {
-  const { currentPage, numPages } = pageContext;
+// Utils
+import { formatAuthorName } from "../shared/utils";
 
+const CategoryPage = ({ data, pageContext }) => {
+  const { category, posts, currentPage, numPages } = pageContext;
   const prevPagePath = currentPage === 2 ? `/blog` : `/blog/${currentPage - 1}`;
   const nextPagePath = `/blog/${currentPage + 1}`;
 
-  const { allWpCategory, allWpPost } = data || {};
+  const { allWpCategory } = data || {};
 
   return (
     <Layout>
@@ -22,7 +25,13 @@ const BlogPage = ({ data, pageContext }) => {
         <Row className="justify-content-between">
           <Col xs={12}>
             <div className="mt-5">
-              <h1 className="mb-5 fs-3">Blog Home</h1>
+              <div className="mb-4">
+                <Link className="text-uppercase" to="/blog">
+                  Blog Home
+                </Link>
+                <span className="mx-2">|</span>
+                <span className="text-uppercase">{category.name}</span>
+              </div>
               {allWpCategory?.nodes.map((category, index) => {
                 if (category.count !== null) {
                   return (
@@ -42,27 +51,32 @@ const BlogPage = ({ data, pageContext }) => {
               })}
             </div>
           </Col>
-          <Col md={7}>
+          <Col xs={7}>
             <hr />
             <div className="my-5">
-              {allWpPost?.nodes && <BlockList list={allWpPost.nodes} />}
-            </div>
-          </Col>
-          <Col md={5}>
-            <hr />
-            <div className="my-5">
-              <BlockLatestPosts />
-            </div>
-          </Col>
-          <Col xs={12}>
-            <hr />
-            <div className="my-5">
+              <BlockList list={posts} />
+              {/* <div>
+                {Array.from({ length: numPages }).map((_, index) => (
+                  <Link
+                    key={`pagination-number${index + 1}`}
+                    to={`blog/${category.slug}/${index === 0 ? "" : index + 1}`}
+                  >
+                    {index + 1}
+                  </Link>
+                ))}
+              </div> */}
               <BlogPagination
                 currentPage={currentPage}
                 prevPagePath={prevPagePath}
                 numPages={numPages}
                 nextPagePath={nextPagePath}
               />
+            </div>
+          </Col>
+          <Col md={4}>
+            <hr />
+            <div className="my-5">
+              <BlockLatestPosts />
             </div>
           </Col>
         </Row>
@@ -72,7 +86,7 @@ const BlogPage = ({ data, pageContext }) => {
 };
 
 export const query = graphql`
-  query ($skip: Int!, $limit: Int!) {
+  query {
     allWpCategory {
       nodes {
         name
@@ -81,26 +95,7 @@ export const query = graphql`
         id
       }
     }
-    allWpPost(sort: { date: DESC }, skip: $skip, limit: $limit) {
-      nodes {
-        id
-        uri
-        slug
-        title
-        excerpt
-        date(formatString: "MMMM DD, YYYY")
-        author {
-          node {
-            avatar {
-              url
-            }
-            firstName
-            lastName
-          }
-        }
-      }
-    }
   }
 `;
 
-export default BlogPage;
+export default CategoryPage;

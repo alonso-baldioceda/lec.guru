@@ -42,7 +42,46 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+  ${() => {
+    let styles = "";
+    for (const color in colors) {
+      const camelToDash = color
+        .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2")
+        .toLowerCase();
 
+      styles += `
+      .bg-${camelToDash} {
+        background-color: ${colors[color]} !important;
+      }
+
+      .border-${camelToDash} {
+        border-color: ${colors[color]} !important;
+        border-style: solid;
+        border-width: 4px;
+      }
+
+      .text-${camelToDash} {
+        color: ${colors[color]} !important;
+      }
+    `;
+    }
+
+    for (const weight in typography.weights) {
+      styles += `
+        .font-${weight} {
+          font-weight: ${typography.weights[weight]} !important;
+        }
+      `;
+    }
+
+    return styles;
+  }}
+
+  .border-radius-1 {
+    border-radius: 8px; 
+  }
+
+  /* Specific classes for WP */
   .${prefix}-blog-post {
     h1,
     h2,
@@ -110,41 +149,6 @@ const GlobalStyles = createGlobalStyle`
     }
 
   }
-
-  ${() => {
-    let styles = "";
-    for (const color in colors) {
-      const camelToDash = color
-        .replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, "$1-$2")
-        .toLowerCase();
-
-      styles += `
-      .bg-${camelToDash} {
-        background-color: ${colors[color]} !important;
-      }
-
-      .border-${camelToDash} {
-        border-color: ${colors[color]} !important;
-        border-style: solid;
-        border-width: 4px;
-      }
-
-      .text-${camelToDash} {
-        color: ${colors[color]} !important;
-      }
-    `;
-    }
-
-    for (const weight in typography.weights) {
-      styles += `
-        .font-${weight} {
-          font-weight: ${typography.weights[weight]} !important;
-        }
-      `;
-    }
-
-    return styles;
-  }}
 `;
 
 export default GlobalStyles;

@@ -7,7 +7,7 @@ const BubbleDesktop = ({ cta, text }) => {
     <div
       className={`d-flex align-items-center d-none d-md-block ${prefix}-bubble-desktop`}
     >
-      <div className="d-flex flex-row justify-content-center bg-sycamore-lighter mb-3 mb-lg-4 p-4 rounded rounded-4">
+      <div className="d-flex flex-row justify-content-center bg-sycamore-lighter mb-3 mb-lg-4 p-4 border-radius-1">
         <div className="d-flex align-items-center justify-content-center h-100">
           <i className="bi bi-megaphone fs-1 text-sycamore mx-2"></i>
         </div>

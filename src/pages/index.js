@@ -9,14 +9,13 @@ import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import BackgroundImage from "../components/BackgroundImage";
+import Slider from "../components/Slider";
 import CardV1 from "../components/CardV1";
 import CardV2 from "../components/CardV2";
+import CardV3 from "../components/CardV3";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
-import Slider from "../components/Slider.jsx";
-import CardV3 from "../components/CardV3.jsx";
-// import RichText from "../components/RichText.jsx";
 
 // Styles
 const StyledIndexPage = styled.div``;

@@ -16,7 +16,7 @@ const ContactPage = ({ data }) => {
   return (
     <Layout>
       <div className="px-2 px-ld-0">
-        <Container className="rounded rounded-4 my-4 my-md-5 overflow-hidden">
+        <Container className="border-radius-1 my-4 my-md-5 overflow-hidden">
           <Row className="bg-marino-lighter">
             <Col md={6}>
               <div className="p-3 p-md-4 p-lg-5">

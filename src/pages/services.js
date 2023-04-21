@@ -96,7 +96,7 @@ const ServicesPage = ({ data }) => {
               <Container>
                 <Row className="justify-content-center">
                   <Col xs={12} xl={8}>
-                    <div className="p-3 p-md-5 rounded rounded-4 position-relative overflow-hidden">
+                    <div className="p-3 p-md-5 border-radius-1 position-relative overflow-hidden">
                       <Mask bgColor={colors.white} opacity={90} />
                       <h2 className="text-center underlined">
                         <RichText text={title} />
@@ -116,7 +116,7 @@ const ServicesPage = ({ data }) => {
                     <BrickWall conf={masonryBreakpoint}>
                       {details.map((detail, index) => (
                         <div
-                          className="bg-sycamore-lighter rounded rounded-4 p-4 p-sm-5 px-lg-4 py-lg-5"
+                          className="bg-sycamore-lighter border-radius-1 p-4 p-sm-5 px-lg-4 py-lg-5"
                           key={index}
                         >
                           <h3 className="text-center mb-4 mb-lg-4 font-bold text-sycamore">

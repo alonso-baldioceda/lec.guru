@@ -11,7 +11,7 @@ const StyledLink = styled(GatsbyLink)`
   text-decoration: none;
 
   .card {
-    border-radius: 10px;
+    border-radius: 8px;
     border: 3px solid ${colors.rouge};
     color: ${colors.black};
     height: 100%;

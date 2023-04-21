@@ -1,12 +1,12 @@
 export const prefix = "lec";
 
 // Colors
-
+// https://colors.muz.li/color-palette-generator/2f5c6d
 export const colors = {
   black: "#000000",
   casal: "#2f5c6d",
-  casalLight: "#b8d6e0",
-  casalLighter: "#dbeaf0",
+  casalLight: "#c9e0e8",
+  casalLighter: "#edf5f7",
   finn: "#6d2f52",
   finnLight: "#e0b8cf",
   finnLighter: "#f0dbe7",

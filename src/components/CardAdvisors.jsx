@@ -29,10 +29,6 @@ const ImageContainer = styled.div`
   background-color: ${colors.white};
   border-radius: 50%;
   margin-bottom: 1rem;
-  /* 
-  @media (min-width: 768px) {
-    margin-right: 0;
-  } */
 
   @media (min-width: 992px) {
     margin-bottom: 0;

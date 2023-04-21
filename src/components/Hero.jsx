@@ -54,7 +54,7 @@ const Hero = ({ cta, heading, img, text, small, src }) => (
               <Col
                 xs={12}
                 lg={8}
-                className="p-4 p-sm-5 mb-lg-0 rounded-4 transparent"
+                className="p-4 p-sm-5 mb-lg-0 border-radius-1 transparent"
               >
                 <h1 className="mb-4">{heading}</h1>
                 <h2 className="mb-0 mb-md-4 fw-bold fs-5">{text}</h2>

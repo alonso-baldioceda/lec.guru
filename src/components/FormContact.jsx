@@ -15,7 +15,6 @@ import { colors, prefix } from "./../shared/styles.js";
 const StylesFormContact = styled.div`
   .invalid {
     background-color: ${colors.rouge};
-    border-radius: 15px;
     color: ${colors.white};
     display: inline-block;
     font-size: 0.875rem;
@@ -149,7 +148,9 @@ export const FormContact = ({
                       onChange={handleChange}
                     />
                     {errors.firstName && touched.firstName ? (
-                      <span className="invalid">{errors.firstName}</span>
+                      <span className="invalid border-radius-1">
+                        {errors.firstName}
+                      </span>
                     ) : null}
                   </Col>
                   <Col xs={12} md={6} className="mb-4">

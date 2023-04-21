@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { colors, prefix } from "./../shared/styles.js";
@@ -8,7 +8,7 @@ import { colors, prefix } from "./../shared/styles.js";
 import Layout from "../components/Layout";
 import BackgroundImage from "../components/BackgroundImage";
 import Mask from "../components/Mask";
-import LatestPosts from "../components/LatestPosts.jsx";
+import BlockLatestPosts from "../components/BlockLatestPosts.jsx";
 
 // Utils
 import { formatAuthorName } from "./../shared/utils.js";
@@ -26,11 +26,14 @@ const Panel = styled.div`
 const BlogPost = ({ data, pageContext }) => {
   const { previous, next } = pageContext;
 
-  console.log("data", pageContext, previous, next);
-
   const { wpPost } = data || {};
   const { title, content, date, featuredImage, author, categories } =
     wpPost || {};
+
+  const { nodes } = categories || {};
+  const { name: categoryName, slug: categorySlug } = nodes[0] || {};
+
+  console.log("nodes", nodes[0].name);
 
   return (
     <Layout>
@@ -43,7 +46,7 @@ const BlogPost = ({ data, pageContext }) => {
             <Row>
               <Col xs={12}>
                 <Panel>
-                  <div className="position-relative">
+                  <div className="position-relative border-radius-1 overflow-hidden">
                     <Mask opacity={90} bgColor={colors.rouge} />
                     <div className="p-4">
                       <h1 className="text-white fs-2 mb-2">{title}</h1>
@@ -70,13 +73,25 @@ const BlogPost = ({ data, pageContext }) => {
         <div className="my-5">
           <Container>
             <Row className="justify-content-between">
+              <Col xs={12}>
+                <div className="mb-4">
+                  <Link className="text-uppercase" to="/blog">
+                    Blog Home
+                  </Link>
+                  <span className="mx-2">|</span>
+                  <span className="text-uppercase">
+                    <Link to={`/blog/category/${categorySlug}`}>
+                      {categoryName}
+                    </Link>
+                  </span>
+                </div>
+              </Col>
               <Col md={7}>
                 <div dangerouslySetInnerHTML={{ __html: content }} />
               </Col>
               <Col md={4}>
                 <div className="mb-5">
-                  <h3 className="mb-3">Recent Posts</h3>
-                  <LatestPosts />
+                  <BlockLatestPosts />
                 </div>
               </Col>
             </Row>
@@ -116,6 +131,7 @@ export const query = graphql`
       categories {
         nodes {
           name
+          slug
         }
       }
     }

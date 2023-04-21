@@ -52,7 +52,7 @@ const StyledMenuClose = styled.div`
 `;
 
 const StyledSpan = styled.span`
-  border-radius: 9px;
+  border-radius: 8px;
   display: block;
   height: 3px;
   left: 0;
