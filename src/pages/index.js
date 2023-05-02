@@ -9,10 +9,9 @@ import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import BackgroundImage from "../components/BackgroundImage";
-import Slider from "../components/Slider";
+import BlockLatestSlider from "../components/BlockLatestSlider";
 import CardV1 from "../components/CardV1";
 import CardV2 from "../components/CardV2";
-import CardV3 from "../components/CardV3";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
@@ -21,7 +20,7 @@ import Mask from "../components/Mask";
 const StyledIndexPage = styled.div``;
 
 const IndexPage = ({ data }) => {
-  const { hero: heroImg, clientsImages, blogImages, allDataJson } = data || {};
+  const { hero: heroImg, clientsImages, allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const node = edges[0].node;
   const { common, homepage } = node || {};
@@ -30,51 +29,6 @@ const IndexPage = ({ data }) => {
 
   const heroImage = getImage(heroImg);
   const heroSrc = heroImage.images.fallback.src;
-
-  const blogSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
-  };
-
-  blog.slider.nodes.forEach((item, index) => {
-    const image = getImage(blogImages.edges[index]?.node.childImageSharp);
-    const fallbackImage = image?.images.fallback.src;
-    item.image = fallbackImage;
-  });
 
   return (
     <StyledIndexPage>
@@ -197,13 +151,7 @@ const IndexPage = ({ data }) => {
                 </h2>
                 <p className="mb-3 mb-lg-5">{blog.text}</p>
                 <div className="mb-3 mb-lg-5">
-                  <Slider settings={blogSliderSettings}>
-                    {blog.slider.nodes.map((item, index) => (
-                      <div key={index}>
-                        <CardV3 {...item} />
-                      </div>
-                    ))}
-                  </Slider>
+                  <BlockLatestSlider />
                 </div>
               </Col>
             </Row>
@@ -242,25 +190,6 @@ export const query = graphql`
           id
           childImageSharp {
             gatsbyImageData(width: 200)
-          }
-        }
-      }
-    }
-    blogImages: allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "unclasified/blog" }
-      }
-      sort: { name: ASC }
-    ) {
-      totalCount
-      edges {
-        node {
-          base
-          name
-          id
-          childImageSharp {
-            gatsbyImageData(width: 500)
           }
         }
       }

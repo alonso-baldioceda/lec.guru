@@ -17,7 +17,7 @@ const Main = styled.main`
   }
 `;
 
-const Layout = ({ children, footer, header }) => {
+const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const data = useStaticQuery(graphql`

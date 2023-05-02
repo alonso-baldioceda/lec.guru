@@ -24,21 +24,27 @@ const StyledCardV3 = styled.div`
   }
 `;
 
-const CardV3 = ({ cta, heading, image, img }) => {
+const CardV3 = ({ author, date, image, title }) => {
   // TODO: use excerpt
   // Trim the heading to 40 characters
-  const trimmedHeading = heading.substring(0, 60);
+  const trimmedTitle = title.substring(0, 60);
 
   return (
     <StyledCardV3 className={classnames(`m-2 ${prefix}-card-v3`)}>
       <Card className="border-radius-1">
-        <Card.Img width="100%" src={img.src} alt={img.alt} />
+        <Card.Img width="100%" src={image} alt={title} />
         <Card.Body className="m-2">
           <Card.Title tag="h6" className="font-bold">
-            {trimmedHeading}...
+            {trimmedTitle}...
           </Card.Title>
-          {/* TODO: Add categoory and date */}
-          {/* <Card.Text>{card.text}</CardText> */}
+          <div className="d-flex">
+            <Card.Text className="text-muted mb-0">
+              <small>{author}</small>
+            </Card.Text>
+          </div>
+          <Card.Text className="text-muted mb-0">
+            <small>{date}</small>
+          </Card.Text>
         </Card.Body>
       </Card>
     </StyledCardV3>

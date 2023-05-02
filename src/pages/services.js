@@ -8,19 +8,18 @@ import { getImage } from "gatsby-plugin-image";
 import { colors, prefix } from "../shared/styles.js";
 
 // Components
-import Layout from "../components/Layout.jsx";
-import BackgroundImage from "../components/BackgroundImage.jsx";
-import Mask from "../components/Mask.jsx";
-import RichText from "../components/RichText.jsx";
-import CollapsableItemList from "../components/CollapsableItemList.jsx";
-import Slider from "../components/Slider.jsx";
-import CardV3 from "../components/CardV3.jsx";
-import BrickWall from "../components/BrickWall.jsx";
+import Layout from "../components/Layout";
+import BackgroundImage from "../components/BackgroundImage";
+import BlockLatestSlider from "../components/BlockLatestSlider";
+import Mask from "../components/Mask";
+import RichText from "../components/RichText";
+import CollapsableItemList from "../components/CollapsableItemList";
+import BrickWall from "../components/BrickWall";
 
 const StyledServicesPage = styled.div``;
 
 const ServicesPage = ({ data }) => {
-  const { blogImages, hero, allDataJson } = data || {};
+  const { hero, allDataJson } = data || {};
   const { edges } = allDataJson || {};
   const node = edges[0].node || {};
   const { common, servicespage } = node || {};
@@ -38,51 +37,6 @@ const ServicesPage = ({ data }) => {
     992: 2,
     768: 1,
   };
-
-  const blogSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
-  };
-
-  blog.slider.nodes.forEach((item, index) => {
-    const image = getImage(blogImages.edges[index]?.node.childImageSharp);
-    const fallbackImage = image?.images.fallback.src;
-    item.image = fallbackImage;
-  });
 
   return (
     <StyledServicesPage>
@@ -148,13 +102,7 @@ const ServicesPage = ({ data }) => {
                   </h2>
                   <p className="mb-3 mb-lg-5">{blog.text}</p>
                   <div className="mb-3 mb-lg-5">
-                    <Slider settings={blogSliderSettings}>
-                      {blog.slider.nodes.map((item, index) => (
-                        <div key={index}>
-                          <CardV3 {...item} />
-                        </div>
-                      ))}
-                    </Slider>
+                    <BlockLatestSlider />
                   </div>
                 </Col>
               </Row>
@@ -177,25 +125,6 @@ export const query = graphql`
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-      }
-    }
-    blogImages: allFile(
-      filter: {
-        extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-        relativeDirectory: { eq: "unclasified/blog" }
-      }
-      sort: { name: ASC }
-    ) {
-      totalCount
-      edges {
-        node {
-          base
-          name
-          id
-          childImageSharp {
-            gatsbyImageData(width: 500)
-          }
-        }
       }
     }
     allDataJson {
@@ -221,19 +150,6 @@ export const query = graphql`
             }
             blog {
               heading
-              slider {
-                nodes {
-                  cta {
-                    label
-                    link
-                  }
-                  heading
-                  img {
-                    alt
-                    src
-                  }
-                }
-              }
               text
             }
           }
