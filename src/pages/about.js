@@ -52,6 +52,23 @@ const AboutPage = ({ data }) => {
                 <Col md={12}>
                   <h1 className="mb-5">{aboutpage.heading}</h1>
                   <RichText text={aboutpage.text} />
+                  <h2 className="mb-5">{aboutpage.inspiration.heading}</h2>
+                  <h3 className="mb-4 font-bold">
+                    {aboutpage.inspiration.subheading}
+                  </h3>
+                  <p className="mb-5">{aboutpage.inspiration.text}</p>
+                  <h3 className="mb-4 font-bold">
+                    {aboutpage.inspiration.list[0].heading}
+                  </h3>
+                  <p className="mb-5">{aboutpage.inspiration.list[0].text}</p>
+                  <h3 className="mb-4 font-bold">
+                    {aboutpage.inspiration.list[1].heading}
+                  </h3>
+                  <p className="mb-5">{aboutpage.inspiration.list[1].text}</p>
+                  <h3 className="mb-4 font-bold">
+                    {aboutpage.inspiration.list[2].heading}
+                  </h3>
+                  <p className="mb-3">{aboutpage.inspiration.list[2].text}</p>
                 </Col>
               </Row>
             </Container>
@@ -124,6 +141,15 @@ export const query = graphql`
           aboutpage {
             heading
             text
+            inspiration {
+              heading
+              subheading
+              text
+              list {
+                heading
+                text
+              }
+            }
             testimonials {
               heading
               list {

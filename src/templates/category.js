@@ -4,13 +4,9 @@ import { Container, Row, Col } from "react-bootstrap";
 
 // Components
 import Layout from "../components/Layout";
-import RichText from "../components/RichText";
 import BlockLatestPosts from "../components/BlockLatestPosts";
 import BlockList from "../components/BlockList";
 import BlogPagination from "../components/BlogPagination";
-
-// Utils
-import { formatAuthorName } from "../shared/utils";
 
 const CategoryPage = ({ data, pageContext }) => {
   const { category, posts, currentPage, numPages } = pageContext;

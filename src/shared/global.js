@@ -39,7 +39,12 @@ const GlobalStyles = createGlobalStyle`
     .decorator {
       border-bottom: 6px solid ${colors.rouge};
       font-weight: ${typography.weights.black} !important;
+      line-height: 1.4;
     }
+  }
+
+  .font-bolder {
+    font-weight: ${typography.weights.black} !important;
   }
 
   ${() => {
@@ -147,7 +152,6 @@ const GlobalStyles = createGlobalStyle`
         font-style: italic;
       }
     }
-
   }
 `;
 

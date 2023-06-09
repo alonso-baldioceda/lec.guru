@@ -15,6 +15,7 @@ import CardV2 from "../components/CardV2";
 import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
+import RichText from "../components/RichText.jsx";
 
 // Styles
 const StyledIndexPage = styled.div``;
@@ -89,35 +90,54 @@ const IndexPage = ({ data }) => {
             <div className="py-3 py-lg-5">
               <Container className="py-4 py-lg-5">
                 <Row className="justify-content-center">
-                  <Col xs={11} lg={7}>
-                    <h2
-                      className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined"
-                      dangerouslySetInnerHTML={{
-                        __html: about.heading,
-                      }}
-                    />
+                  <Col xs={11} sm={8} lg={10}>
+                    <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
+                      <RichText text={about.heading} />
+                    </h2>
+                    <p className="mb-3 text-center">
+                      To help our clients make distinctive, lasting, and
+                      substantial improvements in their performance and to build
+                      a great firm that attracts, develops, excites, and retains
+                      exceptional people.
+                    </p>
+                    <p className="mb-5 text-center">
+                      Our values are a clear and unique reflection of the
+                      thinking of our founder, Dr. Thomas Agrait who has been a
+                      driving force in shaping the firm. Our values have been
+                      transformed incrementally to reflect the changing times.
+                      They are the lighthouse of our long-term strategy as a
+                      firm and the way we serve our clients daily.
+                    </p>
                   </Col>
                 </Row>
                 <Row>
-                  <Col sm={6} className="px-4 px-lg-5">
+                  <Col lg={10} className="offset-1">
                     <i>
                       <h3 className="mt-4 mb-4 text-dark text-center">
-                        {about.company.heading}
+                        {about.purpose.heading}
                       </h3>
                     </i>
-                    <p className="text-dark text-center">
-                      {about.company.text}
-                    </p>
+                    <p className="text-dark">{about.purpose.text}</p>
                   </Col>
-                  <Col sm={6} className="px-4 px-lg-5">
+                  <Col lg={10} className="offset-1">
                     <i>
                       <h3 className="mt-4 mb-4 text-dark text-center">
                         {about.mission.heading}
                       </h3>
                     </i>
-                    <p className="text-dark text-center">
-                      {about.mission.text}
-                    </p>
+                    <p className="text-dark">{about.mission.text}</p>
+                  </Col>
+                  <Col lg={10} className="offset-1">
+                    <i>
+                      <h3 className="mt-4 mb-4 text-dark text-center">
+                        {about.pillars.heading}
+                      </h3>
+                    </i>
+                    <ul className="text-dark d-flex flex-column align-items-center">
+                      <li>{about.pillars.list[0].text}</li>
+                      <li>{about.pillars.list[1].text}</li>
+                      <li>{about.pillars.list[2].text}</li>
+                    </ul>
                   </Col>
                 </Row>
               </Container>
@@ -147,7 +167,7 @@ const IndexPage = ({ data }) => {
             <Row className="justify-content-center">
               <Col lg={19}>
                 <h2 className="text-center mb-3 mb-lg-5 text-casal fs-1">
-                  {blog.heading}
+                  <RichText text={blog.heading} />
                 </h2>
                 <p className="mb-3 mb-lg-5">{blog.text}</p>
                 <div className="mb-3 mb-lg-5">
@@ -235,14 +255,20 @@ export const query = graphql`
           }
           homepage {
             about {
-              company {
+              heading
+              purpose {
                 heading
                 text
               }
-              heading
               mission {
                 heading
                 text
+              }
+              pillars {
+                heading
+                list {
+                  text
+                }
               }
             }
             hero {

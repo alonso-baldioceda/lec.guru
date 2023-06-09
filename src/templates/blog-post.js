@@ -23,9 +23,7 @@ const Panel = styled.div`
   width: 50%;
 `;
 
-const BlogPost = ({ data, pageContext }) => {
-  const { previous, next } = pageContext;
-
+const BlogPost = ({ data }) => {
   const { wpPost } = data || {};
   const { title, content, date, featuredImage, author, categories } =
     wpPost || {};

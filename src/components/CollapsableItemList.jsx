@@ -11,9 +11,17 @@ const StyledCollapsableItemList = styled.li`
     border-bottom: none;
   }
 
-  a {
+  button {
+    background: none;
+    border: none;
+    color: inherit;
     cursor: pointer;
+    cursor: pointer;
+    font: inherit;
+    outline: inherit;
+    padding: 0;
     text-decoration: none;
+    width: 100%;
 
     .collapsable {
       color: ${colors.rouge};
@@ -22,6 +30,7 @@ const StyledCollapsableItemList = styled.li`
 
       &.open {
         height: auto;
+        font-size: 15px;
       }
     }
   }
@@ -36,10 +45,11 @@ const CollapsableItemList = ({ item }) => {
 
   return (
     <StyledCollapsableItemList className={`${prefix}-collapsable-item-list`}>
-      <a className="py-4 d-block" onClick={handleClick}>
-        <div className="d-flex align-items-center justify-content-between">
-          <p className="mb-0 text-sycamore font-bold me-3">{item.title}</p>
-
+      <button className="py-4 d-block" onClick={handleClick}>
+        <div className="d-flex align-items-start justify-content-between">
+          <span className="mb-0 text-sycamore font-bold me-3 text-start">
+            {item.title}
+          </span>
           {isExpanded ? (
             <i className="bi bi-arrow-down text-sycamore"></i>
           ) : (
@@ -49,14 +59,14 @@ const CollapsableItemList = ({ item }) => {
 
         {isExpanded && (
           <p
-            className={classnames("mt-3 mb-0 collapsable", {
+            className={classnames("mt-3 mb-0 collapsable text-start", {
               open: isExpanded,
             })}
           >
             {item.description}
           </p>
         )}
-      </a>
+      </button>
     </StyledCollapsableItemList>
   );
 };

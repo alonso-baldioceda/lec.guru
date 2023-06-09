@@ -98,7 +98,7 @@ const ServicesPage = ({ data }) => {
               <Row className="justify-content-center">
                 <Col lg={10}>
                   <h2 className="text-center mb-3 mb-lg-5 text-casal fs-1">
-                    {blog.heading}
+                    <RichText text={blog.heading} />
                   </h2>
                   <p className="mb-3 mb-lg-5">{blog.text}</p>
                   <div className="mb-3 mb-lg-5">

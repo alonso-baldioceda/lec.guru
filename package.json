@@ -27,6 +27,7 @@
     "formik": "^2.2.9",
     "gatsby": "^5.7.0",
     "gatsby-awesome-pagination": "^0.3.8",
+    "gatsby-cli": "^5.10.0",
     "gatsby-plugin-image": "^3.7.0",
     "gatsby-plugin-manifest": "^5.7.0",
     "gatsby-plugin-mdx": "^5.7.0",

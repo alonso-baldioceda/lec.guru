@@ -28,8 +28,8 @@
       ]
     },
     "blog": {
-      "heading": "Our Blog",
-      "text": "Here you will find the latest articles and resources on the world of lean manufacturing and lean management. Whether you're just starting your lean journey or looking to take your current processes to the next level, our blog section is the perfect resource for you. Join us as we explore the latest trends and best practices in lean consulting and help you unlock the full potential of your organization. Thank you for visiting and we look forward to partnering with you on your lean journey!",
+      "heading": "<span class=\"fs-1 font-bolder\">Our Blog</span><br /><i class=\"fs-1\">What is </i><span class=\"fs-1 decorator\">new</span> <i class=\"fs-1 font-regular\">at Lean Enterprise Consulting</i>",
+      "text": "A fresh and actual collection of articles about our people, our capabilities, our research, our great customers and the never-ending process of continuous improvement of our firm and our global community.",
       "slider": {
         "nodes": [
           {
@@ -260,20 +260,53 @@
       ]
     },
     "about": {
-      "heading": "<i class=\"fs-1\">A little</i> <span class=\"fs-1 decorator\">about us</span>, <i class=\"fs-1 font-regular\">and our mission as world class<i> <span class='fs-1 decorator '>problem solvers</span>",
-      "company": {
-        "heading": "Our Company",
-        "text": "We are a consulting firm specializing in Lean Process Improvement. Our team of experienced consultants has worked with a variety of industries to identify opportunities to reduce waste and improve efficiency in their processes. At our core, we believe in a hands-on approach to problem-solving. Our consultants work side-by-side with our clients to identify opportunities for improvement and develop solutions that are tailored to their specific needs."
+      "heading": "<i class=\"fs-1\">Our</i> <span class=\"fs-1 decorator\">Purpose</span>, <span class=\"fs-1 decorator\">Mission</span> <i class=\"fs-1\">and</i> <span class='fs-1 decorator '>Values</span>",
+      "purpose": {
+        "heading": "Our Purpose",
+        "text": "To assist on the transformation of our global community to create a positive, enduring change in the world."
       },
       "mission": {
         "heading": "Our Mission",
-        "text": "Our mission is to help organizations achieve their full potential through the implementation of Lean Process Improvement techniques. We believe that every organization has the potential to be more efficient, more productive, and more successful. We are committed to providing our clients with the highest level of service and expertise. Our goal is to build long-term relationships with our clients and help them achieve sustainable improvements in their processes."
+        "text": "To help our clients achieve substantial and long-lasting improvements in their performance and to build a great firm that attracts, develops, excites, and retains the very best talent."
+      },
+      "pillars": {
+        "heading": "The Three Pillars that support our Values",
+        "list": [
+          {
+            "text": "Adhere to the highest professional standards."
+          },
+          {
+            "text": "Improve our clients’ performance significantly."
+          },
+          {
+            "text": "Create an unrivaled environment for exceptional people."
+          }
+        ]
       }
     }
   },
   "aboutpage": {
     "heading": "About us",
-    "text": "<p class='mb-3'>Created in 2008, Lean Enterprise Consulting, Inc., has become a global key player in Validation, Regulatory Support, Process Improvement, Engineering and Tech Education, through the delivery of high-quality services that help organizations meet the growing challenges of quality, safety, regulatory, environmental protection and social responsibility. As a trusted partner, Lean Enterprise Consulting, offers innovative solutions that go beyond simple compliance with regulations and standards, fostering an increased ability to reduce risk, improve performance and promote sustainable development.</p><p class='mb-3'>Lean Enterprise Consulting, Inc. focuses on supporting Life Sciences and general industry by aiming its delivery of services to the highest levels of customer satisfaction, striving on each and every task to exceed customers expectations. Lean Enterprise Consulting, Inc. started in business to collaborate with its client-base into achieving greater productivity and experience significant cost reduction</p><p class='mb-0'>However, as this company has interacted in partnership with its customers, its has gained important knowledge and acquired an enhanced perspective on how to help them increase their profits and become more competitive. That is has evolved into a fundamental Value-Added Promise, which translates into tangible benefits for the client. Lean Enterprise Consulting, Inc. interventions transform customers´ needs and opportunities into measurable results.</p>",
+    "text": "<p class='mb-3'>Created in 2008, Lean Enterprise Consulting, Inc., has become a global key player in Validation, Regulatory Support, Process Improvement, Engineering and Tech Education, through the delivery of high-quality services that help organizations meet the growing challenges of quality, safety, regulatory, environmental protection and social responsibility. As a trusted partner, Lean Enterprise Consulting, offers innovative solutions that go beyond simple compliance with regulations and standards, fostering an increased ability to reduce risk, improve performance and promote sustainable development.</p><p class='mb-3'>Lean Enterprise Consulting, Inc. focuses on supporting Life Sciences and general industry by aiming its delivery of services to the highest levels of customer satisfaction, striving on each and every task to exceed customers expectations. Lean Enterprise Consulting, Inc. started in business to collaborate with its client-base into achieving greater productivity and experience significant cost reduction</p><p class='mb-5'>However, as this company has interacted in partnership with its customers, its has gained important knowledge and acquired an enhanced perspective on how to help them increase their profits and become more competitive. That is has evolved into a fundamental Value-Added Promise, which translates into tangible benefits for the client. Lean Enterprise Consulting, Inc. interventions transform customers´ needs and opportunities into measurable results.</p>",
+    "inspiration": {
+      "heading": "Our Aspiration",
+      "subheading": "Accelerate a Sustainable and Inclusive Growth of our client and the global community.",
+      "text": "Since the beginning, we’ve always been strong believers in the operational and financial growth potential of our clients. Today, we’re privileged to work with local and global organizations, public and private; that are on a new and accelerated growth journey, one that pursues sustainability, inclusion, and economic growth, all at the same time.",
+      "list": [
+        {
+          "heading": "Serve as role model of Servant Leadership for our community.",
+          "text": "Our comprehensive set of practices serve clients across most capabilities and industries. Our global servant-leader partners are responsible for delivering client impact, developing knowledge and capabilities, innovating, and developing people. They work closely with regional partners and many others to deliver positive, enduring change to our clients and stakeholders for the well-being of those being served."
+        },
+        {
+          "heading": "Promote a higher Code of Professional Conduct",
+          "text": "Bring our values to life for our colleagues and clients all over the world."
+        },
+        {
+          "heading": "Advance Environmental Sustainability",
+          "text": "Our strategy & actions helps us to minimize the impact our firm has on the environment."
+        }
+      ]
+    },
     "testimonials": {
       "heading": "<i class=\"fs-1\">What people </i><span class=\"fs-1 decorator\">say</span> <i class=\"fs-1 font-regular\">about <i> <span class='fs-1 decorator'>our work</span>",
       "list": [
@@ -559,7 +592,7 @@
     ]
   },
   "contactpage": {
-    "address": "123 Main St, San Francisco, CA 94110",
+    "address": "7617 NW 87th Way, Tamarac FL 33321",
     "description": "Contact us for any question, comment or collaboration. We are happy to listen and help you.",
     "email": "Email address",
     "firstName": "First name",
