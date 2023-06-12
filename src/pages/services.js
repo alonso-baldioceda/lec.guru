@@ -52,9 +52,7 @@ const ServicesPage = ({ data }) => {
                   <Col xs={12} xl={8}>
                     <div className="p-3 p-md-5 border-radius-1 position-relative overflow-hidden">
                       <Mask bgColor={colors.white} opacity={90} />
-                      <h2 className="text-center underlined">
-                        <RichText text={title} />
-                      </h2>
+                      <h2 className="text-center underlined">{title}</h2>
                     </div>
                   </Col>
                 </Row>
@@ -66,6 +64,19 @@ const ServicesPage = ({ data }) => {
             <div className="py-4 py-lg-5">
               <Container>
                 <Row>
+                  <Col xs={12}>
+                    <p className="mb-5">
+                      Our consulting is focused on those resources with economic
+                      value owned or controlled by our clients that will provide
+                      the highest benefit. This approach helps us deliver
+                      insight and impact the organization in a very short time
+                      frame. Our solutions leverage advanced technology,
+                      proprietary data, regulatory knowledge, process
+                      transformation and deep expertise to help clients in the
+                      process of diagnostic, management technology, analytics,
+                      and applied solutions.
+                    </p>
+                  </Col>
                   <Col xs={12}>
                     <BrickWall conf={masonryBreakpoint}>
                       {details.map((detail, index) => (

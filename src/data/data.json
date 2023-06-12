@@ -203,12 +203,11 @@
   "homepage": {
     "hero": {
       "img": "images/unclasified/3.jpg",
-      "heading": "LEAN Enterprise Consulting",
-      "text": "We transform your company into an efficient and customer-oriented organization through the use of Lean methodologies.",
-      "small": "For more than 40 years we have helped more than 200 organizations to be more productive and profitable through the identification and elimination of unnecessary processes, reduction of time and elimination of defects, among others.",
+      "heading": "Our People",
+      "text": "The Lean Enterprise Consulting Senior Advisors",
+      "small": "A team of experts with a new model focused on a powerful aspiration: creating sustainable, inclusive growth for companies looking to outperform in this era of disruption.",
       "cta": [
-        { "label": "Meet the experts", "link": "/executive-advisors" },
-        { "label": "Our Services", "link": "/services" }
+        { "label": "Meet our Senior Advisors", "link": "/executive-advisors" }
       ]
     },
     "services": {
@@ -340,7 +339,7 @@
   "servicespage": {
     "services": [
       {
-        "title": "<i class=\"fs-1\">Streamline Your Success with our Solutions.</i>",
+        "title": "Streamline Your Success with our Solutions.",
         "subtitle": "Streamline Your Success with LEAN Enterprise Consulting Services for Efficient Operations",
         "details": [
           {

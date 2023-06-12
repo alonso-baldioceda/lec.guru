@@ -23,15 +23,6 @@ const BubbleDesktop = ({ cta, text }) => {
             {cta[0].label}
           </a>
         </div>
-        <div>
-          <a
-            className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mb-md-0 mx-0 mx-md-2"
-            href={cta[1].link}
-            role="button"
-          >
-            {cta[1].label}
-          </a>
-        </div>
       </div>
     </div>
   );

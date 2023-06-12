@@ -1,5 +1,4 @@
 import React from "react";
-// import styled from "styled-components";
 import { prefix } from "../shared/styles.js";
 
 const BubbleMobile = ({ cta, text }) => {
@@ -20,15 +19,6 @@ const BubbleMobile = ({ cta, text }) => {
               role="button"
             >
               {cta[0].label}
-            </a>
-          </div>
-          <div className="mx-2">
-            <a
-              className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mb-md-0 mx-0 mx-md-2"
-              href={cta[1].link}
-              role="button"
-            >
-              {cta[1].label}
             </a>
           </div>
         </div>
