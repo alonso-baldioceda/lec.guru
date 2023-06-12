@@ -260,7 +260,7 @@
       ]
     },
     "about": {
-      "heading": "<i class=\"fs-1\">Our</i> <span class=\"fs-1 decorator\">Purpose</span>, <span class=\"fs-1 decorator\">Mission</span> <i class=\"fs-1\">and</i> <span class='fs-1 decorator '>Values</span>",
+      "heading": "Our Purpose, Mission and Values",
       "purpose": {
         "heading": "Our Purpose",
         "text": "To assist on the transformation of our global community to create a positive, enduring change in the world."
@@ -340,7 +340,7 @@
   "servicespage": {
     "services": [
       {
-        "title": "<i class=\"fs-1\">Streamline Your Success with</i><br/><span class='decorator fs-1'>LEAN Enterprise Consulting</span>",
+        "title": "<i class=\"fs-1\">Streamline Your Success with our Solutions.</i>",
         "subtitle": "Streamline Your Success with LEAN Enterprise Consulting Services for Efficient Operations",
         "details": [
           {

@@ -10,6 +10,7 @@ import { colors, prefix } from "./../shared/styles.js";
 // Components
 import BackgroundImage from "../components/BackgroundImage";
 import BlockLatestSlider from "../components/BlockLatestSlider";
+import Blockquote from "../components/Blockquote";
 import CardV1 from "../components/CardV1";
 import CardV2 from "../components/CardV2";
 import Hero from "../components/Hero";
@@ -60,7 +61,7 @@ const IndexPage = ({ data }) => {
             <Container>
               <Row className="justify-content-center">
                 <Col xs={12}>
-                  <h1 className="my-4 my-md-5 text-center">
+                  <h1 className="my-5 my-lg-5 text-center">
                     Some of our clients
                   </h1>
                 </Col>
@@ -71,7 +72,7 @@ const IndexPage = ({ data }) => {
                     <Col
                       key={index}
                       sm={4}
-                      className="text-center my-3 d-flex align-items-center justify-content-center"
+                      className="text-center mb-5 d-flex align-items-center justify-content-center"
                       style={{ height: "60px" }}
                     >
                       <GatsbyImage image={image} alt="client" />
@@ -84,15 +85,15 @@ const IndexPage = ({ data }) => {
         </div>
         {/* About us */}
         <div className={`${prefix}-about`}>
-          <div className=" position-relative">
+          <div className="position-relative">
             <BackgroundImage src="images/unclasified/4.jpg" />
             <Mask bgColor={colors.sycamoreLight} opacity={90} />
             <div className="py-3 py-lg-5">
-              <Container className="py-4 py-lg-5">
+              <Container className="py-3 py-lg-5">
                 <Row className="justify-content-center">
                   <Col xs={11} sm={8} lg={10}>
                     <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
-                      <RichText text={about.heading} />
+                      {about.heading}
                     </h2>
                     <p className="mb-3 text-center">
                       To help our clients make distinctive, lasting, and
@@ -100,7 +101,7 @@ const IndexPage = ({ data }) => {
                       a great firm that attracts, develops, excites, and retains
                       exceptional people.
                     </p>
-                    <p className="mb-5 text-center">
+                    <p className="mb-3 text-center">
                       Our values are a clear and unique reflection of the
                       thinking of our founder, Dr. Thomas Agrait who has been a
                       driving force in shaping the firm. Our values have been
@@ -117,7 +118,9 @@ const IndexPage = ({ data }) => {
                         {about.purpose.heading}
                       </h3>
                     </i>
-                    <p className="text-dark">{about.purpose.text}</p>
+                    <p className="text-dark text-center">
+                      {about.purpose.text}
+                    </p>
                   </Col>
                   <Col lg={10} className="offset-1">
                     <i>
@@ -125,29 +128,64 @@ const IndexPage = ({ data }) => {
                         {about.mission.heading}
                       </h3>
                     </i>
-                    <p className="text-dark">{about.mission.text}</p>
-                  </Col>
-                  <Col lg={10} className="offset-1">
-                    <i>
-                      <h3 className="mt-4 mb-4 text-dark text-center">
-                        {about.pillars.heading}
-                      </h3>
-                    </i>
-                    <ul className="text-dark d-flex flex-column align-items-center">
-                      <li>{about.pillars.list[0].text}</li>
-                      <li>{about.pillars.list[1].text}</li>
-                      <li>{about.pillars.list[2].text}</li>
-                    </ul>
+                    <p className="text-dark mb-0 text-center">
+                      {about.mission.text}
+                    </p>
                   </Col>
                 </Row>
               </Container>
             </div>
           </div>
+          <div className="my-3 my-lg-5">
+            <div className="py-3 py-lg-5">
+              <Container>
+                <Row>
+                  <Col lg={10} className="offset-1">
+                    <h2 className="mb-5 text-dark text-center">
+                      {about.pillars.heading}
+                    </h2>
+                  </Col>
+                  <Col md={4}>
+                    <div className="d-flex">
+                      <span className="pe-3">
+                        <i className="bi bi-check-circle-fill fs-1"></i>
+                      </span>
+                      <p className="mb-0">{about.pillars.list[0].text}</p>
+                    </div>
+                  </Col>
+                  <Col md={4}>
+                    <div className="d-flex">
+                      <span className="pe-3">
+                        <i className="bi bi-graph-up fs-1"></i>
+                      </span>
+                      <p className="mb-0">{about.pillars.list[1].text}</p>
+                    </div>
+                  </Col>
+                  <Col md={4}>
+                    <div className="d-flex">
+                      <span className="pe-3">
+                        <i className="bi bi-trophy fs-1"></i>
+                      </span>
+                      <p className="mb-0">{about.pillars.list[2].text}</p>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
+          </div>
+          <div className="bg-light">
+            <div className="mt-3 mt-lg-5">
+              <Blockquote
+                text="The ultimate goal of our team of experts at Lean Enterprise Consulting is to make you successful"
+                author="Dr. Thomas Agrait"
+              />
+            </div>
+          </div>
         </div>
         {/* Our experts */}
         <div className={`${prefix}-team`}>
-          <Container className="pt-4 pt-lg-5">
-            <Row className="my-4 my-lg-5 justify-content-center">
+          <Container className="pt-3 pt-lg-5">
+            <Row className="my-3 my-lg-5 justify-content-center">
               <Col xs={12} className="mb-4">
                 <h2 className="text-center fs-1 mb-4 mb-lg-5">
                   {team.heading}
