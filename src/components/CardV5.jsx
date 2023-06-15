@@ -11,7 +11,7 @@ import SocialItem from "./SocialItem.jsx";
 import RichText from "./RichText.jsx";
 
 // Styles
-const StyledCardAdvisors = styled.div`
+const StyledCardV5 = styled.div`
   .${prefix}-social-item {
     color: ${colors.marino} !important;
 
@@ -37,9 +37,9 @@ const ImageContainer = styled.div`
   }
 `;
 
-const CardAdvisors = ({ image, name, title, bio, social }) => {
+const CardV5 = ({ image, name, title, bio, social }) => {
   return (
-    <Card className=" h-100">
+    <Card className={`h-100 ${prefix}-card-v5`}>
       <Card.Body className="m-0 p-0">
         <Card.Title className=" mb-0 p-4 pb-0">
           <div className="d-flex flex-column flex-lg-row align-items-center ">
@@ -62,16 +62,16 @@ const CardAdvisors = ({ image, name, title, bio, social }) => {
         <Card.Text className="text-start text-dark p-4 pb-0">
           <RichText text={bio} />
         </Card.Text>
-        <StyledCardAdvisors>
+        <StyledCardV5>
           <div className="d-flex justify-content-center justify-content-md-start px-4 pt-2 pb-4">
             {social.links.map((item, index) => (
               <SocialItem key={index} link={item.link} icon={item.icon} />
             ))}
           </div>
-        </StyledCardAdvisors>
+        </StyledCardV5>
       </Card.Body>
     </Card>
   );
 };
 
-export default CardAdvisors;
+export default CardV5;

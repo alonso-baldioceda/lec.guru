@@ -9,7 +9,7 @@ import { prefix } from "./../shared/styles.js";
 
 // Components
 import Layout from "../components/Layout";
-import CardAdvisors from "../components/CardAdvisors";
+import CardV5 from "../components/CardV5";
 
 const StyledExecutiveAdvisorsPage = styled.div``;
 
@@ -24,7 +24,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
     const image = getImage(teamImages.edges[index]?.node.childImageSharp);
     item.image = image;
   });
-  
+
   return (
     <StyledExecutiveAdvisorsPage>
       <Layout>
@@ -33,7 +33,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
             <Row className="my-4 my-lg-5 ps-5 me-5">
               {cards.map((advisor, index) => (
                 <Col sm={6} key={index} className="mb-4 mb-lg-5">
-                  <CardAdvisors
+                  <CardV5
                     name={advisor.name}
                     title={advisor.title}
                     bio={advisor.bio}

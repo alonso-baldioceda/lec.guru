@@ -13,8 +13,8 @@ import BackgroundImage from "../components/BackgroundImage";
 import BlockLatestSlider from "../components/BlockLatestSlider";
 import Mask from "../components/Mask";
 import RichText from "../components/RichText";
-import CollapsableItemList from "../components/CollapsableItemList";
 import BrickWall from "../components/BrickWall";
+import CardV6 from "../components/CardV6";
 
 const StyledServicesPage = styled.div``;
 
@@ -80,22 +80,7 @@ const ServicesPage = ({ data }) => {
                   <Col xs={12}>
                     <BrickWall conf={masonryBreakpoint}>
                       {details.map((detail, index) => (
-                        <div
-                          className="bg-sycamore-lighter border-radius-1 p-4 p-sm-5 px-lg-4 py-lg-5"
-                          key={index}
-                        >
-                          <h3 className="text-center mb-4 mb-lg-4 font-bold text-sycamore">
-                            {detail.title}
-                          </h3>
-                          <p className="mb-2 text-center">
-                            {detail.introduction}
-                          </p>
-                          <ul className="list-unstyled mb-0 ">
-                            {detail.details.map((detail, index) => (
-                              <CollapsableItemList key={index} item={detail} />
-                            ))}
-                          </ul>
-                        </div>
+                        <CardV6 key={index} {...detail} />
                       ))}
                     </BrickWall>
                   </Col>
@@ -166,16 +151,17 @@ export const query = graphql`
           }
           servicespage {
             services {
+              title
+              subtitle
               details {
+                title
+                tag
+                introduction
                 details {
                   description
                   title
                 }
-                introduction
-                title
               }
-              subtitle
-              title
             }
           }
         }

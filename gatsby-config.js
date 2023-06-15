@@ -1,7 +1,9 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
  */
+
 module.exports = {
+  trailingSlash: "never",
   siteMetadata: {
     title: `Lean Enterprise Consulting`,
     siteUrl: `https://www.yourdomain.tld`,

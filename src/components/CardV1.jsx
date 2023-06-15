@@ -23,23 +23,26 @@ const StyledLink = styled(GatsbyLink)`
   }
 `;
 
-const CardV1 = ({ cta, heading, icon, link, text }) => (
-  <StyledLink to={link} className={`${prefix}-card-v1`}>
-    <Card>
-      <Card.Body className="d-flex flex-column justify-content-between p-4">
-        <Card.Title className="d-flex align-items-center font-bold">
-          <i className={`fs-1 bi bi-${icon} me-2`}></i>
-          {heading}
-        </Card.Title>
-        <Card.Text className="d-flex">{text}</Card.Text>
-        <div>
-          <button className="btn rounded-pill bg-rouge text-white px-4 py-2 fw-bold">
-            {cta}
-          </button>
-        </div>
-      </Card.Body>
-    </Card>
-  </StyledLink>
-);
+const CardV1 = ({ cta, heading, icon, anchor, text }) => {
+  console.log(anchor);
+  return (
+    <StyledLink to={`services${anchor}`} className={`${prefix}-card-v1`}>
+      <Card>
+        <Card.Body className="d-flex flex-column justify-content-between p-4">
+          <Card.Title className="d-flex align-items-center font-bold">
+            <i className={`fs-1 bi bi-${icon} me-2`}></i>
+            {heading}
+          </Card.Title>
+          <Card.Text className="d-flex">{text}</Card.Text>
+          <div>
+            <button className="btn rounded-pill bg-rouge text-white px-4 py-2 fw-bold">
+              {cta}
+            </button>
+          </div>
+        </Card.Body>
+      </Card>
+    </StyledLink>
+  );
+};
 
 export default CardV1;

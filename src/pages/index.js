@@ -67,7 +67,6 @@ const IndexPage = ({ data }) => {
                 </Col>
                 {clientsImages.edges.map((client, index) => {
                   const image = getImage(client.node.childImageSharp);
-
                   return (
                     <Col
                       key={index}
@@ -95,20 +94,8 @@ const IndexPage = ({ data }) => {
                     <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
                       {about.heading}
                     </h2>
-                    <p className="mb-3 text-center">
-                      To help our clients make distinctive, lasting, and
-                      substantial improvements in their performance and to build
-                      a great firm that attracts, develops, excites, and retains
-                      exceptional people.
-                    </p>
-                    <p className="mb-3 text-center">
-                      Our values are a clear and unique reflection of the
-                      thinking of our founder, Dr. Thomas Agrait who has been a
-                      driving force in shaping the firm. Our values have been
-                      transformed incrementally to reflect the changing times.
-                      They are the lighthouse of our long-term strategy as a
-                      firm and the way we serve our clients daily.
-                    </p>
+                    <p className="mb-3 text-center">{about.text1}</p>
+                    <p className="mb-3 text-center">{about.text2}</p>
                   </Col>
                 </Row>
                 <Row>
@@ -294,6 +281,8 @@ export const query = graphql`
           homepage {
             about {
               heading
+              text1
+              text2
               purpose {
                 heading
                 text
@@ -324,7 +313,7 @@ export const query = graphql`
                 cta
                 heading
                 icon
-                link
+                anchor
                 text
               }
               heading
