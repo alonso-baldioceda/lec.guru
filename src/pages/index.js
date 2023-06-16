@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
             <div className="py-3 py-lg-5">
               <Container className="py-3 py-lg-5">
                 <Row className="justify-content-center">
-                  <Col xs={11} sm={8} lg={10}>
+                  <Col xs={11} sm={11} lg={10}>
                     <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
                       {about.heading}
                     </h2>
@@ -134,24 +134,24 @@ const IndexPage = ({ data }) => {
                       {about.pillars.heading}
                     </h2>
                   </Col>
-                  <Col md={4}>
-                    <div className="d-flex">
+                  <Col lg={4}>
+                    <div className="mb-3 mb-lg-0 d-flex align-items-center justify-content-center">
                       <span className="pe-3">
                         <i className="bi bi-check-circle-fill fs-1"></i>
                       </span>
                       <p className="mb-0">{about.pillars.list[0].text}</p>
                     </div>
                   </Col>
-                  <Col md={4}>
-                    <div className="d-flex">
+                  <Col lg={4}>
+                    <div className="mb-3 mb-lg-0 d-flex align-items-center justify-content-center">
                       <span className="pe-3">
                         <i className="bi bi-graph-up fs-1"></i>
                       </span>
                       <p className="mb-0">{about.pillars.list[1].text}</p>
                     </div>
                   </Col>
-                  <Col md={4}>
-                    <div className="d-flex">
+                  <Col lg={4}>
+                    <div className="d-flex align-items-center justify-content-center">
                       <span className="pe-3">
                         <i className="bi bi-trophy fs-1"></i>
                       </span>
