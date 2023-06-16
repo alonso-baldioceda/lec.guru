@@ -30,7 +30,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
       <Layout>
         <div className={`${prefix}-teamAdvisors`}>
           <Container className="pt-auto pt-lg-auto">
-            <Row className="my-4 my-lg-5 ps-5 me-5">
+            <Row className="my-4 my-lg-5">
               {cards.map((advisor, index) => (
                 <Col sm={6} key={index} className="mb-4 mb-lg-5">
                   <CardV5

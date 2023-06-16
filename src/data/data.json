@@ -105,11 +105,11 @@
       "heading": "Our Experts",
       "cards": [
         {
-          "img": "images/unclasified/face.jpg",
+          "img": "images/team/1.jpg",
           "link": "/executive-advisors",
-          "name": "Jane Doe",
-          "job": "Job",
-          "text": "Jane is an experienced Lean Six Sigma Black Belt and has helped numerous companies streamline their processes and increase efficiency.",
+          "name": "Miguel Rodriguez",
+          "job": "Executive Advisor profile",
+          "text": "Miguel, an experienced consultant, enhances competitiveness in manufacturing, quality systems, and program management for pharmaceutical and medical device companies.",
           "social": {
             "heading": "Follow Us",
             "links": [
@@ -121,11 +121,11 @@
           }
         },
         {
-          "img": "images/unclasified/face.jpg",
+          "img": "images/team/2.jpg",
           "link": "/executive-advisors",
-          "name": "Jane Doe",
-          "job": "Job",
-          "text": "Jane is an experienced Lean Six Sigma Black Belt and has helped numerous companies streamline their processes and increase efficiency.",
+          "name": "Eddie Ignacio",
+          "job": "Executive Advisor Profile",
+          "text": "Eddie Ignacio, an experienced operational leader, has transformed global operations profitably. His expertise includes manufacturing, procurement, logistics, and regulatory compliance.",
           "social": {
             "heading": "Follow Us",
             "links": [
@@ -137,11 +137,11 @@
           }
         },
         {
-          "img": "images/unclasified/face.jpg",
+          "img": "images/team/3.jpg",
           "link": "/executive-advisors",
-          "name": "Jane Doe",
-          "job": "Job",
-          "text": "Jane is an experienced Lean Six Sigma Black Belt and has helped numerous companies streamline their processes and increase efficiency.",
+          "name": "Roberto Correa",
+          "job": "Executive Advisor profile",
+          "text": "Roberto Correa has extensive experience in medical device operations and quality systems. He specializes in strategic planning, organizational development, and compliance.",
           "social": {
             "heading": "Follow Us",
             "links": [
@@ -153,11 +153,11 @@
           }
         },
         {
-          "img": "images/unclasified/face.jpg",
+          "img": "images/team/4.jpg",
           "link": "/executive-advisors",
-          "name": "Jane Doe",
-          "job": "Job",
-          "text": "Jane is an experienced Lean Six Sigma Black Belt and has helped numerous companies streamline their processes and increase efficiency.",
+          "name": "Thomas Agrait",
+          "job": "CEO",
+          "text": "Eng. Thomas H. Agrait, Ph.D., coaches organizations and individuals to achieve desired personal and business results through skillful choices.",
           "social": {
             "heading": "Follow Us",
             "links": [

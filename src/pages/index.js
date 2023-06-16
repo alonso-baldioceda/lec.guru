@@ -32,6 +32,8 @@ const IndexPage = ({ data }) => {
   const heroImage = getImage(heroImg);
   const heroSrc = heroImage.images.fallback.src;
 
+  console.log("team", team);
+
   return (
     <StyledIndexPage>
       <Layout>
@@ -99,7 +101,7 @@ const IndexPage = ({ data }) => {
                   </Col>
                 </Row>
                 <Row>
-                  <Col lg={10} className="offset-1">
+                  <Col lg={10} className="offset-lg-1">
                     <i>
                       <h3 className="mt-4 mb-4 text-dark text-center">
                         {about.purpose.heading}
@@ -109,7 +111,7 @@ const IndexPage = ({ data }) => {
                       {about.purpose.text}
                     </p>
                   </Col>
-                  <Col lg={10} className="offset-1">
+                  <Col lg={10} className="offset-lg-1">
                     <i>
                       <h3 className="mt-4 mb-4 text-dark text-center">
                         {about.mission.heading}
@@ -127,7 +129,7 @@ const IndexPage = ({ data }) => {
             <div className="py-3 py-lg-5">
               <Container>
                 <Row>
-                  <Col lg={10} className="offset-1">
+                  <Col lg={10} className="offset-lg-1">
                     <h2 className="mb-5 text-dark text-center">
                       {about.pillars.heading}
                     </h2>

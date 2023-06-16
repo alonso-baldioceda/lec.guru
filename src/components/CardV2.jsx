@@ -7,10 +7,9 @@ import { Link as GatsbyLink } from "gatsby";
 import { colors, prefix } from "../shared/styles.js";
 
 // Components
-import SocialItem from "./SocialItem.jsx";
+// import SocialItem from "./SocialItem.jsx";
 
 // Styles
-
 const StyledCardV2 = styled.div`
   .card {
     background-color: ${colors.softMarino} !important;
@@ -102,11 +101,11 @@ const CardV2 = ({ name, img, link, job, social, text }) => {
             </Card.Text>
             <Card.Text className="text-center text-dark">{text}</Card.Text>
           </Link>
-          <div className="d-flex justify-content-center mt-3">
+          {/* <div className="d-flex justify-content-center mt-3">
             {social.links.map((item, index) => (
               <SocialItem key={index} {...item} />
             ))}
-          </div>
+          </div> */}
         </Card.Body>
       </Card>
     </StyledCardV2>
