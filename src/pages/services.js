@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
@@ -19,15 +20,23 @@ import CardV6 from "../components/CardV6";
 const StyledServicesPage = styled.div``;
 
 const ServicesPage = ({ data }) => {
-  const { hero, allDataJson } = data || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node || {};
-  const { common, servicespage } = node || {};
-  const { header, footer, blog } = common || {};
-  const { services } = servicespage || {};
-  const { title, details } = services[0] || {};
+  const { t } = useTranslation();
 
-  const heroImage = getImage(hero);
+  const trCommon = t("common", {
+    returnObjects: true,
+  });
+
+  const trServices = t("servicespage", {
+    returnObjects: true,
+  });
+
+  const { blog } = trCommon;
+  const { services } = trServices;
+  const { title, intro, details } = services[0] || {};
+
+  const { heroImg } = data || {};
+
+  const heroImage = getImage(heroImg);
   const heroSrc = heroImage.images.fallback.src;
 
   const masonryBreakpoint = {
@@ -40,12 +49,11 @@ const ServicesPage = ({ data }) => {
 
   return (
     <StyledServicesPage>
-      <Layout header={header} footer={footer}>
+      <Layout>
         <div className={`${prefix}-services`}>
           {/* Hero */}
           <div className="position-relative" style={{ height: "460px" }}>
             <BackgroundImage src={heroSrc} />
-            {/* <Mask bgColor={colors.finnLight} opacity={30} /> */}
             <div className="position-absolute top-50 start-50 translate-middle w-100 mt-n5">
               <Container>
                 <Row className="justify-content-center">
@@ -65,17 +73,7 @@ const ServicesPage = ({ data }) => {
               <Container>
                 <Row>
                   <Col xs={12}>
-                    <p className="mb-5">
-                      Our consulting is focused on those resources with economic
-                      value owned or controlled by our clients that will provide
-                      the highest benefit. This approach helps us deliver
-                      insight and impact the organization in a very short time
-                      frame. Our solutions leverage advanced technology,
-                      proprietary data, regulatory knowledge, process
-                      transformation and deep expertise to help clients in the
-                      process of diagnostic, management technology, analytics,
-                      and applied solutions.
-                    </p>
+                    <p className="mb-5">{intro}</p>
                   </Col>
                   <Col xs={12}>
                     <BrickWall conf={masonryBreakpoint}>
@@ -114,57 +112,13 @@ export default ServicesPage;
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "unclasified/12.jpg" }) {
+    heroImg: file(relativePath: { eq: "unclasified/12.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 3000
           placeholder: BLURRED
           formats: [AUTO, WEBP, AVIF]
         )
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          common {
-            team {
-              cards {
-                img
-                job
-                link
-                name
-                social {
-                  heading
-                  links {
-                    icon
-                    link
-                  }
-                }
-                text
-              }
-              heading
-            }
-            blog {
-              heading
-              text
-            }
-          }
-          servicespage {
-            services {
-              title
-              subtitle
-              details {
-                title
-                tag
-                introduction
-                details {
-                  description
-                  title
-                }
-              }
-            }
-          }
-        }
       }
     }
   }
