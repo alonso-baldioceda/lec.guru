@@ -278,6 +278,9 @@
         }
       ]
     },
+    "clients": {
+      "heading": "Some of our clients"
+    },
     "about": {
       "heading": "Our Purpose, Mission and Values",
       "text1": "To help our clients make distinctive, lasting, and substantial improvements in their performance and to build a great firm that attracts, develops, excites, and retains exceptional people.",
@@ -303,6 +306,10 @@
             "text": "Create an unrivaled environment for exceptional people."
           }
         ]
+      },
+      "quote": {
+        "text": "The ultimate goal of our team of experts at Lean Enterprise Consulting is to make you successful",
+        "author": "Dr. Thomas Agrait"
       }
     }
   },

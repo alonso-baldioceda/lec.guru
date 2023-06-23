@@ -2,9 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import classnames from "classnames";
 import Slick from "react-slick";
+
 import { prefix } from "./../shared/styles.js";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 // Styles
 const SliderWrapper = styled((props) => <section {...props} />)`

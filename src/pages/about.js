@@ -4,12 +4,12 @@ import { Container, Row, Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
 
 // Components
+import BackgroundImage from "../components/BackgroundImage";
+import CardV4 from "../components/CardV4";
 import Layout from "../components/Layout";
+import Mask from "../components/Mask";
 import RichText from "../components/RichText";
 import Slider from "../components/Slider";
-import BackgroundImage from "../components/BackgroundImage";
-import Mask from "../components/Mask";
-import CardV4 from "../components/CardV4";
 
 // Variables
 import { colors } from "./../shared/styles.js";
@@ -21,13 +21,13 @@ const AboutPage = ({ data }) => {
   const { aboutpage } = node || {};
 
   const testimonialSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
     autoplay: true,
     autoplaySpeed: 5000,
-    slidesToShow: 1,
+    dots: true,
+    infinite: true,
     slidesToScroll: 1,
+    slidesToShow: 1,
+    speed: 500,
   };
 
   const testimonialBg =
@@ -85,12 +85,13 @@ const AboutPage = ({ data }) => {
               <Row>
                 <Col md={12}>
                   <h2 className="mb-5 text-white text-center">
-                    <RichText text={aboutpage.testimonials.heading} />
+                    {/* <RichText text={aboutpage.testimonials.heading} /> */}
                   </h2>
                   <Slider settings={testimonialSliderSettings}>
                     {aboutpage.testimonials.list &&
                       aboutpage.testimonials.list.map((testimonial, index) => (
                         <CardV4 key={index} {...testimonial} />
+                        // <div key={index}>{index}</div>
                       ))}
                   </Slider>
                 </Col>

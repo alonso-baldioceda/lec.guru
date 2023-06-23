@@ -8,6 +8,9 @@ import "@fontsource/lato/700.css";
 import "@fontsource/lato/700-italic.css";
 import "@fontsource/lato/900.css";
 import "@fontsource/lato/900-italic.css";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
 import { createGlobalStyle } from "styled-components";
 
 // Variables

@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { I18nextProvider } from "react-i18next";
 import { useStaticQuery, graphql } from "gatsby";
 
 // Components
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
+
+// Translate
+import i18next from "./../i18e";
 
 // Global Styles
 import GlobalStyle from "./../shared/global.js";
@@ -86,7 +90,7 @@ const Layout = ({ children }) => {
   const { header: headerData, footer: footerData } = common || {};
 
   return (
-    <>
+    <I18nextProvider i18n={i18next}>
       <GlobalStyle />
       <Header
         brand={headerData.brand}
@@ -106,7 +110,7 @@ const Layout = ({ children }) => {
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
-    </>
+    </I18nextProvider>
   );
 };
 
