@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
 import { Container, Row, Col } from "react-bootstrap";
 
 // Components
@@ -7,12 +7,17 @@ import Layout from "../components/Layout";
 import FormContact from "../components/FormContact";
 import Map from "../components/Map";
 
-const ContactPage = ({ data }) => {
-  const { allDataJson } = data || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node;
-  const { contactpage } = node || {};
+const ContactPage = () => {
+  const { t } = useTranslation();
 
+  const trContactPage = t("contactpage", {
+    returnObjects: true,
+  });
+
+  const { heading, description, address, phoneNumber, sendMessage } =
+    trContactPage;
+
+  // TODO: Hard stress contact form
   return (
     <Layout>
       <div className="px-2 px-ld-0">
@@ -20,15 +25,15 @@ const ContactPage = ({ data }) => {
           <Row className="bg-marino-lighter">
             <Col md={6}>
               <div className="p-3 p-md-4 p-lg-5">
-                <h1 className="mb-5">{contactpage.heading}</h1>
-                <p className="mb-4">{contactpage.description}</p>
+                <h1 className="mb-5">{heading}</h1>
+                <p className="mb-4">{description}</p>
                 <p className="d-flex align-items-center mb-1">
                   <i className="bi bi-geo-alt fs-4 me-2"></i>
-                  <span>{contactpage.address}</span>
+                  <span>{address}</span>
                 </p>
                 <p className="d-flex align-items-center mb-0">
                   <i className="bi bi-telephone fs-4 me-2"></i>
-                  <span>{contactpage.phoneNumber}</span>
+                  <span>{phoneNumber}</span>
                 </p>
               </div>
             </Col>
@@ -46,11 +51,9 @@ const ContactPage = ({ data }) => {
             <Col>
               <div className="p-4 p-md-5">
                 <h3 className="mb-5">
-                  <span className="decorator fs-3">
-                    {contactpage.sendMessage}
-                  </span>
+                  <span className="decorator fs-3">{sendMessage}</span>
                 </h3>
-                <FormContact {...contactpage} />
+                <FormContact {...trContactPage} />
               </div>
             </Col>
           </Row>
@@ -61,42 +64,3 @@ const ContactPage = ({ data }) => {
 };
 
 export default ContactPage;
-
-export const query = graphql`
-  query {
-    allDataJson {
-      edges {
-        node {
-          contactpage {
-            address
-            description
-            email
-            firstName
-            heading
-            lastName
-            message
-            phone
-            phoneNumber
-            sendMessage
-            subject
-            submit
-            submitting
-            validation {
-              emailInvalid
-              emailRequired
-              errorBody
-              errorHeader
-              firstNameRequired
-              lastNameRequired
-              messageRequired
-              phoneRequired
-              subjectRequired
-              successBody
-              successHeader
-            }
-          }
-        }
-      }
-    }
-  }
-`;

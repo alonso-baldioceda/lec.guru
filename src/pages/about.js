@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
 import { getImage } from "gatsby-plugin-image";
@@ -15,10 +16,15 @@ import Slider from "../components/Slider";
 import { colors } from "./../shared/styles.js";
 
 const AboutPage = ({ data }) => {
-  const { testimonialBackground, testimonialImages, allDataJson } = data || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node;
-  const { aboutpage } = node || {};
+  const { t } = useTranslation();
+
+  const trAboutPage = t("aboutpage", {
+    returnObjects: true,
+  });
+
+  const { heading, text, inspiration, testimonials } = trAboutPage;
+
+  const { testimonialBackground, testimonialImages } = data || {};
 
   const testimonialSliderSettings = {
     autoplay: true,
@@ -33,7 +39,7 @@ const AboutPage = ({ data }) => {
   const testimonialBg =
     testimonialBackground.childImageSharp.gatsbyImageData.images.fallback.src;
 
-  aboutpage.testimonials.list.forEach((item, index) => {
+  testimonials.list.forEach((item, index) => {
     const image = getImage(
       testimonialImages.edges[index]?.node.childImageSharp
     );
@@ -50,25 +56,23 @@ const AboutPage = ({ data }) => {
             <Container>
               <Row>
                 <Col md={12}>
-                  <h1 className="mb-5">{aboutpage.heading}</h1>
-                  <RichText text={aboutpage.text} />
-                  <h2 className="mb-5">{aboutpage.inspiration.heading}</h2>
+                  <h1 className="mb-5">{heading}</h1>
+                  <RichText text={text} />
+                  <h2 className="mb-5">{inspiration.heading}</h2>
+                  <h3 className="mb-4 font-bold">{inspiration.subheading}</h3>
+                  <p className="mb-5">{inspiration.text}</p>
                   <h3 className="mb-4 font-bold">
-                    {aboutpage.inspiration.subheading}
+                    {inspiration.list[0].heading}
                   </h3>
-                  <p className="mb-5">{aboutpage.inspiration.text}</p>
+                  <p className="mb-5">{inspiration.list[0].text}</p>
                   <h3 className="mb-4 font-bold">
-                    {aboutpage.inspiration.list[0].heading}
+                    {inspiration.list[1].heading}
                   </h3>
-                  <p className="mb-5">{aboutpage.inspiration.list[0].text}</p>
+                  <p className="mb-5">{inspiration.list[1].text}</p>
                   <h3 className="mb-4 font-bold">
-                    {aboutpage.inspiration.list[1].heading}
+                    {inspiration.list[2].heading}
                   </h3>
-                  <p className="mb-5">{aboutpage.inspiration.list[1].text}</p>
-                  <h3 className="mb-4 font-bold">
-                    {aboutpage.inspiration.list[2].heading}
-                  </h3>
-                  <p className="mb-3">{aboutpage.inspiration.list[2].text}</p>
+                  <p className="mb-3">{inspiration.list[2].text}</p>
                 </Col>
               </Row>
             </Container>
@@ -85,13 +89,12 @@ const AboutPage = ({ data }) => {
               <Row>
                 <Col md={12}>
                   <h2 className="mb-5 text-white text-center">
-                    {/* <RichText text={aboutpage.testimonials.heading} /> */}
+                    <RichText text={testimonials.heading} />
                   </h2>
                   <Slider settings={testimonialSliderSettings}>
-                    {aboutpage.testimonials.list &&
-                      aboutpage.testimonials.list.map((testimonial, index) => (
+                    {testimonials.list &&
+                      testimonials.list.map((testimonial, index) => (
                         <CardV4 key={index} {...testimonial} />
-                        // <div key={index}>{index}</div>
                       ))}
                   </Slider>
                 </Col>
@@ -132,34 +135,6 @@ export const query = graphql`
           id
           childImageSharp {
             gatsbyImageData(width: 120)
-          }
-        }
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          aboutpage {
-            heading
-            text
-            inspiration {
-              heading
-              subheading
-              text
-              list {
-                heading
-                text
-              }
-            }
-            testimonials {
-              heading
-              list {
-                text
-                alt
-                name
-                position
-              }
-            }
           }
         }
       }

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
@@ -14,16 +15,22 @@ import CardV5 from "../components/CardV5";
 const StyledExecutiveAdvisorsPage = styled.div``;
 
 const ExecutiveAdvisorsPage = ({ data }) => {
-  const { teamImages, allDataJson } = data || {};
-  const { edges } = allDataJson;
-  const { node } = edges[0];
-  const { executiveAdisorsPage } = node;
-  const { cards } = executiveAdisorsPage;
+  const { t } = useTranslation();
+
+  const trExecutiveAdisorsPage = t("executiveAdisorsPage", {
+    returnObjects: true,
+  });
+
+  const { cards } = trExecutiveAdisorsPage;
+
+  const { teamImages } = data || {};
 
   cards.forEach((item, index) => {
     const image = getImage(teamImages.edges[index]?.node.childImageSharp);
     item.image = image;
   });
+
+  // TODO: Add contact data to cards
 
   return (
     <StyledExecutiveAdvisorsPage>
@@ -69,45 +76,6 @@ export const query = graphql`
           id
           childImageSharp {
             gatsbyImageData(width: 500)
-          }
-        }
-      }
-    }
-    allDataJson {
-      edges {
-        node {
-          common {
-            team {
-              cards {
-                img
-                job
-                link
-                name
-                social {
-                  heading
-                  links {
-                    icon
-                    link
-                  }
-                }
-                text
-              }
-              heading
-            }
-          }
-          executiveAdisorsPage {
-            cards {
-              name
-              bio
-              title
-              social {
-                heading
-                links {
-                  icon
-                  link
-                }
-              }
-            }
           }
         }
       }

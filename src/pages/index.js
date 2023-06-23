@@ -29,26 +29,27 @@ const IndexPage = ({ data }) => {
     returnObjects: true,
   });
 
-  const { hero: heroImg, clientsImages } = data || {};
+  const { hero, services, clients, about } = trHomepage;
+  const { team, blog } = trCommon;
+
+  const { heroImg, clientsImages } = data || {};
   const heroImage = getImage(heroImg);
   const heroSrc = heroImage.images.fallback.src;
 
   return (
     <Layout>
       {/* Hero */}
-      <Hero {...trHomepage.hero} src={heroSrc} />
+      <Hero {...hero} src={heroSrc} />
       {/* Services */}
       <div className={`${prefix}-services`}>
         <div className="bg-marino-lighter">
           <Container className="py-4 py-lg-5">
             <h2 className="text-center my-4 my-lg-5 fs-1">
-              {trHomepage.services.heading}
+              {services.heading}
             </h2>
-            <p className="text-center mb-4 mb-lg-5 fs-5">
-              {trHomepage.services.text}
-            </p>
+            <p className="text-center mb-4 mb-lg-5 fs-5">{services.text}</p>
             <Row>
-              {trHomepage.services.cards.map((card, index) => (
+              {services.cards.map((card, index) => (
                 <Col sm={6} lg={4} key={index} className="mb-4 mb-lg-5">
                   <CardV1 {...card} />
                 </Col>
@@ -63,9 +64,7 @@ const IndexPage = ({ data }) => {
           <Container>
             <Row className="justify-content-center">
               <Col xs={12}>
-                <h1 className="my-5 my-lg-5 text-center">
-                  {trHomepage.clients.heading}
-                </h1>
+                <h1 className="my-5 my-lg-5 text-center">{clients.heading}</h1>
               </Col>
               {clientsImages.edges.map((client, index) => {
                 const image = getImage(client.node.childImageSharp);
@@ -94,31 +93,29 @@ const IndexPage = ({ data }) => {
               <Row className="justify-content-center">
                 <Col xs={11} sm={11} lg={10}>
                   <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
-                    {trHomepage.about.heading}
+                    {about.heading}
                   </h2>
-                  <p className="mb-3 text-center">{trHomepage.about.text1}</p>
-                  <p className="mb-3 text-center">{trHomepage.about.text2}</p>
+                  <p className="mb-3 text-center">{about.text1}</p>
+                  <p className="mb-3 text-center">{about.text2}</p>
                 </Col>
               </Row>
               <Row>
                 <Col lg={10} className="offset-lg-1">
                   <i>
                     <h3 className="mt-4 mb-4 text-dark text-center">
-                      {trHomepage.about.purpose.heading}
+                      {about.purpose.heading}
                     </h3>
                   </i>
-                  <p className="text-dark text-center">
-                    {trHomepage.about.purpose.text}
-                  </p>
+                  <p className="text-dark text-center">{about.purpose.text}</p>
                 </Col>
                 <Col lg={10} className="offset-lg-1">
                   <i>
                     <h3 className="mt-4 mb-4 text-dark text-center">
-                      {trHomepage.about.mission.heading}
+                      {about.mission.heading}
                     </h3>
                   </i>
                   <p className="text-dark mb-0 text-center">
-                    {trHomepage.about.mission.text}
+                    {about.mission.text}
                   </p>
                 </Col>
               </Row>
@@ -131,7 +128,7 @@ const IndexPage = ({ data }) => {
               <Row>
                 <Col lg={10} className="offset-lg-1">
                   <h2 className="mb-5 text-dark text-center">
-                    {trHomepage.about.pillars.heading}
+                    {about.pillars.heading}
                   </h2>
                 </Col>
                 <Col lg={4}>
@@ -139,9 +136,7 @@ const IndexPage = ({ data }) => {
                     <span className="pe-3">
                       <i className="bi bi-check-circle-fill fs-1"></i>
                     </span>
-                    <p className="mb-0">
-                      {trHomepage.about.pillars.list[0].text}
-                    </p>
+                    <p className="mb-0">{about.pillars.list[0].text}</p>
                   </div>
                 </Col>
                 <Col lg={4}>
@@ -149,9 +144,7 @@ const IndexPage = ({ data }) => {
                     <span className="pe-3">
                       <i className="bi bi-graph-up fs-1"></i>
                     </span>
-                    <p className="mb-0">
-                      {trHomepage.about.pillars.list[1].text}
-                    </p>
+                    <p className="mb-0">{about.pillars.list[1].text}</p>
                   </div>
                 </Col>
                 <Col lg={4}>
@@ -159,9 +152,7 @@ const IndexPage = ({ data }) => {
                     <span className="pe-3">
                       <i className="bi bi-trophy fs-1"></i>
                     </span>
-                    <p className="mb-0">
-                      {trHomepage.about.pillars.list[2].text}
-                    </p>
+                    <p className="mb-0">{about.pillars.list[2].text}</p>
                   </div>
                 </Col>
               </Row>
@@ -170,7 +161,7 @@ const IndexPage = ({ data }) => {
         </div>
         <div className="bg-light">
           <div className="mt-3 mt-lg-5">
-            <Blockquote {...trHomepage.about.quote} />
+            <Blockquote {...about.quote} />
           </div>
         </div>
       </div>
@@ -179,11 +170,9 @@ const IndexPage = ({ data }) => {
         <Container className="pt-3 pt-lg-5">
           <Row className="my-3 my-lg-5 justify-content-center">
             <Col xs={12} className="mb-4">
-              <h2 className="text-center fs-1 mb-4 mb-lg-5">
-                {trCommon.team.heading}
-              </h2>
+              <h2 className="text-center fs-1 mb-4 mb-lg-5">{team.heading}</h2>
             </Col>
-            {trCommon.team.cards.map((card, index) => (
+            {team.cards.map((card, index) => (
               <Col sm={6} xl={3} key={index} className="mb-4 mb-lg-5">
                 <CardV2 {...card} />
               </Col>
@@ -197,9 +186,9 @@ const IndexPage = ({ data }) => {
           <Row className="justify-content-center">
             <Col lg={19}>
               <h2 className="text-center mb-3 mb-lg-5 text-casal fs-1">
-                <RichText text={trCommon.blog.heading} />
+                <RichText text={blog.heading} />
               </h2>
-              <p className="mb-3 mb-lg-5">{trCommon.blog.text}</p>
+              <p className="mb-3 mb-lg-5">{blog.text}</p>
               <div className="mb-3 mb-lg-5">
                 <BlockLatestSlider />
               </div>
@@ -215,7 +204,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    hero: file(relativePath: { eq: "unclasified/tt.jpg" }) {
+    heroImg: file(relativePath: { eq: "unclasified/tt.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 3000
