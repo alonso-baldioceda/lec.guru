@@ -1,0 +1,705 @@
+{
+  "common": {
+    "header": {
+      "top": {
+        "phone": {
+          "label": "Llamar ahora",
+          "href": "+19542583117",
+          "icon": "call"
+        },
+        "email": {
+          "label": "contact@lec.guru",
+          "href": "contact@lec.guru",
+          "icon": "envelope"
+        }
+      },
+      "brand": {
+        "icon": "logo",
+        "alt": "Lean Enterprise Consulting",
+        "to": "/"
+      },
+      "nav": [
+        { "label": "Inicio", "link": "/" },
+        { "label": "Nosotros", "link": "/about" },
+        { "label": "Asesores Ejecutivos", "link": "/executive-advisors" },
+        { "label": "Contacto", "link": "/contact" },
+        { "label": "Blog", "link": "/blog" }
+      ]
+    },
+    "blog": {
+      "heading": "<span class=\"fs-1 font-bolder\">Nuestro Blog</span><br /><i class=\"fs-1\">Qué hay de </i><span class=\"fs-1 decorator\">nuevo</span> <i class=\"fs-1 font-regular\">en Lean Enterprise Consulting</i>",
+      "text": "Una colección fresca y actualizada de artículos sobre nuestro equipo, nuestras capacidades, nuestras investigaciones, nuestros excelentes clientes y el proceso interminable de mejora continua de nuestra empresa y nuestra comunidad global.",
+      "slider": {
+        "nodes": [
+          {
+            "heading": "5 Principios Clave de la Gestión Lean para una Mayor Eficiencia",
+            "img": {
+              "src": "/images/unclasified/5.jpg",
+              "alt": "5 Principios Clave de la Gestión Lean para una Mayor Eficiencia"
+            },
+            "cta": {
+              "label": "Contáctanos",
+              "link": "/blog/mejora-tus-procesos-de-negocio"
+            }
+          },
+          {
+            "heading": "Maximizando la Productividad con Metodologías Lean Six Sigma",
+            "img": {
+              "src": "/images/unclasified/6.jpg",
+              "alt": "Maximizando la Productividad con Metodologías Lean Six Sigma"
+            },
+            "cta": {
+              "label": "Ver nuestros servicios",
+              "link": "/blog/problemas-con-la-industria-y-el-gobierno"
+            }
+          },
+          {
+            "heading": "Cómo Aplicar el Pensamiento Lean para Optimizar tu Cadena de Suministro",
+            "img": {
+              "src": "/images/unclasified/7.jpg",
+              "alt": "Cómo Aplicar el Pensamiento Lean para Optimizar tu Cadena de Suministro"
+            },
+            "cta": {
+              "label": "Contáctanos",
+              "link": "/blog/reclutamiento-para-puestos-especializados"
+            }
+          },
+          {
+            "heading": "Los Beneficios de la Manufactura Lean y la Producción Justo a Tiempo",
+            "img": {
+              "src": "/images/unclasified/5.jpg",
+              "alt": "Los Beneficios de la Manufactura Lean y la Producción Justo a Tiempo"
+            },
+            "cta": {
+              "label": "Contáctanos",
+              "link": "/blog/mejora-tus-procesos-de-negocio"
+            }
+          },
+          {
+            "heading": "Aplicando los Principios Lean para Mejorar las Operaciones de Salud",
+            "img": {
+              "src": "/images/unclasified/6.jpg",
+              "alt": "Aplicando los Principios Lean para Mejorar las Operaciones de Salud"
+            },
+            "cta": {
+              "label": "Ver nuestros servicios",
+              "link": "/blog/problemas-con-la-industria-y-el-gobierno"
+            }
+          },
+          {
+            "heading": "Lean Startup: Aplicando Metodologías Lean al Emprendimiento",
+            "img": {
+              "src": "/images/unclasified/7.jpg",
+              "alt": "Lean Startup: Aplicando Metodologías Lean al Emprendimiento"
+            },
+            "cta": {
+              "label": "Contáctanos",
+              "link": "/blog/reclutamiento-para-puestos-especializados"
+            }
+          }
+        ]
+      }
+    },
+    "team": {
+      "heading": "Nuestros Expertos",
+      "cards": [
+        {
+          "img": "images/team/1.jpg",
+          "link": "/executive-advisors",
+          "name": "Miguel Rodriguez",
+          "job": "Perfil del Asesor Ejecutivo",
+          "text": "Miguel, un consultor experimentado, mejora la competitividad en empresas farmacéuticas y de dispositivos médicos a través de sistemas de fabricación, calidad y gestión de programas.",
+          "social": {
+            "heading": "Síguenos",
+            "links": [
+              { "icon": "facebook", "link": "https://www.facebook.com/" },
+              { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+              { "icon": "twitter", "link": "https://twitter.com/" },
+              { "icon": "instagram", "link": "https://www.instagram.com/" }
+            ]
+          }
+        },
+        {
+          "img": "images/team/2.jpg",
+          "link": "/executive-advisors",
+          "name": "Eddie Ignacio",
+          "job": "Perfil del Asesor Ejecutivo",
+          "text": "Eddie Ignacio, un líder operativo experimentado, ha transformado operaciones globales de manera rentable. Su experiencia incluye fabricación, adquisiciones, logística y cumplimiento normativo.",
+          "social": {
+            "heading": "Síguenos",
+            "links": [
+              { "icon": "facebook", "link": "https://www.facebook.com/" },
+              { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+              { "icon": "twitter", "link": "https://twitter.com/" },
+              { "icon": "instagram", "link": "https://www.instagram.com/" }
+            ]
+          }
+        },
+        {
+          "img": "images/team/3.jpg",
+          "link": "/executive-advisors",
+          "name": "Roberto Correa",
+          "job": "Perfil del Asesor Ejecutivo",
+          "text": "Roberto Correa tiene una amplia experiencia en operaciones de dispositivos médicos y sistemas de calidad. Se especializa en planificación estratégica, desarrollo organizacional y cumplimiento normativo.",
+          "social": {
+            "heading": "Síguenos",
+            "links": [
+              { "icon": "facebook", "link": "https://www.facebook.com/" },
+              { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+              { "icon": "twitter", "link": "https://twitter.com/" },
+              { "icon": "instagram", "link": "https://www.instagram.com/" }
+            ]
+          }
+        },
+        {
+          "img": "images/team/4.jpg",
+          "link": "/executive-advisors",
+          "name": "Thomas Agrait",
+          "job": "CEO",
+          "text": "Ing. Thomas H. Agrait, Ph.D., asesora a organizaciones y personas para lograr los resultados deseados en los negocios a través de elecciones hábiles.",
+          "social": {
+            "heading": "Síguenos",
+            "links": [
+              { "icon": "facebook", "link": "https://www.facebook.com/" },
+              { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+              { "icon": "twitter", "link": "https://twitter.com/" },
+              { "icon": "instagram", "link": "https://www.instagram.com/" }
+            ]
+          }
+        }
+      ]
+    },
+    "footer": {
+      "nav": {
+        "heading": "Páginas",
+        "nav": [
+          { "label": "Inicio", "link": "/" },
+          { "label": "Nosotros", "link": "/about" },
+          { "label": "Servicios", "link": "/services" },
+          { "label": "Asesores Ejecutivos", "link": "/executive-advisors" },
+          { "label": "Contacto", "link": "/contact" },
+          { "label": "Blog", "link": "/blog" }
+        ]
+      },
+      "social": {
+        "heading": "Síguenos",
+        "links": [
+          { "icon": "facebook", "link": "https://www.facebook.com/" },
+          { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+          { "icon": "twitter", "link": "https://twitter.com/" },
+          { "icon": "instagram", "link": "https://www.instagram.com/" }
+        ]
+      },
+      "contact": {
+        "heading": "Contáctanos",
+        "address": "Fort Lauderdale, FL. USA",
+        "phone": "Teléfono: +954-258-3117",
+        "email": "Correo electrónico: contact@lec.guru"
+      },
+      "copyright": "© 2008 - 2022 Lean Enterprise Consulting, Inc. | Todos los derechos reservados."
+    }
+  },
+  "homepage": {
+    "hero": {
+      "img": "images/unclasified/3.jpg",
+      "heading": "Nuestro Equipo",
+      "text": "Asesores Senior de Lean Enterprise Consulting",
+      "small": "Un equipo de expertos con un nuevo modelo enfocado en una poderosa aspiración: crear un crecimiento sostenible e inclusivo para empresas que buscan destacarse en esta era de interrupción.",
+      "cta": [
+        {
+          "label": "Conoce a nuestros Asesores Senior",
+          "link": "/executive-advisors"
+        }
+      ]
+    },
+    "services": {
+      "heading": "Nuestros Servicios",
+      "text": "Ofrecemos una variedad de servicios enfocados en mejorar la calidad, eficiencia y satisfacción del cliente al eliminar desperdicios y mejorar los procesos. Nuestros principales servicios se detallan a continuación:",
+      "cards": [
+        {
+          "icon": "bar-chart-line",
+          "heading": "Consultoría de Lean Six Sigma",
+          "text": "Optimiza tus procesos empresariales con servicios de consultoría de Lean Six Sigma, impulsando la excelencia operativa y obteniendo resultados sostenibles para tu empresa.",
+          "anchor": "#lean-six-sigma-enterprise-consulting",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "check-circle",
+          "heading": "Validación y Comisionamiento",
+          "text": "Texto aquí",
+          "anchor": "#validation-and-commissioning",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "shield-check",
+          "heading": "Soporte Regulatorio y de Cumplimiento",
+          "text": "Texto aquí",
+          "anchor": "#regulatory-and-compliance-support",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "diagram-2",
+          "heading": "Gestión de Proyectos",
+          "text": "Texto aquí",
+          "anchor": "#project-management",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "tree",
+          "heading": "Ingeniería Ambiental",
+          "text": "Texto aquí",
+          "anchor": "#environmental-engineering",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "headset",
+          "heading": "Ingeniería de Servicio al Cliente",
+          "text": "Texto aquí",
+          "anchor": "#customer-service-engineering",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "filter-square",
+          "heading": "Soporte de Sala Limpia",
+          "text": "Texto aquí",
+          "anchor": "#clean-room-support",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "laptop",
+          "heading": "Validación de Servicios Informáticos",
+          "text": "Texto aquí",
+          "anchor": "#computer-services-validation",
+          "cta": "Leer más"
+        },
+        {
+          "icon": "lightbulb",
+          "heading": "Neuroingeniería",
+          "text": "Texto aquí",
+          "anchor": "#neuro-engineering",
+          "cta": "Leer más"
+        }
+      ]
+    },
+    "clients": {
+      "heading": "Algunos de nuestros clientes"
+    },
+    "about": {
+      "heading": "Nuestro Propósito, Misión y Valores",
+      "text1": "Ayudar a nuestros clientes a lograr mejoras distintivas, duraderas y sustanciales en su desempeño y construir una gran empresa que atraiga, desarrolle, emocione y retenga a personas excepcionales.",
+      "text2": "Nuestros valores son un reflejo claro y único del pensamiento de nuestro fundador, el Dr. Thomas Agrait, quien ha sido una fuerza impulsora en la formación de la empresa. Nuestros valores se han transformado incrementalmente para reflejar los tiempos cambiantes. Son el faro de nuestra estrategia a largo plazo como empresa y la forma en que servimos a nuestros clientes diariamente.",
+      "purpose": {
+        "heading": "Nuestro Propósito",
+        "text": "Ayudar en la transformación de nuestra comunidad global para crear un cambio positivo y perdurable en el mundo."
+      },
+      "mission": {
+        "heading": "Nuestra Misión",
+        "text": "Ayudar a nuestros clientes a lograr mejoras sustanciales y duraderas en su desempeño y construir una gran empresa que atraiga, desarrolle, emocione y retenga el mejor talento."
+      },
+      "pillars": {
+        "heading": "Los Tres Pilares que respaldan nuestros Valores",
+        "list": [
+          {
+            "text": "Adherirse a los más altos estándares profesionales."
+          },
+          {
+            "text": "Mejorar significativamente el desempeño de nuestros clientes."
+          },
+          {
+            "text": "Crear un entorno incomparable para personas excepcionales."
+          }
+        ]
+      },
+      "quote": {
+        "text": "El objetivo final de nuestro equipo de expertos en Lean Enterprise Consulting es hacerte exitoso",
+        "author": "Dr. Thomas Agrait"
+      }
+    }
+  },
+  "aboutpage": {
+    "heading": "Sobre nosotros",
+    "text": "<p class='mb-3'>Creada en 2008, Lean Enterprise Consulting, Inc., se ha convertido en un jugador clave a nivel mundial en Validación, Soporte Regulatorio, Mejora de Procesos, Ingeniería y Educación Tecnológica, a través de la entrega de servicios de alta calidad que ayudan a las organizaciones a enfrentar los crecientes desafíos de calidad, seguridad, regulación, protección ambiental y responsabilidad social. Como socio de confianza, Lean Enterprise Consulting ofrece soluciones innovadoras que van más allá del mero cumplimiento de regulaciones y normas, fomentando una mayor capacidad para reducir riesgos, mejorar el desempeño y promover el desarrollo sostenible.</p><p class='mb-3'>Lean Enterprise Consulting, Inc. se enfoca en brindar soporte a las Ciencias de la Vida y la industria en general, dirigiendo la entrega de servicios hacia los más altos niveles de satisfacción del cliente, esforzándose en cada tarea por superar las expectativas de los clientes. Lean Enterprise Consulting, Inc. comenzó su negocio para colaborar con su base de clientes en lograr una mayor productividad y experimentar una reducción significativa de costos.</p><p class='mb-5'>Sin embargo, a medida que esta empresa ha interactuado en asociación con sus clientes, ha adquirido conocimientos importantes y ha adquirido una perspectiva mejorada sobre cómo ayudarlos a aumentar sus ganancias y ser más competitivos. Esto se ha convertido en una Promesa de Valor Agregado fundamental, que se traduce en beneficios tangibles para el cliente. Las intervenciones de Lean Enterprise Consulting, Inc. transforman las necesidades y oportunidades de los clientes en resultados medibles.</p>",
+    "inspiration": {
+      "heading": "Nuestra Aspiración",
+      "subheading": "Acelerar el crecimiento sostenible e inclusivo de nuestros clientes y la comunidad global.",
+      "text": "Desde el principio, siempre hemos sido firmes creyentes en el potencial de crecimiento operativo y financiero de nuestros clientes. Hoy en día, tenemos el privilegio de trabajar con organizaciones locales y globales, públicas y privadas, que están en un nuevo y acelerado camino de crecimiento, uno que persigue la sostenibilidad, la inclusión y el crecimiento económico, todo al mismo tiempo.",
+      "list": [
+        {
+          "heading": "Servir como modelo de liderazgo servicial para nuestra comunidad.",
+          "text": "Nuestro conjunto integral de prácticas sirve a clientes en la mayoría de las capacidades e industrias. Nuestros socios globales líderes sirven para generar impacto en los clientes, desarrollar conocimientos y capacidades, innovar y desarrollar personas. Trabajan en estrecha colaboración con socios regionales y muchos otros para generar un cambio positivo y duradero en nuestros clientes y partes interesadas, en beneficio de quienes son servidos."
+        },
+        {
+          "heading": "Promover un Código de Conducta Profesional más elevado",
+          "text": "Dar vida a nuestros valores para nuestros colegas y clientes en todo el mundo."
+        },
+        {
+          "heading": "Promover la Sostenibilidad Ambiental",
+          "text": "Nuestra estrategia y acciones nos ayudan a minimizar el impacto que nuestra empresa tiene en el medio ambiente."
+        }
+      ]
+    },
+    "testimonials": {
+      "heading": "<i class=\"fs-1\">Lo que la </i><span class=\"fs-1 decorator\">gente </span><i class=\"fs-1 font-regular\">dice</i><span class=\"fs-1 decorator\"> sobre <i>nuestro trabajo</i></span>",
+      "list": [
+        {
+          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
+          "alt": "algún texto aquí",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
+          "alt": "algún texto aquí",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
+          "alt": "algún texto aquí",
+          "name": "John Doe",
+          "position": "CEO"
+        },
+        {
+          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
+          "alt": "algún texto aquí",
+          "name": "John Doe",
+          "position": "CEO"
+        }
+      ]
+    }
+  },
+  "servicespage": {
+    "services": [
+      {
+        "title": "Optimiza tu éxito con nuestras soluciones.",
+        "subtitle": "Optimiza tu éxito con los servicios de consultoría LEAN Enterprise para operaciones eficientes",
+        "intro": "Nuestra consultoría se enfoca en aquellos recursos de valor económico propiedad o controlados por nuestros clientes que brindarán el mayor beneficio. Este enfoque nos ayuda a proporcionar información e impacto a la organización en un período de tiempo muy corto. Nuestras soluciones aprovechan tecnología avanzada, datos propietarios, conocimiento regulatorio, transformación de procesos y experiencia profunda para ayudar a los clientes en el proceso de diagnóstico, tecnología de gestión, análisis y soluciones aplicadas.",
+        "details": [
+          {
+            "title": "Consultoría de Lean Six Sigma Enterprise",
+            "tag": "lean-six-sigma-enterprise-consulting",
+            "introduction": "Optimiza tus procesos empresariales con servicios de consultoría de Lean Six Sigma, impulsando la excelencia operativa y obteniendo resultados sostenibles para tu empresa.",
+            "details": [
+              {
+                "title": "Análisis de Procesos",
+                "description": "Nuestro equipo analizará tus procesos empresariales utilizando diversas herramientas y técnicas para identificar áreas de ineficiencia y desperdicio."
+              },
+              {
+                "title": "Implementación de LEAN",
+                "description": "Desarrollaremos un plan basado en nuestro análisis para implementar los principios LEAN en tus procesos utilizando herramientas como eventos Kaizen, 5S y trabajo estandarizado. Trabajaremos con tu equipo para garantizar una implementación fluida y brindar capacitación."
+              },
+              {
+                "title": "Mejora Continua",
+                "description": "Nuestro equipo te ayudará a establecer una cultura de mejora continua dentro de tu organización, brindando apoyo continuo y orientación para mantener las mejoras y lograr mayores avances."
+              },
+              {
+                "title": "Métricas e Informes",
+                "description": "Estableceremos métricas y mecanismos de informes para rastrear el progreso y medir el impacto de nuestro servicio de Procesamiento LEAN, lo que te ayudará a identificar nuevas oportunidades de mejora y tomar decisiones basadas en datos."
+              },
+              {
+                "title": "Soluciones Personalizadas",
+                "description": "Adaptaremos nuestro servicio de Procesamiento LEAN para satisfacer tus necesidades específicas, desarrollando una solución personalizada ya sea que necesites ayuda con un proceso específico o desees implementar los principios LEAN en toda tu organización."
+              }
+            ]
+          },
+          {
+            "title": "Validación y Puesta en Marcha",
+            "tag": "validation-and-commissioning",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Soporte Regulatorio y de Cumplimiento",
+            "tag": "regulatory-and-compliance-support",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Gestión de Proyectos",
+            "tag": "project-management",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Ingeniería Ambiental",
+            "tag": "environmental-engineering",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Ingeniería de Servicio al Cliente",
+            "tag": "customer-service-engineering",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Soporte de Sala Limpia",
+            "tag": "clean-room-support",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Validación de Servicios Informáticos",
+            "tag": "computer-services-validation",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          },
+          {
+            "title": "Neuroingeniería",
+            "tag": "neuro-engineering",
+            "introduction": "Descripción del servicio",
+            "details": [
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              },
+              {
+                "title": "Título aquí",
+                "description": "Texto aquí"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contactpage": {
+    "address": "7617 NW 87th Way, Tamarac FL 33321",
+    "description": "Contáctanos para cualquier pregunta, comentario o colaboración. Estamos felices de escucharte y ayudarte.",
+    "email": "Dirección de correo electrónico",
+    "firstName": "Nombre",
+    "heading": "Contáctanos",
+    "lastName": "Apellido",
+    "message": "Mensaje",
+    "phone": "Teléfono",
+    "phoneNumber": "954-258-3117",
+    "sendMessage": "Enviar un mensaje",
+    "subject": "Asunto",
+    "submit": "Enviar",
+    "submitting": "enviando",
+    "validation": {
+      "firstNameRequired": "Se requiere nombre",
+      "lastNameRequired": "Se requiere apellido",
+      "emailRequired": "Se requiere correo electrónico",
+      "emailInvalid": "Dirección de correo electrónico inválida",
+      "phoneRequired": "Se requiere teléfono",
+      "subjectRequired": "Se requiere asunto",
+      "messageRequired": "Se requiere mensaje",
+      "successHeader": "Mensaje enviado :)",
+      "successBody": "Nos pondremos en contacto contigo si es necesario, ¡gracias!",
+      "errorHeader": "Algo salió mal :(",
+      "errorBody": "Por favor, inténtalo de nuevo, ¡gracias!"
+    }
+  },
+  "executiveAdisorsPage": {
+    "cards": [
+      {
+        "name": "Miguel Rodriguez",
+        "title": "Perfil del asesor ejecutivo",
+        "bio": "<p>Miguel es un consultor en manufactura, sistemas de calidad y gestión de programas, con más de 30 años de experiencia en operaciones farmacéuticas y dispositivos médicos. Evalúa los requisitos comerciales críticos de las organizaciones, identifica deficiencias y oportunidades potenciales, y desarrolla soluciones innovadoras y rentables para mejorar la competitividad.</p> <p>Antes de unirse a LEC, Miguel trabajó para compañías farmacéuticas (Baxter y Procter & Gamble) en roles de fabricación, ingeniería, sistemas de calidad y gestión de proyectos en Estados Unidos y Puerto Rico. Durante los últimos 15 años, también ha trabajado con compañías de dispositivos médicos (Medtronic, St Jude Medical, Oscor Inc.) en posiciones técnicas y de liderazgo como Director de Operaciones, Gerente General y COO, en Estados Unidos, Puerto Rico y República Dominicana.</p> <p>Tiene una amplia experiencia en tecnologías y productos de fabricación, tales como:<p><ul><li>Líquidos, emulsiones y cremas (productos de cuidado personal)</li><li>Fabricación/productos en forma sólida (analgésicos)</li><li>Catéteres, guías y introductores (aplicaciones vasculares/periféricas)</li><li>Marcapasos y DAI (ritmo cardíaco)</li><li>Electrodos implantables (dolor, corazón, DBS)</li><li>Válvulas mecánicas/de tejido (reparación/reemplazo de válvulas cardíacas)</li><li>Bombas de infusión de diabetes y accesorios (depósitos/sensores)</li><li>Bombas implantables de infusión de medicamentos (control del dolor)</li></ul> <p>Obtuvo su título de Bachiller en Ingeniería Industrial (BSIE) en la Universidad de Puerto Rico. Ha participado en varios programas de desarrollo en estadística (Universidad de Tennessee), Programa de Desarrollo de Liderazgo (Wharton Business School) y Programa Avanzado de Gestión de Programas/Proyectos (Procter & Gamble). En los últimos años, Miguel ha brindado apoyo y asesoramiento de consultoría a compañías farmacéuticas y de dispositivos médicos en Estados Unidos, Puerto Rico y el Caribe en áreas relacionadas con Sistemas de Calidad y Estrategias de Remediación, Desarrollo y Despliegue de Estrategias Comerciales, Operaciones de Fabricación, Sistemas de Manufactura Lean y Gestión de Programas/Proyectos.</p> ",
+        "social": {
+          "heading": "Síguenos",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Eddie Ignacio",
+        "title": "Perfil del asesor ejecutivo",
+        "bio": "<p>Eddie Ignacio es un líder operativo altamente diverso con más de 40 años de experiencia en las industrias electrónica, química, conversión, iluminación de consumo, acceso minorista y de productos profesionales, y productos farmacéuticos/dispositivos médicos. Antes de unirse a Lean Enterprise Consulting Inc., Eddie formó parte de varias grandes empresas, incluyendo Intel, Western Digital, Johnson & Johnson, General Electric y WernerCo. Se le reconoce por transformar los sistemas operativos globales de manera rentable y productiva. A lo largo de su carrera, ha ocupado puestos nacionales e internacionales en Puerto Rico, Estados Unidos, México, Irlanda, Italia, Brasil, Países Bajos y Suiza.</p> <p>Eddie tiene una Licenciatura en Ciencias: Ingeniería Eléctrica de la Universidad de Puerto Rico (Recinto de Mayagüez). Es un Master Black Belt certificado en Six Sigma desde 1995 y ha capacitado a más de 250 profesionales en todo el mundo. Es completamente bilingüe en inglés y español. En su último cargo como Vicepresidente Ejecutivo de Operaciones/Director de Operaciones, Eddie fue responsable de establecer objetivos comerciales a corto y largo plazo y optimizar el capital humano en todos los niveles. Sus áreas de experiencia incluyen, entre otras cosas, lo siguiente:</p> <ul><li>Operaciones y fabricación a nivel mundial</li><li>Adquisiciones y abastecimiento global</li><li>Puesta en marcha y reestructuración</li><li>Logística y cadena de suministro global</li><li>Manufactura Lean y Six Sigma</li><li>Aseguramiento de calidad y excelencia en procesos</li><li>Adquisiciones y asociaciones</li><li>Cumplimiento normativo</li></ul> <p>Como consultor interno y externo, Eddie ha brindado capacitación y asesoramiento a empresas en Estados Unidos, Asia Pacífico y Europa en áreas relacionadas con Six Sigma, redacción técnica, principios operativos, sistemas de calidad ISO, liderazgo y otros.</p>",
+        "social": {
+          "heading": "Síguenos",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Roberto Correa",
+        "title": "Perfil del asesor ejecutivo",
+        "bio": "<p>Roberto Correa tiene una amplia experiencia en Operaciones de Dispositivos Médicos y Operaciones de Sistemas de Calidad, incluyendo Gestión de Calidad de Proveedores, Gestión de Fabricación, Planificación y Desarrollo Estratégico, Alineación y Desarrollo Organizacional.</p> <p>Antes de unirse a Lean Enterprise Consulting Inc., Roberto formó parte de dos importantes empresas: Johnson & Johnson, líder global en productos de salud, donde adquirió experiencia en dispositivos médicos durante sus 34 años de asociación trabajando en Brasil, Estados Unidos, México y Puerto Rico, y luego con CR BARD, una empresa multinacional de dispositivos médicos, durante sus 4 años de asociación trabajando en Estados Unidos, México y Puerto Rico.</p> <p>Su experiencia específica en dispositivos incluye una amplia gama de productos de clase I, II y II, como:</p> <ul><li>Productos de urología (catéteres de Foley y accesorios de catéter, productos de recolección urinaria, sistemas de monitoreo urológico, drenajes de heridas y tubos de drenaje)</li><li>Sistemas vasculares periféricos (injertos vasculares, catéteres de angioplastia, stents, puertos implantados, dispositivos de alimentación enteral, catéteres venosos centrales)</li><li>Sistemas de acceso (catéteres de diálisis, líneas PICC)</li><li>Sistemas de cierre de heridas (suturas quirúrgicas, grapas y pegamento tópico)</li><li>Implantes mamarios y mallas quirúrgicas</li></ul> <p>Recibió su Licenciatura en Ingeniería Civil de la FVE (Brasil) y tiene un MBA de la Fundação Getulio Vargas (Brasil).</p> <p>Como consultor, Roberto ha brindado capacitación y asesoramiento a empresas de dispositivos médicos en Estados Unidos y América Latina en áreas relacionadas con la Estrategia de Sistemas de Calidad, requisitos de sistemas de calidad (ISO / FDA / ANVISA), evaluación y cumplimiento de sistemas de calidad, remediación de brechas de cumplimiento, métricas de calidad y reducción de errores humanos, inspecciones regulares de la FDA, programas de auditoría y selección y gestión de proveedores.</p>",
+        "social": {
+          "heading": "Síguenos",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      },
+      {
+        "name": "Thomas Agrait",
+        "title": "Perfil del asesor ejecutivo",
+        "bio": "<p>“Coaching organizations and its associates in making skillful choices to reach their desired personal & business results.”</p> <p>Thomas H. Agrait, presidente de Lean Enterprise Consulting Inc., aporta lo mejor de dos enfoques a su trabajo con los clientes: una amplia experiencia en Excelencia en Procesos y experiencia individual única en evocar la excelencia en sus clientes de asesoramiento de manera creativa y con un juicio experimentado integrando la Neurociencia en todos sus proyectos, componente que evoca la excelencia natural e individual en todos los miembros del equipo de proyectos hacia las diferentes tareas. Este enfoque, muy bien orquestado, tiene el poder de alinear el comportamiento de alto impacto en cada nivel de las organizaciones para lograr una ejecución innovadora. Él cree que las corporaciones son víctimas del gran robo de capacitación. Las empresas estadounidenses gastan enormes cantidades de dinero en capacitación y educación de empleados, $110 mil millones al año, para ser exactos. Sin embargo, solo un pequeño porcentaje de ese gasto genera un impacto comercial mensurable, y mucho menos un cambio sostenible. La mayor parte de la inversión de capacitación de las empresas se desperdicia debido a la falta de conexiones cerebrales efectivas con el aprendizaje aplicado.</p>",
+        "social": {
+          "heading": "Síguenos",
+          "links": [
+            { "icon": "facebook", "link": "https://www.facebook.com/" },
+            { "icon": "linkedin", "link": "https://www.linkedin.com/" },
+            { "icon": "twitter", "link": "https://twitter.com/" },
+            { "icon": "instagram", "link": "https://www.instagram.com/" }
+          ]
+        }
+      }
+    ]
+  }
+}

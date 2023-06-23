@@ -9,6 +9,7 @@ import Brand from "./Brand";
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";
 import Close from "./Close";
+import LanguageSelector from "./../LanguageSelector.jsx";
 
 // Styles
 const StyledHeader = styled.header`
@@ -36,21 +37,29 @@ const HideNav = styled.div`
   }
 `;
 
-const Header = ({ brand, nav, isOpen, setIsOpen }) => (
-  <>
-    {isOpen && <NavMobile nav={nav} isOpen={isOpen} setIsOpen={setIsOpen} />}
-    <StyledHeader className={`bg-marino ${prefix}-header`}>
-      <Container>
-        <Brand {...brand} />
-        <HideNav className="hide-nav">
-          <NavDesktop nav={nav} />
-        </HideNav>
-        <div className="d-lg-none">
-          <Close isOpen={isOpen} setIsOpen={setIsOpen} />
-        </div>
-      </Container>
-    </StyledHeader>
-  </>
-);
+const Header = ({ brand, nav, isOpen, setIsOpen }) => {
+  const languagesList = {
+    es: "Esp",
+    en: "Eng",
+  };
+
+  return (
+    <>
+      {isOpen && <NavMobile nav={nav} isOpen={isOpen} setIsOpen={setIsOpen} />}
+      <StyledHeader className={`bg-marino ${prefix}-header`}>
+        <Container>
+          <Brand {...brand} />
+          <HideNav className="hide-nav">
+            <LanguageSelector languagesList={languagesList} />
+            <NavDesktop nav={nav} />
+          </HideNav>
+          <div className="d-lg-none">
+            <Close isOpen={isOpen} setIsOpen={setIsOpen} />
+          </div>
+        </Container>
+      </StyledHeader>
+    </>
+  );
+};
 
 export default Header;

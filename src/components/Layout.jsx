@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { I18nextProvider } from "react-i18next";
-import { useStaticQuery, graphql } from "gatsby";
+import { useTranslation } from "react-i18next";
+import styled from "styled-components";
 
 // Components
 import Header from "./header/Header";
@@ -22,80 +22,23 @@ const Main = styled.main`
 `;
 
 const Layout = ({ children }) => {
+  const { t } = useTranslation();
+
+  const trCommon = t("common", {
+    returnObjects: true,
+  });
+
+  const { header, footer } = trCommon;
+
   const [isOpen, setIsOpen] = useState(false);
-
-  const data = useStaticQuery(graphql`
-    query LayoutQuery {
-      allDataJson {
-        edges {
-          node {
-            common {
-              header {
-                brand {
-                  alt
-                  icon
-                  to
-                }
-                nav {
-                  label
-                  link
-                }
-                top {
-                  email {
-                    href
-                    icon
-                    label
-                  }
-                  phone {
-                    href
-                    icon
-                    label
-                  }
-                }
-              }
-              footer {
-                contact {
-                  address
-                  email
-                  heading
-                  phone
-                }
-                copyright
-                nav {
-                  heading
-                  nav {
-                    label
-                    link
-                  }
-                }
-                social {
-                  heading
-                  links {
-                    icon
-                    link
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
-
-  const { allDataJson } = data || {};
-  const { edges } = allDataJson || {};
-  const node = edges[0].node;
-  const { common } = node || {};
-  const { header: headerData, footer: footerData } = common || {};
 
   return (
     <I18nextProvider i18n={i18next}>
       <GlobalStyle />
       <Header
-        brand={headerData.brand}
-        nav={headerData.nav}
-        top={headerData.top}
+        brand={header.brand}
+        nav={header.nav}
+        top={header.top}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />
@@ -103,10 +46,10 @@ const Layout = ({ children }) => {
         {children}
       </Main>
       <Footer
-        nav={footerData.nav}
-        copyright={footerData.copyright}
-        social={footerData.social}
-        contact={footerData.contact}
+        nav={footer.nav}
+        copyright={footer.copyright}
+        social={footer.social}
+        contact={footer.contact}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
       />

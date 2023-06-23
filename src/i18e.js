@@ -5,11 +5,11 @@ import { initReactI18next } from "react-i18next";
 
 // translation catalog
 const resources = {
-  //   es: {
-  //     translations: require("./data/es.json"),
-  //   },
   en: {
     translations: require("./data/en.json"),
+  },
+  es: {
+    translations: require("./data/es.json"),
   },
 };
 
