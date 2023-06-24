@@ -36,7 +36,6 @@ const Layout = ({ children }) => {
   const changeLocale = (key) => {
     i18n.changeLanguage(key);
     setLanguage(key);
-    setIsOpen(!isOpen);
   };
 
   return (

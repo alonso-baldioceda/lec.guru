@@ -62,6 +62,8 @@ const LanguageSelectorMobile = ({
   languagesLabel,
   changeLocale,
   language,
+  isOpen,
+  setIsOpen,
 }) => {
   return (
     <LanguageSelectorMobileStyles>
@@ -72,7 +74,10 @@ const LanguageSelectorMobile = ({
         return (
           <div key={index}>
             <LinkTranslate
-              onClick={() => changeLocale(key)}
+              onClick={() => {
+                changeLocale(key);
+                setIsOpen(!isOpen);
+              }}
               className={language === key ? "active" : null}
             >
               {languages[key]}

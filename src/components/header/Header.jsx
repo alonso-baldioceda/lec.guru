@@ -46,7 +46,7 @@ const Header = ({
   changeLocale,
   language,
 }) => {
-  const languagesList = {
+  const languages = {
     en: "Eng",
     es: "Esp",
   };
@@ -68,7 +68,11 @@ const Header = ({
           <Brand {...brand} />
           <HideNav className="hide-nav">
             <NavDesktop nav={nav} />
-            <LanguageSelectorDesktop languagesList={languagesList} />
+            <LanguageSelectorDesktop
+              languages={languages}
+              changeLocale={changeLocale}
+              language={language}
+            />
           </HideNav>
           <div className="d-lg-none">
             <Close isOpen={isOpen} setIsOpen={setIsOpen} />

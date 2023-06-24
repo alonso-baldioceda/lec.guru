@@ -1,7 +1,5 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
+import React from "react";
 import styled from "styled-components";
-import ClassNames from "classnames";
 
 // Variables
 import { colors } from "../../shared/styles";
@@ -58,40 +56,17 @@ const LinkTranslate = styled.a`
   }
 `;
 
-const LanguageSelectorDesktop = ({ languagesList }) => {
-  const { i18n } = useTranslation();
-  const [language, setLanguage] = useState(0);
-  const [open, _] = useState(false);
-
-  const [, setValues] = useState({
-    language: "en",
-  });
-
-  const changeLocale = (key) => {
-    i18n.changeLanguage(key);
-    setValues((oldValues) => ({
-      ...oldValues,
-      language: key,
-    }));
-  };
-
+const LanguageSelectorDesktop = ({ languages, changeLocale, language }) => {
   return (
     <LanguageSelectorDesktopStyles>
-      {Object.keys(languagesList).map((key, index) => {
+      {Object.keys(languages).map((key, index) => {
         return (
           <LinkTranslate
-            key={key}
-            onClick={() => {
-              changeLocale(key);
-              open !== undefined &&
-                setLanguage !== undefined &&
-                setLanguage(index);
-            }}
-            className={ClassNames("lang", {
-              active: language === index,
-            })}
+            key={index}
+            onClick={() => changeLocale(key)}
+            className={language === key ? "active" : null}
           >
-            {languagesList[key]}
+            {languages[key]}
           </LinkTranslate>
         );
       })}

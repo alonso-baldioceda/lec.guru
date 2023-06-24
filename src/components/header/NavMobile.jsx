@@ -85,6 +85,8 @@ const NavMobile = ({
           languages={languages}
           changeLocale={changeLocale}
           language={language}
+          setIsOpen={setIsOpen}
+          isOpen={isOpen}
         />
       </div>
     </StyledNavMobile>
