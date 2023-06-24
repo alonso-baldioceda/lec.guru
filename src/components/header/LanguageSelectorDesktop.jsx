@@ -3,10 +3,19 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import ClassNames from "classnames";
 
+// Variables
+import { colors } from "../../shared/styles";
+
 // Styles
+const LanguageSelectorDesktopStyles = styled.div`
+  border-left: 2px solid ${colors.white};
+  margin-left: 22px;
+  padding-left: 22px;
+`;
+
 const LinkTranslate = styled.a`
   border-bottom: 2px solid transparent;
-  color: var(--black);
+  color: ${colors.white};
   cursor: pointer;
   display: initial;
   font-size: 0.95rem;
@@ -14,30 +23,29 @@ const LinkTranslate = styled.a`
   letter-spacing: 0.6px;
   line-height: 28px;
   margin-bottom: 0.5rem;
-  margin-right: 0.75rem;
   padding-bottom: 4px;
   text-decoration: none;
 
   &:hover {
-    border-bottom: 2px solid var(--terracotta);
-    color: var(--white) !important;
+    border-bottom: 2px solid ${colors.white};
+    color: ${colors.marinoLighter} !important;
     text-decoration: none !important;
   }
 
   &:visited {
-    color: var(--white) !important;
+    color: ${colors.white} !important;
     text-decoration: none;
   }
 
-  @media (min-width: 1200px) {
-    margin-right: 1.25rem;
+  @media (min-width: 992px) {
+    margin-right: 22px;
 
     &:hover {
-      color: var(--black) !important;
+      color: ${colors.marinoLighter} !important;
     }
 
     &:visited {
-      color: var(--black) !important;
+      color: ${colors.marinoLighter} !important;
     }
 
     &:focus {
@@ -46,16 +54,14 @@ const LinkTranslate = styled.a`
   }
 
   &.active {
-    border-bottom: 2px solid var(--terracotta);
+    border-bottom: 2px solid ${colors.rouge};
   }
 `;
 
-const LanguageSelector = ({ languagesList }) => {
+const LanguageSelectorDesktop = ({ languagesList }) => {
   const { i18n } = useTranslation();
   const [language, setLanguage] = useState(0);
-  const [open, setOpen] = useState(false);
-  //   const context = useContext(GlobalContext);
-  //   const { language, setLanguage, open } = context;
+  const [open, _] = useState(false);
 
   const [, setValues] = useState({
     language: "en",
@@ -70,7 +76,7 @@ const LanguageSelector = ({ languagesList }) => {
   };
 
   return (
-    <div className="languagues">
+    <LanguageSelectorDesktopStyles>
       {Object.keys(languagesList).map((key, index) => {
         return (
           <LinkTranslate
@@ -89,8 +95,8 @@ const LanguageSelector = ({ languagesList }) => {
           </LinkTranslate>
         );
       })}
-    </div>
+    </LanguageSelectorDesktopStyles>
   );
 };
 
-export default LanguageSelector;
+export default LanguageSelectorDesktop;

@@ -31,8 +31,6 @@ const BlogPost = ({ data }) => {
   const { nodes } = categories || {};
   const { name: categoryName, slug: categorySlug } = nodes[0] || {};
 
-  console.log("nodes", nodes[0].name);
-
   return (
     <Layout>
       <StyledBlogPost className={`${prefix}-blog-post`}>

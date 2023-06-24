@@ -9,7 +9,7 @@ import Brand from "./Brand";
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";
 import Close from "./Close";
-import LanguageSelector from "./../LanguageSelector.jsx";
+import LanguageSelectorDesktop from "./LanguageSelectorDesktop";
 
 // Styles
 const StyledHeader = styled.header`
@@ -37,21 +37,38 @@ const HideNav = styled.div`
   }
 `;
 
-const Header = ({ brand, nav, isOpen, setIsOpen }) => {
+const Header = ({
+  brand,
+  nav,
+  isOpen,
+  setIsOpen,
+  languagesLabel,
+  changeLocale,
+  language,
+}) => {
   const languagesList = {
-    es: "Esp",
     en: "Eng",
+    es: "Esp",
   };
 
   return (
     <>
-      {isOpen && <NavMobile nav={nav} isOpen={isOpen} setIsOpen={setIsOpen} />}
+      {isOpen && (
+        <NavMobile
+          nav={nav}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          languagesLabel={languagesLabel}
+          changeLocale={changeLocale}
+          language={language}
+        />
+      )}
       <StyledHeader className={`bg-marino ${prefix}-header`}>
         <Container>
           <Brand {...brand} />
           <HideNav className="hide-nav">
-            <LanguageSelector languagesList={languagesList} />
             <NavDesktop nav={nav} />
+            <LanguageSelectorDesktop languagesList={languagesList} />
           </HideNav>
           <div className="d-lg-none">
             <Close isOpen={isOpen} setIsOpen={setIsOpen} />

@@ -4,6 +4,7 @@ import classnames from "classnames";
 
 // Components
 import NavItem from "./NavItem";
+import LanguageSelectorMobile from "./LanguageSelectorMobile";
 
 // Variables
 import { prefix, colors } from "../../shared/styles.js";
@@ -47,23 +48,47 @@ const StyledNavMobile = styled.div`
   }
 `;
 
-const NavMobile = ({ nav, isOpen, setIsOpen }) => (
-  <StyledNavMobile
-    className={classnames({ open: isOpen }, `${prefix}-nav-mobile`)}
-  >
-    <ul className="m-0 p-5">
-      {nav.map((item, index) => (
-        <li key={index}>
-          <NavItem
-            to={item.link}
-            label={item.label}
-            isOpen={isOpen}
-            setIsOpen={setIsOpen}
-          />
-        </li>
-      ))}
-    </ul>
-  </StyledNavMobile>
-);
+const NavMobile = ({
+  nav,
+  isOpen,
+  setIsOpen,
+  languagesLabel,
+  changeLocale,
+  language,
+}) => {
+  const languages = {
+    en: "English",
+    es: "Español",
+  };
+
+  return (
+    <StyledNavMobile
+      className={classnames({ open: isOpen }, `${prefix}-nav-mobile`)}
+    >
+      <div className="p-5 w-100">
+        <div className="mb-5">
+          <ul className="m-0 w-100 p-0">
+            {nav.map((item, index) => (
+              <li key={index}>
+                <NavItem
+                  to={item.link}
+                  label={item.label}
+                  isOpen={isOpen}
+                  setIsOpen={setIsOpen}
+                />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <LanguageSelectorMobile
+          languagesLabel={languagesLabel}
+          languages={languages}
+          changeLocale={changeLocale}
+          language={language}
+        />
+      </div>
+    </StyledNavMobile>
+  );
+};
 
 export default NavMobile;

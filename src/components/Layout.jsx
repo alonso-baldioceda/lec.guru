@@ -22,7 +22,7 @@ const Main = styled.main`
 `;
 
 const Layout = ({ children }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const trCommon = t("common", {
     returnObjects: true,
@@ -31,6 +31,13 @@ const Layout = ({ children }) => {
   const { header, footer } = trCommon;
 
   const [isOpen, setIsOpen] = useState(false);
+  const [language, setLanguage] = useState("en");
+
+  const changeLocale = (key) => {
+    i18n.changeLanguage(key);
+    setLanguage(key);
+    setIsOpen(!isOpen);
+  };
 
   return (
     <I18nextProvider i18n={i18next}>
@@ -41,6 +48,9 @@ const Layout = ({ children }) => {
         top={header.top}
         isOpen={isOpen}
         setIsOpen={setIsOpen}
+        languagesLabel={header.languagesLabel}
+        changeLocale={changeLocale}
+        language={language}
       />
       <Main className="main" id="main">
         {children}

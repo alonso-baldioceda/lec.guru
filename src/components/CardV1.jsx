@@ -24,7 +24,6 @@ const StyledLink = styled(GatsbyLink)`
 `;
 
 const CardV1 = ({ cta, heading, icon, anchor, text }) => {
-  console.log(anchor);
   return (
     <StyledLink to={`services${anchor}`} className={`${prefix}-card-v1`}>
       <Card>

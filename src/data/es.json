@@ -24,7 +24,8 @@
         { "label": "Asesores Ejecutivos", "link": "/executive-advisors" },
         { "label": "Contacto", "link": "/contact" },
         { "label": "Blog", "link": "/blog" }
-      ]
+      ],
+      "languagesLabel": "Idiomas"
     },
     "blog": {
       "heading": "<span class=\"fs-1 font-bolder\">Nuestro Blog</span><br /><i class=\"fs-1\">Qué hay de </i><span class=\"fs-1 decorator\">nuevo</span> <i class=\"fs-1 font-regular\">en Lean Enterprise Consulting</i>",
