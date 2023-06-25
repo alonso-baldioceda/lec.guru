@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Masonry from "react-masonry-css";
 
 // Variables
-import { colors, prefix } from "../shared/styles.js";
+import { prefix } from "../shared/styles.js";
 
 const StyledMasonry = styled.div`
   .my-masonry-grid {
@@ -17,7 +17,6 @@ const StyledMasonry = styled.div`
   }
 
   .my-masonry-grid_column > div {
-    background: ${colors.sycamore};
     margin-bottom: 30px;
   }
 `;

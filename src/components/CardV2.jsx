@@ -82,7 +82,7 @@ const ImageContainer = styled.div`
   width: 100%;
 `;
 
-const CardV2 = ({ name, img, link, job, social, text }) => {
+const CardV2 = ({ name, img, link, job, phone, email, social, text }) => {
   return (
     <StyledCardV2>
       <Card className={`border-0 bg-light p-4 ${prefix}-card-v2`}>
@@ -99,7 +99,21 @@ const CardV2 = ({ name, img, link, job, social, text }) => {
             <Card.Text className="text-marino text-center fw-bold mb-3 mt-2">
               {job}
             </Card.Text>
-            <Card.Text className="text-center text-dark">{text}</Card.Text>
+            {text && (
+              <Card.Text className="text-center text-dark">{text}</Card.Text>
+            )}
+            {phone && (
+              <Card.Text className="text-center text-dark">
+                <span className="fw-bold">Phone</span>:<br />
+                {phone}
+              </Card.Text>
+            )}
+            {email && (
+              <Card.Text className="text-center text-dark">
+                <span className="fw-bold">Email</span>:<br />
+                {email}
+              </Card.Text>
+            )}
           </Link>
           {/* <div className="d-flex justify-content-center mt-3">
             {social.links.map((item, index) => (

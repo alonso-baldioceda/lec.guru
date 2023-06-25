@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
+import BrickWall from "../components/BrickWall";
 
 // Variables
 import { prefix } from "./../shared/styles.js";
@@ -17,20 +18,27 @@ const StyledExecutiveAdvisorsPage = styled.div``;
 const ExecutiveAdvisorsPage = ({ data }) => {
   const { t } = useTranslation();
 
-  const trExecutiveAdisorsPage = t("executiveAdisorsPage", {
+  const trCommon = t("common", {
     returnObjects: true,
   });
 
-  const { cards } = trExecutiveAdisorsPage;
+  const { team } = trCommon;
+  const { executives } = team;
 
   const { teamImages } = data || {};
 
-  cards.forEach((item, index) => {
+  executives.forEach((item, index) => {
     const image = getImage(teamImages.edges[index]?.node.childImageSharp);
     item.image = image;
   });
 
-  // TODO: Add contact data to cards
+  const masonryBreakpoint = {
+    default: 3,
+    1440: 3,
+    1200: 1,
+    992: 2,
+    768: 1,
+  };
 
   return (
     <StyledExecutiveAdvisorsPage>
@@ -38,17 +46,17 @@ const ExecutiveAdvisorsPage = ({ data }) => {
         <div className={`${prefix}-teamAdvisors`}>
           <Container className="pt-auto pt-lg-auto">
             <Row className="my-4 my-lg-5">
-              {cards.map((advisor, index) => (
-                <Col sm={6} key={index} className="mb-4 mb-lg-5">
-                  <CardV5
-                    name={advisor.name}
-                    title={advisor.title}
-                    bio={advisor.bio}
-                    image={advisor.image}
-                    social={advisor.social}
-                  />
-                </Col>
-              ))}
+              <Col xs={12}>
+                <BrickWall conf={masonryBreakpoint}>
+                  {executives.map((advisor, index) => (
+                    // <Col sm={6}  className="mb-4 mb-lg-5">
+
+                    <CardV5 key={index} {...advisor} />
+
+                    // </Col>
+                  ))}
+                </BrickWall>
+              </Col>
             </Row>
           </Container>
         </div>

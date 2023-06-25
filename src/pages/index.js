@@ -31,6 +31,7 @@ const IndexPage = ({ data }) => {
 
   const { hero, services, clients, about } = trHomepage;
   const { team, blog } = trCommon;
+  const { executives } = team;
 
   const { heroImg, clientsImages } = data || {};
   const heroImage = getImage(heroImg);
@@ -172,8 +173,8 @@ const IndexPage = ({ data }) => {
             <Col xs={12} className="mb-4">
               <h2 className="text-center fs-1 mb-4 mb-lg-5">{team.heading}</h2>
             </Col>
-            {team.cards.map((card, index) => (
-              <Col sm={6} xl={3} key={index} className="mb-4 mb-lg-5">
+            {executives.map((card, index) => (
+              <Col sm={6} xl={4} key={index} className="mb-4 mb-lg-5">
                 <CardV2 {...card} />
               </Col>
             ))}
