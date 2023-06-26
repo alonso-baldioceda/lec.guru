@@ -27,6 +27,7 @@ const StyledNavDesktop = styled.nav`
       transition: all 0.25s ease-out;
       text-decoration: none;
 
+      &.active,
       &:hover {
         color: ${colors.white};
         border-bottom: 2px solid ${colors.white};

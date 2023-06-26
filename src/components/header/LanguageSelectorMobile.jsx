@@ -53,7 +53,8 @@ const LinkTranslate = styled.a`
   }
 
   &.active {
-    color: ${colors.rouge};
+    color: ${colors.black};
+    border-bottom: 4px solid ${colors.black};
   }
 `;
 

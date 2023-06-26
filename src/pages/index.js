@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => {
             <p className="text-center mb-4 mb-lg-5 fs-5">{services.text}</p>
             <Row>
               {services.cards.map((card, index) => (
-                <Col sm={6} lg={4} key={index} className="mb-4 mb-lg-5">
+                <Col md={6} lg={4} key={index} className="mb-4 mb-lg-5">
                   <CardV1 {...card} />
                 </Col>
               ))}
@@ -174,7 +174,7 @@ const IndexPage = ({ data }) => {
               <h2 className="text-center fs-1 mb-4 mb-lg-5">{team.heading}</h2>
             </Col>
             {executives.map((card, index) => (
-              <Col sm={6} xl={4} key={index} className="mb-4 mb-lg-5">
+              <Col md={6} xl={4} key={index} className="mb-4 mb-lg-5">
                 <CardV2 {...card} />
               </Col>
             ))}

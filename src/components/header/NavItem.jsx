@@ -13,7 +13,12 @@ const NavItem = ({ to, label, isOpen, setIsOpen }) => {
   };
 
   return (
-    <GatsbyLink className={`${prefix}-nav-item`} to={to} onClick={handleClick}>
+    <GatsbyLink
+      className={`${prefix}-nav-item`}
+      to={to}
+      onClick={handleClick}
+      activeClassName="active"
+    >
       {label}
     </GatsbyLink>
   );

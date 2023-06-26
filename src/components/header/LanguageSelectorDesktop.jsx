@@ -52,7 +52,7 @@ const LinkTranslate = styled.a`
   }
 
   &.active {
-    border-bottom: 2px solid ${colors.rouge};
+    border-bottom: 2px solid ${colors.white};
   }
 `;
 

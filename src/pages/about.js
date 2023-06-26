@@ -55,7 +55,7 @@ const AboutPage = ({ data }) => {
           <div className="my-3">
             <Container>
               <Row>
-                <Col md={12}>
+                <Col md={12} className="px-3 px-md-0">
                   <h1 className="mb-5">{heading}</h1>
                   <RichText text={text} />
                   <h2 className="mb-5">{inspiration.heading}</h2>

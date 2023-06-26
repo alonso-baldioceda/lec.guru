@@ -245,65 +245,65 @@
       "text": "Ofrecemos una variedad de servicios enfocados en mejorar la calidad, eficiencia y satisfacción del cliente al eliminar desperdicios y mejorar los procesos. Nuestros principales servicios se detallan a continuación:",
       "cards": [
         {
-          "icon": "bar-chart-line",
-          "heading": "Consultoría de Lean Six Sigma",
-          "text": "Optimiza tus procesos empresariales con servicios de consultoría de Lean Six Sigma, impulsando la excelencia operativa y obteniendo resultados sostenibles para tu empresa.",
+          "icon": "check",
+          "heading": "Validación",
+          "text": "LEC apoya a los clientes en el proceso de establecer evidencia documental que demuestre que un procedimiento, proceso o actividad llevado a cabo en las pruebas y luego en la producción mantiene el nivel de cumplimiento deseado en todas las etapas.",
           "anchor": "#lean-six-sigma-enterprise-consulting",
           "cta": "Leer más"
         },
         {
-          "icon": "check-circle",
-          "heading": "Validación y Comisionamiento",
-          "text": "Texto aquí",
+          "icon": "wrench",
+          "heading": "Puesta en marcha",
+          "text": "Lean Enterprise Consulting proporciona un enfoque sistemático para determinar la puesta en marcha y la rotación de instalaciones, sistemas y equipos para los usuarios finales y garantizar que se cumplan los requisitos de los usuarios y las especificaciones de diseño. Las actividades dentro de esta fase pueden incluir revisiones de diseño, pruebas de aceptación en fábrica, verificación de instalación y pruebas funcionales.",
           "anchor": "#validation-and-commissioning",
           "cta": "Leer más"
         },
         {
           "icon": "shield-check",
           "heading": "Soporte Regulatorio y de Cumplimiento",
-          "text": "Texto aquí",
+          "text": "LEC evalúa y establece el nivel de cumplimiento de la organización con la Ley Federal de Alimentos, Medicamentos y Cosméticos y otras leyes reglamentarias internacionales. Nuestro programa de remediación de Cumplimiento proporciona el mecanismo para reconocer los problemas, crear un plan para corregirlos y evitar que ocurran en el futuro y ejecutar el plan.",
           "anchor": "#regulatory-and-compliance-support",
           "cta": "Leer más"
         },
         {
           "icon": "diagram-2",
           "heading": "Gestión de Proyectos",
-          "text": "Texto aquí",
+          "text": "Los servicios de gestión de proyectos de LEC consisten en liderar el trabajo de un equipo para lograr todos los objetivos del proyecto dentro de las restricciones dadas, es decir, alcance, tiempo y presupuesto. Implica la planificación y organización de los recursos de una empresa para llevar a cabo una tarea, evento o deber específico.",
           "anchor": "#project-management",
           "cta": "Leer más"
         },
         {
           "icon": "tree",
           "heading": "Ingeniería Ambiental",
-          "text": "Texto aquí",
+          "text": "LEC proporciona soluciones para la recolección, el transporte, el procesamiento y la eliminación de desechos. Según los componentes de los desechos sólidos, nuestros ingenieros ambientales, utilizando principios de ingeniería, ciencia del suelo, biología y química, desarrollan soluciones a los problemas ambientales y recomiendan posibles técnicas para manejarlos y eliminarlos sin dañar el medio ambiente.",
           "anchor": "#environmental-engineering",
           "cta": "Leer más"
         },
         {
           "icon": "headset",
           "heading": "Ingeniería de Servicio al Cliente",
-          "text": "Texto aquí",
+          "text": "LEC ayuda a los clientes a encontrar soluciones a sus problemas y responde preguntas sobre productos o servicios, lo que les permite determinar la causa principal del problema, determinar la mejor solución e implementarla de manera efectiva.",
           "anchor": "#customer-service-engineering",
           "cta": "Leer más"
         },
         {
           "icon": "filter-square",
           "heading": "Soporte de Sala Limpia",
-          "text": "Texto aquí",
+          "text": "LEC proporciona un conjunto integral de servicios que incluye actividades de inspección para evaluar si el entorno controlado protege los productos de dispositivos médicos y farmacéuticos de la contaminación y los contaminantes como el polvo, los microbios en el aire, las partículas de aerosol, al tiempo que brinda la consultoría y la orientación para seguir y cumplir con el Clean actual. Requisitos de la habitación.",
           "anchor": "#clean-room-support",
           "cta": "Leer más"
         },
         {
           "icon": "laptop",
           "heading": "Validación de Servicios Informáticos",
-          "text": "Texto aquí",
+          "text": "Los servicios LEC CSV están destinados a probar, validar y documentar formalmente que un sistema informático regulado realiza exactamente lo que está diseñado para hacer de una manera consistente y precisa que es segura, confiable y rastreable.",
           "anchor": "#computer-services-validation",
           "cta": "Leer más"
         },
         {
           "icon": "lightbulb",
           "heading": "Neuroingeniería",
-          "text": "Texto aquí",
+          "text": "El equipo de Neuroingeniería de LEC trabaja en la aplicación de enfoques neurocientíficos y de ingeniería para comprender, mejorar o explotar las propiedades de los sistemas neuronales, así como para diseñar soluciones a problemas asociados con limitaciones y disfunciones neurológicas en los miembros de cualquier organización.",
           "anchor": "#neuro-engineering",
           "cta": "Leer más"
         }

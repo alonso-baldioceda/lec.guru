@@ -241,65 +241,65 @@
       "text": "We offer a variety of services focused on improving quality, efficiency, and customer satisfaction by eliminating waste and improving processes. Our main services are detailed below:",
       "cards": [
         {
-          "icon": "bar-chart-line",
-          "heading": "Lean Six Sigma Enterprise Consulting",
-          "text": "Optimize your business processes with Lean Six Sigma consulting services, driving operational excellence and achieving sustainable results for your enterprise.",
+          "icon": "check-circle",
+          "heading": "Validation",
+          "text": "LEC supports clients in the process of establishing documentary evidence demonstrating that a procedure, process, or activity carried out in testing and then production maintains the desired level of compliance at all stages. ",
           "anchor": "#lean-six-sigma-enterprise-consulting",
           "cta": "Read more"
         },
         {
-          "icon": "check-circle",
-          "heading": "Validation & Commissioning",
-          "text": "Some text here",
+          "icon": "wrench",
+          "heading": "Commissioning",
+          "text": "Lean Enterprise Consulting provides a systematic approach to determine the start-up and turnover of facilities, systems, and equipment to end-users and ensure that user requirements and design specifications are met. Activities within this phase may include design reviews, factory acceptance testing, installation verification, and functional testing.",
           "anchor": "#validation-and-commissioning",
           "cta": "Read more"
         },
         {
           "icon": "shield-check",
-          "heading": "Regulatory & Compliance Support",
-          "text": "Some text here",
+          "heading": "Regulatory & Compliance",
+          "text": "LEC assesses and establishes the organization compliance level with the Federal Food, Drug, and Cosmetic Act and other International Regulatory laws. Our Compliance remediation program provide the mechanism to recognize the problems, create a plan to correct and prevent them from occurring in the future, and executing to the plan.",
           "anchor": "#regulatory-and-compliance-support",
           "cta": "Read more"
         },
         {
           "icon": "diagram-2",
           "heading": "Project Management",
-          "text": "Some text here",
+          "text": "LEC Project management services consist in leading the work of a team to achieve all project goals within the given constraints-i.e., scope, time, and budget. It involves the planning and organization of a company's resources to move a specific task, event, or duty towards completion.",
           "anchor": "#project-management",
           "cta": "Read more"
         },
         {
           "icon": "tree",
           "heading": "Environmental Engineering",
-          "text": "Some text here",
+          "text": "LEC provides solutions to waste collection, transportation, processing, and disposal. Depending on the constituents of solid waste, our environmental engineers, utilizing engineering principles, soil science, biology, and chemistry develop solutions to environmental problems and recommend possible techniques to manage and dispose of it without damaging the environment.",
           "anchor": "#environmental-engineering",
           "cta": "Read more"
         },
         {
           "icon": "headset",
           "heading": "Customer Service Engineering",
-          "text": "Some text here",
+          "text": "LEC assists clients in finding solutions to their problems and answer questions about products or services allowing them to determine the primary cause of the issue, determine the best solution, and implement it effectively.",
           "anchor": "#customer-service-engineering",
           "cta": "Read more"
         },
         {
           "icon": "filter-square",
           "heading": "Clean Room Support",
-          "text": "Some text here",
+          "text": "LEC provides a comprehensive set of services which includes inspection activities to assess if the controlled environment protects pharmaceutical and medical device products from contamination and pollutants such as dust, airborne microbes, aerosol particles while providing the consultancy and guidance to follow & comply with the current Clean Room requirements.",
           "anchor": "#clean-room-support",
           "cta": "Read more"
         },
         {
           "icon": "laptop",
           "heading": "Computer Services Validation",
-          "text": "Some text here",
+          "text": "LEC CSV services are aimed to  test, validate and formally document that a regulated computer-based system performs exactly what it is designed to do in a consistent and accurate manner that is secure, reliable and traceable.",
           "anchor": "#computer-services-validation",
           "cta": "Read more"
         },
         {
           "icon": "lightbulb",
           "heading": "Neuro-Engineering",
-          "text": "Some text here",
+          "text": "LEC Neuro-engineering team work on the application of neuroscientific and engineering approaches to understand, enhance, or exploit the properties of neural systems, as well as to design solutions to problems associated with neurological limitations and dysfunction in the members of any organization.",
           "anchor": "#neuro-engineering",
           "cta": "Read more"
         }

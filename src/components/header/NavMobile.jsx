@@ -43,6 +43,10 @@ const StyledNavMobile = styled.div`
         font-size: 32px;
         font-weight: 900;
         text-decoration: none;
+
+        &.active {
+          border-bottom: 4px solid ${colors.black};
+        }
       }
     }
   }
