@@ -20,6 +20,7 @@ const SocialItem = ({ link, icon }) => (
   <StyledSocialItem
     className={`me-3 d-inline-block ${prefix}-social-item`}
     href={link}
+    target="_blank"
   >
     <i className={`bi bi-${icon} fs-2`}></i>
   </StyledSocialItem>

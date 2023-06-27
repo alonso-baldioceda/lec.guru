@@ -212,10 +212,10 @@
       "social": {
         "heading": "Síguenos",
         "links": [
-          { "icon": "facebook", "link": "https://www.facebook.com/" },
-          { "icon": "linkedin", "link": "https://www.linkedin.com/" },
-          { "icon": "twitter", "link": "https://twitter.com/" },
-          { "icon": "instagram", "link": "https://www.instagram.com/" }
+          {
+            "icon": "linkedin",
+            "link": "https://www.linkedin.com/in/dr-thomas-h-agrait-i-e-lean-enterprise-consulting-a8671216/"
+          }
         ]
       },
       "contact": {
@@ -239,6 +239,20 @@
           "link": "/executive-advisors"
         }
       ]
+    },
+    "contact1": {
+      "text": "No dude en comunicarse con nosotros para cualquier consulta, comentario o posible asociación. Estamos aquí para escuchar y ofrecer asistencia, asegurando que sus necesidades sean satisfechas con el máximo cuidado y dedicación. No dude en ponerse en contacto: sus preguntas nos importan y estamos ansiosos por brindarle el apoyo que necesita.",
+      "cta": {
+        "label": "Contáctenos",
+        "to": "/contact"
+      }
+    },
+    "contact2": {
+      "text": "Contáctenos para preguntas, comentarios o colaboración. Estamos aquí para ayudar y valorar su opinión. ¡Ponerse en contacto!",
+      "cta": {
+        "label": "Contáctenos",
+        "to": "/contact"
+      }
     },
     "services": {
       "heading": "Nuestros Servicios",
@@ -370,28 +384,10 @@
       "heading": "<i class=\"fs-1\">Lo que la </i><span class=\"fs-1 decorator\">gente </span><i class=\"fs-1 font-regular\">dice</i><span class=\"fs-1 decorator\"> sobre <i>nuestro trabajo</i></span>",
       "list": [
         {
-          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
+          "text": "El Dr. Thomas Agrait ha brindado sus servicios de consultoría con mucho éxito. Integró su riqueza de conocimientos en nuestros procesos y sistemas con resultados financieros extraordinarios. Es un excelente líder que guía a nuestros equipos para completar una gran cantidad de proyectos a tiempo. El Dr. Agrait es un líder autodirigido que aprende los procesos comerciales necesarios y brinda actualizaciones inmediatas al equipo de liderazgo. Es un placer trabajar con el Dr. Agrait y esperamos tener una relación a largo plazo.",
           "alt": "algún texto aquí",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
-          "alt": "algún texto aquí",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
-          "alt": "algún texto aquí",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Nuestra empresa farmacéutica ha logrado, mediante el trabajo con el equipo de LEC, implementar la metodología Lean. Este enfoque práctico y orientado a resultados nos ha permitido mejorar nuestra eficiencia y rentabilidad. Recomendamos altamente los servicios de LEC a otras empresas que buscan mejorar sus procesos e incrementar su competitividad.",
-          "alt": "algún texto aquí",
-          "name": "John Doe",
-          "position": "CEO"
+          "name": "Manny Arce",
+          "position": "Gerente General, Werner Co."
         }
       ]
     }

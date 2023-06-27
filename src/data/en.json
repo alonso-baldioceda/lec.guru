@@ -211,10 +211,10 @@
       "social": {
         "heading": "Follow Us",
         "links": [
-          { "icon": "facebook", "link": "https://www.facebook.com/" },
-          { "icon": "linkedin", "link": "https://www.linkedin.com/" },
-          { "icon": "twitter", "link": "https://twitter.com/" },
-          { "icon": "instagram", "link": "https://www.instagram.com/" }
+          {
+            "icon": "linkedin",
+            "link": "https://www.linkedin.com/in/dr-thomas-h-agrait-i-e-lean-enterprise-consulting-a8671216/"
+          }
         ]
       },
       "contact": {
@@ -235,6 +235,20 @@
       "cta": [
         { "label": "Meet our Senior Advisors", "link": "/executive-advisors" }
       ]
+    },
+    "contact1": {
+      "text": "Feel free to reach out to us for any inquiries, feedback, or potential partnerships. We're here to lend an ear and offer assistance, ensuring your needs are met with utmost care and dedication. Don't hesitate to get in touch – your questions matter to us, and we're eager to provide the support you require.",
+      "cta": {
+        "label": "Contact Us",
+        "to": "/contact"
+      }
+    },
+    "contact2": {
+      "text": "Contact us for questions, feedback, or collaboration. We're here to assist and value your input. Get in touch!",
+      "cta": {
+        "label": "Contact Us",
+        "to": "/contact"
+      }
     },
     "services": {
       "heading": "Our Services",
@@ -366,28 +380,10 @@
       "heading": "<i class=\"fs-1\">What people </i><span class=\"fs-1 decorator\">say</span> <i class=\"fs-1 font-regular\">about <i> <span class='fs-1 decorator'>our work</span>",
       "list": [
         {
-          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
+          "text": "Dr. Thomas Agrait has provided his consulting services with a great deal of success.  He integrated his wealth of knowledge into our processes and systems with extraordinary financial results.  He is an excellent leader that lead our teams in completing a plethora of projects on time.  Dr. Agrait is a self-directed leader that learns the necessary business processes and provides prompt updates to the leadership team.  It is a pleasure working with Dr. Agrait and we look forward to a long term relationship.",
           "alt": "some text here",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
-          "alt": "some text here",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
-          "alt": "some text here",
-          "name": "John Doe",
-          "position": "CEO"
-        },
-        {
-          "text": "Our pharmaceutical company has achieved through working with the LEC team to implement Lean methodology. This practical approach and focus on results has allowed us to improve our efficiency and profitability. We highly recommend the LEC services to other companies looking to improve their processes and increase their competitiveness.",
-          "alt": "some text here",
-          "name": "John Doe",
-          "position": "CEO"
+          "name": "Manny Arce",
+          "position": "General Manager, Werner Co."
         }
       ]
     }

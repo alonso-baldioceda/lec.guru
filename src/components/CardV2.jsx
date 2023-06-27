@@ -15,7 +15,7 @@ const StyledCardV2 = styled.div`
     background-color: ${colors.softMarino} !important;
 
     img {
-      border: 6px solid ${colors.white};
+      border: 4px solid ${colors.white};
       border-radius: 50%;
       transition: transform 0.3s ease;
     }
@@ -47,9 +47,11 @@ const Link = styled((props) => <GatsbyLink {...props} />)`
 
 const ImageContainer = styled.div`
   background-color: ${colors.white};
-  border: 6px solid ${colors.marino};
   border-radius: 50%;
+  border: 6px solid ${colors.marino};
   height: 100%;
+  margin: 0 auto;
+  max-width: 200px;
   overflow: hidden;
   width: 100%;
 `;
@@ -60,11 +62,10 @@ const CardV2 = ({ name, img, link, job, phone, email, social, text }) => {
       <Card className={`border-0 bg-light p-4 h-100 ${prefix}-card-v2`}>
         <Link to={link}>
           <div>
-            <ImageContainer className="mb-3 p-1 p-lg-2">
+            <ImageContainer className="mb-3">
               <Card.Img variant="top" src={img} />
             </ImageContainer>
           </div>
-
           <Card.Body>
             <Card.Title className="text-uppercase fw-bold text-center text-dark fs-5 mb-0">
               {name}

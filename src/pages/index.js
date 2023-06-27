@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -29,7 +30,7 @@ const IndexPage = ({ data }) => {
     returnObjects: true,
   });
 
-  const { hero, services, clients, about } = trHomepage;
+  const { hero, contact1, contact2, services, clients, about } = trHomepage;
   const { team, blog } = trCommon;
   const { executives } = team;
 
@@ -41,22 +42,66 @@ const IndexPage = ({ data }) => {
     <Layout>
       {/* Hero */}
       <Hero {...hero} src={heroSrc} />
-      {/* Services */}
-      <div className={`${prefix}-services`}>
-        <div className="bg-marino-lighter">
-          <Container className="py-4 py-lg-5">
-            <h2 className="text-center my-4 my-lg-5 fs-1">
-              {services.heading}
-            </h2>
-            <p className="text-center mb-4 mb-lg-5 fs-5">{services.text}</p>
-            <Row>
-              {services.cards.map((card, index) => (
-                <Col md={6} lg={4} key={index} className="mb-4 mb-lg-5">
-                  <CardV1 {...card} />
+      <div className="bg-marino-lighter">
+        <div className="py-4 py-lg-5">
+          {/* Contact #1 */}
+          <div className={`${prefix}-contact`}>
+            <Container>
+              <Row>
+                <Col xs={12}>
+                  <p className="text-center mb-4">{contact1.text}</p>
+                  <div className="d-flex justify-content-center mb-4">
+                    <Link
+                      className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
+                      to={contact1.cta.to}
+                      role="button"
+                    >
+                      {contact1.cta.label}
+                    </Link>
+                  </div>
                 </Col>
-              ))}
-            </Row>
-          </Container>
+              </Row>
+            </Container>
+          </div>
+          {/* Services */}
+          <div className={`${prefix}-services`}>
+            <Container>
+              <Row>
+                <Col xs={12}>
+                  <h2 className="text-center my-4 my-lg-5 fs-1">
+                    {services.heading}
+                  </h2>
+                  <p className="text-center mb-4 mb-lg-5">{services.text}</p>
+                </Col>
+              </Row>
+              <Row>
+                {services.cards.map((card, index) => (
+                  <Col md={6} lg={4} key={index} className="mb-4 mb-lg-5">
+                    <CardV1 {...card} />
+                  </Col>
+                ))}
+              </Row>
+            </Container>
+          </div>
+          {/* Contact #2 */}
+          <div className={`${prefix}-contact`}>
+            <Container>
+              <Row>
+                <Col xs={12}>
+                  <p className="text-center mb-4">{contact2.text}</p>
+                  <div className="d-flex justify-content-center mb-4">
+                    <Link
+                      className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
+                      to={contact2.cta.to}
+                      role="button"
+                    >
+                      {contact2.cta.label}
+                    </Link>
+                  </div>
+                </Col>
+              </Row>
+            </Container>
+          </div>
         </div>
       </div>
       {/* Clients */}

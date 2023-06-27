@@ -1,6 +1,6 @@
 import React from "react";
 import { prefix } from "../shared/styles.js";
-import { GatsbyImage } from "gatsby-plugin-image";
+// import { GatsbyImage } from "gatsby-plugin-image";
 
 const CardV4 = ({ text, image, alt, name, position }) => {
   return (
@@ -9,7 +9,7 @@ const CardV4 = ({ text, image, alt, name, position }) => {
     >
       <p className="text-white text-center mb-5">{text}</p>
       <div className="d-flex align-items-center flex-column">
-        <span className="mb-3">
+        {/* <span className="mb-3">
           {image ? (
             <GatsbyImage
               image={image}
@@ -17,7 +17,7 @@ const CardV4 = ({ text, image, alt, name, position }) => {
               className="rounded-circle me-3"
             />
           ) : null}
-        </span>
+        </span> */}
         <h6 className="mb-0 text-white">{name}</h6>
         <p className="mb-3 text-white">{position}</p>
       </div>

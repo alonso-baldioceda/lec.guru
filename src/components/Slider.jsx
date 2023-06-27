@@ -7,7 +7,6 @@ import { prefix } from "./../shared/styles.js";
 
 // Styles
 const SliderWrapper = styled((props) => <section {...props} />)`
-  min-height: 380px;
   margin: 0 auto;
   max-width: 2200px;
   position: relative;
