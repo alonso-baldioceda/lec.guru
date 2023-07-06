@@ -48,10 +48,12 @@
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.1",
     "react-masonry-css": "^1.0.16",
+    "react-particles": "^2.10.1",
     "react-slick": "^0.29.0",
     "sass": "^1.59.3",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
+    "tsparticles": "^2.10.1",
     "yup": "^1.0.2"
   },
   "devDependencies": {

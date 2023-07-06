@@ -42,7 +42,7 @@ const BlockList = ({ list }) => {
       {list.map((blog, index) => (
         <div key={index} className="mb-5">
           <BlockLink
-            to={blog.slug}
+            to={`/blog/${blog.slug}`}
             className="text-decoration-none d-block p-4 border-radius-1"
           >
             <h3 className="text-black fs-5">{blog.title}</h3>

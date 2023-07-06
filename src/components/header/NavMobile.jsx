@@ -4,7 +4,7 @@ import classnames from "classnames";
 
 // Components
 import NavItem from "./NavItem";
-import LanguageSelectorMobile from "./LanguageSelectorMobile";
+// import LanguageSelectorMobile from "./LanguageSelectorMobile";
 
 // Variables
 import { prefix, colors } from "../../shared/styles.js";
@@ -56,14 +56,14 @@ const NavMobile = ({
   nav,
   isOpen,
   setIsOpen,
-  languagesLabel,
-  changeLocale,
-  language,
+  // languagesLabel,
+  // changeLocale,
+  // language,
 }) => {
-  const languages = {
-    en: "English",
-    es: "Español",
-  };
+  // const languages = {
+  //   en: "English",
+  //   es: "Español",
+  // };
 
   return (
     <StyledNavMobile
@@ -84,14 +84,14 @@ const NavMobile = ({
             ))}
           </ul>
         </div>
-        <LanguageSelectorMobile
+        {/* <LanguageSelectorMobile
           languagesLabel={languagesLabel}
           languages={languages}
           changeLocale={changeLocale}
           language={language}
           setIsOpen={setIsOpen}
           isOpen={isOpen}
-        />
+        /> */}
       </div>
     </StyledNavMobile>
   );

@@ -10,11 +10,12 @@ import { colors, prefix } from "./../shared/styles.js";
 
 // Components
 import BackgroundImage from "../components/BackgroundImage";
+import BackgroundParticles from "../components/BackgroundParticles";
 import BlockLatestSlider from "../components/BlockLatestSlider";
 import Blockquote from "../components/Blockquote";
 import CardV1 from "../components/CardV1";
 import CardV2 from "../components/CardV2";
-import Hero from "../components/Hero";
+// import Hero from "../components/Hero";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import RichText from "../components/RichText.jsx";
@@ -34,14 +35,16 @@ const IndexPage = ({ data }) => {
   const { team, blog } = trCommon;
   const { executives } = team;
 
-  const { heroImg, clientsImages } = data || {};
-  const heroImage = getImage(heroImg);
-  const heroSrc = heroImage.images.fallback.src;
+  // const { heroImg, clientsImages } = data || {};
+  const { clientsImages } = data || {};
+  // const heroImage = getImage(heroImg);
+  // const heroSrc = heroImage.images.fallback.src;
 
   return (
     <Layout>
       {/* Hero */}
-      <Hero {...hero} src={heroSrc} />
+      <BackgroundParticles {...hero} />
+      {/* <Hero {...hero} src={heroSrc} /> */}
       <div className="bg-marino-lighter">
         <div className="py-4 py-lg-5">
           {/* Contact #1 */}
@@ -250,7 +253,7 @@ export default IndexPage;
 
 export const query = graphql`
   query {
-    heroImg: file(relativePath: { eq: "unclasified/tt.jpg" }) {
+    heroImg: file(relativePath: { eq: "hero-blue.jpg" }) {
       childImageSharp {
         gatsbyImageData(
           width: 3000
