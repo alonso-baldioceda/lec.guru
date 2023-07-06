@@ -129,8 +129,12 @@ const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
                   lg={8}
                   className="d-flex flex-column align-items-center"
                 >
-                  <h1 className="mb-2 text-casal text-uppercase">{heading}</h1>
-                  <h2 className="mb-0 fw-bold fs-3 text-rouge">{text}</h2>
+                  <h1 className="mb-2 text-casal text-uppercase text-center">
+                    {heading}
+                  </h1>
+                  <h2 className="mb-0 fw-bold fs-3 text-rouge text-center">
+                    {text}
+                  </h2>
                   {/* <p className="mb-4 text-dark fs-6 text-center">{small}</p> */}
                   {/* <a
                     className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mb-0 mx-auto"
