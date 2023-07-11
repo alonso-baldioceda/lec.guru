@@ -46,64 +46,66 @@ const IndexPage = ({ data }) => {
       <BackgroundParticles {...hero} />
       {/* <Hero {...hero} src={heroSrc} /> */}
       <div className="bg-marino-lighter">
-        <div className="py-4 py-lg-5">
-          {/* Contact #1 */}
-          <div className={`${prefix}-contact`}>
-            <Container>
-              <Row>
-                <Col xs={12}>
-                  <p className="text-center mb-4">{contact1.text}</p>
-                  <div className="d-flex justify-content-center mb-4">
-                    <Link
-                      className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
-                      to={contact1.cta.to}
-                      role="button"
-                    >
-                      {contact1.cta.label}
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
-          </div>
-          {/* Services */}
-          <div className={`${prefix}-services`}>
-            <Container>
-              <Row>
-                <Col xs={12}>
-                  <h2 className="text-center my-4 my-lg-5 fs-1">
-                    {services.heading}
-                  </h2>
-                  <p className="text-center mb-4 mb-lg-5">{services.text}</p>
-                </Col>
-              </Row>
-              <Row>
-                {services.cards.map((card, index) => (
-                  <Col md={6} lg={4} key={index} className="mb-4 mb-lg-5">
-                    <CardV1 {...card} />
+        <div className="pt-3">
+          <div className="py-4 py-lg-5">
+            {/* Contact #1 */}
+            <div className={`${prefix}-contact`}>
+              <Container>
+                <Row>
+                  <Col xs={12}>
+                    <p className="text-center mb-4">{contact1.text}</p>
+                    <div className="d-flex justify-content-center mb-4">
+                      <Link
+                        className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
+                        to={contact1.cta.to}
+                        role="button"
+                      >
+                        {contact1.cta.label}
+                      </Link>
+                    </div>
                   </Col>
-                ))}
-              </Row>
-            </Container>
-          </div>
-          {/* Contact #2 */}
-          <div className={`${prefix}-contact`}>
-            <Container>
-              <Row>
-                <Col xs={12}>
-                  <p className="text-center mb-4">{contact2.text}</p>
-                  <div className="d-flex justify-content-center mb-4">
-                    <Link
-                      className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
-                      to={contact2.cta.to}
-                      role="button"
-                    >
-                      {contact2.cta.label}
-                    </Link>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+                </Row>
+              </Container>
+            </div>
+            {/* Services */}
+            <div className={`${prefix}-services`}>
+              <Container>
+                <Row>
+                  <Col xs={12}>
+                    <h2 className="text-center my-4 my-lg-5 fs-1">
+                      {services.heading}
+                    </h2>
+                    <p className="text-center mb-4 mb-lg-5">{services.text}</p>
+                  </Col>
+                </Row>
+                <Row>
+                  {services.cards.map((card, index) => (
+                    <Col md={6} lg={4} key={index} className="mb-4 mb-lg-5">
+                      <CardV1 {...card} />
+                    </Col>
+                  ))}
+                </Row>
+              </Container>
+            </div>
+            {/* Contact #2 */}
+            <div className={`${prefix}-contact`}>
+              <Container>
+                <Row>
+                  <Col xs={12}>
+                    <p className="text-center mb-4">{contact2.text}</p>
+                    <div className="d-flex justify-content-center mb-4">
+                      <Link
+                        className="btn bg-rouge rounded-pill text-white px-4 py-2 fw-bold mx-0 mx-md-2"
+                        to={contact2.cta.to}
+                        role="button"
+                      >
+                        {contact2.cta.label}
+                      </Link>
+                    </div>
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
       </div>
