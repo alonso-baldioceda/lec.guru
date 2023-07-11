@@ -380,16 +380,22 @@
       "heading": "<i class=\"fs-1\">What people </i><span class=\"fs-1 decorator\">say</span> <i class=\"fs-1 font-regular\">about <i> <span class='fs-1 decorator'>our work</span>",
       "list": [
         {
-          "text": "Dr. Thomas Agrait has provided his consulting services with a great deal of success.  He integrated his wealth of knowledge into our processes and systems with extraordinary financial results.  He is an excellent leader that lead our teams in completing a plethora of projects on time.  Dr. Agrait is a self-directed leader that learns the necessary business processes and provides prompt updates to the leadership team.  It is a pleasure working with Dr. Agrait and we look forward to a long term relationship.",
+          "text": "<p>Dr. Thomas Agrait has provided his consulting services with a great deal of success.</p><p>He integrated his wealth of knowledge into our processes and systems with extraordinary financial results.</p><p>He is an excellent leader that lead our teams in completing a plethora of projects on time. Dr. Agrait is a self-directed leader that learns the necessary business processes and provides prompt updates to the leadership team.<p></p><p>It is a pleasure working with Dr. Agrait and we look forward to a long term relationship</p>",
           "alt": "some text here",
           "name": "Manny Arce",
           "position": "General Manager, Werner Co."
         },
         {
-          "text": "We all know that Lean Six Sigma is a method to reduce waste in business processes but the reality is that many attempts to implement Lean Methodology fail to reach their goals. Dr. Agrait's Team at Lean Enterprise Consulting equipped with their Neuro Scientific Methodology can link the efficiency of Lean Thinking to the individual needs of the employees within the organization. By using Neuroscientific Tools for Process Improvements, every organization, like BD, can improve output and quality while developing people and improving employee satisfaction and engagement levels",
+          "text": "<p>We all know that Lean Six Sigma is a method to reduce waste in business processes but the reality is that many attempts to implement Lean Methodology fail to reach their goals.</p><p>Dr. Agrait's Team at Lean Enterprise Consulting equipped with their Neuro Scientific Methodology can link the efficiency of Lean Thinking to the individual needs of the employees within the organization.</p><p>By using Neuroscientific Tools for Process Improvements, every organization, like BD, can improve output and quality while developing people and improving employee satisfaction and engagement levels.</p>",
           "alt": "some text here",
           "name": "Rogelio Chacon",
           "position": "Senior HR at Becton, Dickinson, and Co. (BD)"
+        },
+        {
+          "text": "<p>I am writing to thank you for the experience, professional and practical support received from Lean Enterprise Consulting Inc. through the quality system remediation to lift a warning letter resulting from 483s after several FDA inspections. At the same time, I was the VP of Research and Development of a Medical Device company in Palm Harbor, Florida.</p><p>During the remediation process, all the critical points of the Quality System from DHF, DHR, supplier quality, clean room validations, process monitoring, and post-market surveillance, among others, were emphasized, remediated, and improved. The level of improvements, monthly progress reports to the agency, mock audits, and effectiveness checks demonstrated its value by raising the bar of the quality system at the site, both domestic and international.</p><p>With your professional guidance and transparent support, we successfully lifted the warning letter from the FDA. It has been almost eight years since we had Lean Enterprise Consulting come to our company and help us to improve our quality system for complying with FDA QSR. We recommend that any company with a problem complying with FDA QSR should consult Lean Enterprise Consulting. Again, thank you so much for all the help!</p>",
+          "alt": "some text here",
+          "name": "Noel Perez, Ph.D., P.E.",
+          "position": "Sr. Director"
         }
       ]
     }
