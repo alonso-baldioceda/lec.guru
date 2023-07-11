@@ -2,8 +2,12 @@ import React, { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 import { Container, Row, Col } from "react-bootstrap";
-
 import styled from "styled-components";
+
+// Components
+// import RichText from "../components/RichText";
+
+// Variables
 import { prefix } from "./../shared/styles.js";
 
 // Styles
@@ -24,9 +28,27 @@ const StyledBackgroundParticles = styled((props) => <div {...props} />)`
       height: 92vh;
     }
   }
+
+  h1 {
+    font-size: 2.75rem !important;
+    font-weight: 900 !important;
+
+    @media (min-width: 768px) {
+      font-size: 4rem !important;
+    }
+  }
+
+  h2 {
+    font-size: 1.75rem !important;
+    font-weight: 900 !important;
+
+    @media (min-width: 768px) {
+      font-size: 3rem !important;
+    }
+  }
 `;
 
-const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
+const BackgroundParticles = ({ heading, text }) => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -58,13 +80,6 @@ const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
             },
             fpsLimit: 120,
             interactivity: {
-              events: {
-                onClick: {
-                  enable: true,
-                  mode: "push",
-                },
-                resize: true,
-              },
               modes: {
                 push: {
                   quantity: 4,
@@ -87,7 +102,7 @@ const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
                 width: 1,
               },
               collisions: {
-                enable: true,
+                enable: false,
               },
               move: {
                 direction: "none",
@@ -98,6 +113,7 @@ const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
                 random: false,
                 speed: 2,
                 straight: false,
+                bounce: false,
               },
               number: {
                 density: {
@@ -126,7 +142,7 @@ const BackgroundParticles = ({ cta, heading, img, text, small, src }) => {
               <Row className="justify-content-center">
                 <Col
                   xs={12}
-                  lg={8}
+                  lg={9}
                   className="d-flex flex-column align-items-center"
                 >
                   <h1 className="mb-2 text-casal text-uppercase text-center">

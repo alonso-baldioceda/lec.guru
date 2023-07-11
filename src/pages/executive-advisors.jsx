@@ -49,11 +49,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
               <Col xs={12}>
                 <BrickWall conf={masonryBreakpoint}>
                   {executives.map((advisor, index) => (
-                    // <Col sm={6}  className="mb-4 mb-lg-5">
-
                     <CardV5 key={index} {...advisor} />
-
-                    // </Col>
                   ))}
                 </BrickWall>
               </Col>

@@ -69,7 +69,8 @@ const CardV5 = ({ image, name, job, bio, phone, email, social }) => {
               <RichText text={bio} />
             </div>
           )}
-          {phone && (
+          {!bio && <p></p>}
+          {/* {phone && (
             <p className="text-xtart text-dark px-4">
               <span className="fw-bold">Phone</span>:<br />
               {phone}
@@ -80,7 +81,7 @@ const CardV5 = ({ image, name, job, bio, phone, email, social }) => {
               <span className="fw-bold">Email</span>:<br />
               {email}
             </p>
-          )}
+          )} */}
           {/* 
           <div className="d-flex justify-content-center justify-content-md-start px-4 pt-2 pb-4">
             {social.links.map((item, index) => (
