@@ -145,7 +145,7 @@ const BackgroundParticles = ({ heading, text }) => {
                   lg={9}
                   className="d-flex flex-column align-items-center"
                 >
-                  <h1 className="mb-2 text-casal text-uppercase text-center">
+                  <h1 className="mb-2 text-marino text-uppercase text-center">
                     {heading}
                   </h1>
                   <h2 className="mb-0 fw-bold fs-3 text-rouge text-center">
