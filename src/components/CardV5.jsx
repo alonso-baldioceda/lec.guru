@@ -31,6 +31,7 @@ const ImageContainer = styled.div`
   border-radius: 50%;
   margin-bottom: 1rem;
   overflow: hidden;
+  width: 75%;
 
   @media (min-width: 992px) {
     margin-bottom: 0;

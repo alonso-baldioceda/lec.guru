@@ -142,7 +142,7 @@ const IndexPage = ({ data }) => {
           <div className="py-3 py-lg-5">
             <Container className="py-3 py-lg-5">
               <Row className="justify-content-center">
-                <Col xs={11} sm={11} lg={10}>
+                <Col xs={12} sm={11} lg={10}>
                   <h2 className="text-center mb-3 mb-lg-5 fs-1 text-dark underlined">
                     {about.heading}
                   </h2>

@@ -59,7 +59,9 @@ const ImageContainer = styled.div`
 const CardV2 = ({ name, img, link, job, phone, email, social, text }) => {
   return (
     <StyledCardV2 className="h-100">
-      <Card className={`border-0 bg-light p-4 h-100 ${prefix}-card-v2`}>
+      <Card
+        className={`border-0 bg-light py-4 px-0 px-lg-4 h-100 ${prefix}-card-v2`}
+      >
         <Link to={link}>
           <div>
             <ImageContainer className="mb-3">

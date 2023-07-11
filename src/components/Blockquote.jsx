@@ -26,7 +26,7 @@ const Blockquote = ({ text, author }) => {
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-md-12 col-xl-8">
-            <figure className="p-5 mb-0">
+            <figure className="p-2 p-md-5 mb-0">
               <i className="bi bi-quote mb-4"></i>
               <blockquote className="blockquote pb-2">
                 <p className="quote">{text}</p>

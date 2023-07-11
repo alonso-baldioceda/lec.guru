@@ -24,8 +24,8 @@ const ContactPage = () => {
         <Container className="border-radius-1 my-4 my-md-5 overflow-hidden">
           <Row className="bg-marino-lighter">
             <Col md={6}>
-              <div className="p-3 p-md-4 p-lg-5">
-                <h1 className="mb-5">{heading}</h1>
+              <div className="px-0 px-md-4 px-lg-5 py-4 py-lg-5">
+                <h1 className="mb-3 mb-lg-5">{heading}</h1>
                 <p className="mb-4">{description}</p>
                 <p className="d-flex align-items-center mb-1">
                   <i className="bi bi-geo-alt fs-4 me-2"></i>
@@ -49,8 +49,8 @@ const ContactPage = () => {
             }}
           >
             <Col>
-              <div className="p-4 p-md-5">
-                <h3 className="mb-5">
+              <div className="px-0 px-md-5 py-3">
+                <h3 className="mb-3 mb-lg-5">
                   <span className="decorator fs-3">{sendMessage}</span>
                 </h3>
                 <FormContact {...trContactPage} />
