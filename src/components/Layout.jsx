@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { I18nextProvider } from "react-i18next";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
+import { Helmet } from "react-helmet";
 
 // Components
 import Header from "./header/Header";
@@ -40,6 +41,12 @@ const Layout = ({ children }) => {
 
   return (
     <I18nextProvider i18n={i18next}>
+      <Helmet>
+        <meta
+          http-equiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
+      </Helmet>
       <GlobalStyle />
       <Header
         brand={header.brand}
