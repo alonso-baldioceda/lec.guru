@@ -16,6 +16,7 @@ import Mask from "../components/Mask";
 import RichText from "../components/RichText";
 import BrickWall from "../components/BrickWall";
 import CardV6 from "../components/CardV6";
+import Seo from "../components/Seo.jsx";
 
 const StyledServicesPage = styled.div``;
 
@@ -50,6 +51,7 @@ const ServicesPage = ({ data }) => {
   return (
     <StyledServicesPage>
       <Layout>
+        <Seo title="Lean Enterprise Consulting - Services" />
         <div className={`${prefix}-services`}>
           {/* Hero */}
           <div className="position-relative" style={{ height: "460px" }}>

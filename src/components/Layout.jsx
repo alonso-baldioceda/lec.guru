@@ -43,7 +43,7 @@ const Layout = ({ children }) => {
     <I18nextProvider i18n={i18next}>
       <Helmet>
         <meta
-          http-equiv="Content-Security-Policy"
+          httpEquiv="Content-Security-Policy"
           content="upgrade-insecure-requests"
         />
       </Helmet>

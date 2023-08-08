@@ -31,7 +31,7 @@ const Blockquote = ({ text, author }) => {
               <blockquote className="blockquote pb-2">
                 <p className="quote">{text}</p>
               </blockquote>
-              <figcaption className="blockquote-footer mb-3">
+              <figcaption className="blockquote-footer mb-3 text-black font-bold">
                 {author}
               </figcaption>
             </figure>

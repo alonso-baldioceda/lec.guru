@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Container, Row, Col } from "react-bootstrap";
-import { Helmet } from "react-helmet";
 
 // Variables
 import { colors, prefix } from "./../shared/styles.js";
@@ -19,6 +18,7 @@ import CardV2 from "../components/CardV2";
 import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import RichText from "../components/RichText.jsx";
+import Seo from "../components/Seo.jsx";
 
 const IndexPage = ({ data }) => {
   const { t } = useTranslation();
@@ -42,13 +42,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet>
-        <meta
-          http-equiv="Content-Security-Policy"
-          content="upgrade-insecure-requests"
-        />
-      </Helmet>
-
+      <Seo title="Lean Enterprise Consulting - Homepage" />
       {/* Hero */}
       <BackgroundParticles {...hero} />
       {/* <Hero {...hero} src={heroSrc} /> */}
@@ -262,7 +256,7 @@ export default IndexPage;
 
 export const Head = () => (
   <meta
-    http-equiv="Content-Security-Policy"
+    httpEquiv="Content-Security-Policy"
     content="upgrade-insecure-requests"
   />
 );

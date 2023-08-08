@@ -7,6 +7,7 @@ import Layout from "../components/Layout";
 import BlockLatestPosts from "../components/BlockLatestPosts";
 import BlogPagination from "../components/BlogPagination";
 import BlockList from "../components/BlockList";
+import Seo from "../components/Seo.jsx";
 
 const BlogPage = ({ data, pageContext }) => {
   const { currentPage, numPages } = pageContext;
@@ -18,6 +19,7 @@ const BlogPage = ({ data, pageContext }) => {
 
   return (
     <Layout>
+      <Seo title="Lean Enterprise Consulting - Blog" />
       <Container>
         <Row className="justify-content-between">
           <Col xs={12}>

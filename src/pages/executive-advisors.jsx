@@ -12,6 +12,7 @@ import { prefix } from "./../shared/styles.js";
 // Components
 import Layout from "../components/Layout";
 import CardV5 from "../components/CardV5";
+import Seo from "../components/Seo.jsx";
 
 const StyledExecutiveAdvisorsPage = styled.div``;
 
@@ -43,6 +44,7 @@ const ExecutiveAdvisorsPage = ({ data }) => {
   return (
     <StyledExecutiveAdvisorsPage>
       <Layout>
+        <Seo title="Lean Enterprise Consulting - Executive Advisors" />
         <div className={`${prefix}-teamAdvisors`}>
           <Container className="pt-auto pt-lg-auto">
             <Row className="my-4 my-lg-5">

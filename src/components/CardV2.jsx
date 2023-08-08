@@ -65,7 +65,7 @@ const CardV2 = ({ name, img, link, job, phone, email, social, text }) => {
         <Link to={link}>
           <div>
             <ImageContainer className="mb-3">
-              <Card.Img variant="top" src={img} />
+              <Card.Img variant="top" src={img} alt={name} />
             </ImageContainer>
           </div>
           <Card.Body>

@@ -6,6 +6,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Layout from "../components/Layout";
 import FormContact from "../components/FormContact";
 import Map from "../components/Map";
+import Seo from "../components/Seo.jsx";
 
 const ContactPage = () => {
   const { t } = useTranslation();
@@ -20,6 +21,7 @@ const ContactPage = () => {
   // TODO: Hard stress contact form
   return (
     <Layout>
+      <Seo title="Lean Enterprise Consulting - Contact Us" />
       <div className="px-2 px-ld-0">
         <Container className="border-radius-1 my-4 my-md-5 overflow-hidden">
           <Row className="bg-marino-lighter">

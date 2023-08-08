@@ -9,19 +9,13 @@ import Layout from "../components/Layout";
 import BackgroundImage from "../components/BackgroundImage";
 import Mask from "../components/Mask";
 import BlockLatestPosts from "../components/BlockLatestPosts.jsx";
+import Seo from "../components/Seo.jsx";
 
 // Utils
 import { formatAuthorName } from "./../shared/utils.js";
 
 // Styles
 const StyledBlogPost = styled.div``;
-
-const Panel = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50%;
-`;
 
 const BlogPost = ({ data }) => {
   const { wpPost } = data || {};
@@ -33,35 +27,37 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
+      <Seo title={`Lean Enterprise Consulting - Blog - ${title}`} />
       <StyledBlogPost className={`${prefix}-blog-post`}>
-        <div className="position-relative" style={{ height: "300px" }}>
+        <div
+          className="position-relative d-flex align-items-center"
+          style={{ height: "300px" }}
+        >
           {featuredImage && (
             <BackgroundImage src={featuredImage.node.mediaItemUrl} />
           )}
           <Container>
             <Row>
-              <Col xs={12}>
-                <Panel>
-                  <div className="position-relative border-radius-1 overflow-hidden">
-                    <Mask opacity={90} bgColor={colors.rouge} />
-                    <div className="p-4">
-                      <h1 className="text-white fs-2 mb-2">{title}</h1>
-                      <p className="text-white mb-3">
-                        by {formatAuthorName(author)} | {date}
-                      </p>
-                      {categories?.nodes.map((category, index) => {
-                        return (
-                          <span
-                            key={index}
-                            className="badge rounded-pill bg-sycamore px-2 me-2 mb-2"
-                          >
-                            {category.name}
-                          </span>
-                        );
-                      })}
-                    </div>
+              <Col xs={12} md={8}>
+                <div className="position-relative border-radius-1 overflow-hidden">
+                  <Mask opacity={90} bgColor={colors.rouge} />
+                  <div className="p-4">
+                    <h1 className="text-white fs-2 mb-2">{title}</h1>
+                    <p className="text-white mb-3">
+                      by {formatAuthorName(author)} | {date}
+                    </p>
+                    {categories?.nodes.map((category, index) => {
+                      return (
+                        <span
+                          key={index}
+                          className="badge rounded-pill bg-sycamore px-2 me-2 mb-2"
+                        >
+                          {category.name}
+                        </span>
+                      );
+                    })}
                   </div>
-                </Panel>
+                </div>
               </Col>
             </Row>
           </Container>

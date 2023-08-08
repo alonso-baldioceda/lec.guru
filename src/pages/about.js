@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { graphql } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
@@ -11,12 +11,15 @@ import Layout from "../components/Layout";
 import Mask from "../components/Mask";
 import RichText from "../components/RichText";
 import Slider from "../components/Slider";
+import Seo from "../components/Seo.jsx";
 
 // Variables
 import { colors } from "./../shared/styles.js";
 
 const AboutPage = ({ data }) => {
   const { t } = useTranslation();
+
+  const [isReady, setIsReady] = useState(false);
 
   const trAboutPage = t("aboutpage", {
     returnObjects: true,
@@ -47,8 +50,13 @@ const AboutPage = ({ data }) => {
     item.image = image;
   });
 
+  useEffect(() => {
+    setIsReady(true);
+  }, []);
+
   return (
     <Layout>
+      <Seo title="Lean Enterprise Consulting - About us" />
       {/* History */}
       <div className="bg-sycamore-lighter">
         <div className="py-5">
@@ -80,29 +88,32 @@ const AboutPage = ({ data }) => {
         </div>
       </div>
       {/* Testimonials */}
-      <div className="position-relative">
-        <BackgroundImage src={testimonialBg} />
-        <Mask bgColor={colors.marino} opacity={95} />
-        <div className="py-5">
-          <div className="my-3">
-            <Container>
-              <Row>
-                <Col md={12}>
-                  <h2 className="mb-5 text-white text-center">
-                    <RichText text={testimonials.heading} />
-                  </h2>
-                  <Slider settings={testimonialSliderSettings}>
-                    {testimonials.list &&
-                      testimonials.list.map((testimonial, index) => (
-                        <CardV4 key={index} {...testimonial} />
-                      ))}
-                  </Slider>
-                </Col>
-              </Row>
-            </Container>
+      {isReady ? (
+        <div className="position-relative">
+          <BackgroundImage src={testimonialBg} />
+          <Mask bgColor={colors.marino} opacity={95} />
+          <div className="py-5">
+            <div className="my-3">
+              <Container>
+                <Row>
+                  <Col md={12}>
+                    <h2 className="mb-5 text-white text-center">
+                      <RichText text={testimonials.heading} />
+                    </h2>
+                    {testimonials.list ? (
+                      <Slider settings={testimonialSliderSettings}>
+                        {testimonials.list.map((testimonial, index) => (
+                          <CardV4 key={index} {...testimonial} />
+                        ))}
+                      </Slider>
+                    ) : null}
+                  </Col>
+                </Row>
+              </Container>
+            </div>
           </div>
         </div>
-      </div>
+      ) : null}
     </Layout>
   );
 };
