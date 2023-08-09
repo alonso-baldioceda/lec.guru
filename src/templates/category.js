@@ -47,7 +47,7 @@ const CategoryPage = ({ data, pageContext }) => {
               })}
             </div>
           </Col>
-          <Col xs={7}>
+          <Col xs={12} lg={7}>
             <hr />
             <div className="my-5">
               <BlockList list={posts} />

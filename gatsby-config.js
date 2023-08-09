@@ -53,6 +53,13 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-PK8QBRLL",
+        includeInDevelopment: false,
+      },
+    },
     "gatsby-plugin-styled-components",
     {
       resolve: "gatsby-source-filesystem",
