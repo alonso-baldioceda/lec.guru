@@ -111,30 +111,34 @@ const IndexPage = ({ data }) => {
         </div>
       </div>
       {/* Clients */}
-      <div className={`${prefix}-clients`}>
-        <div className="my-3 my-md-5">
-          <Container>
-            <Row className="justify-content-center">
-              <Col xs={12}>
-                <h1 className="my-5 my-lg-5 text-center">{clients.heading}</h1>
-              </Col>
-              {clientsImages.edges.map((client, index) => {
-                const image = getImage(client.node.childImageSharp);
-                return (
-                  <Col
-                    key={index}
-                    sm={4}
-                    className="text-center mb-5 d-flex align-items-center justify-content-center"
-                    style={{ height: "60px" }}
-                  >
-                    <GatsbyImage image={image} alt="client" />
-                  </Col>
-                );
-              })}
-            </Row>
-          </Container>
+      {clientsImages ? (
+        <div className={`${prefix}-clients`}>
+          <div className="my-3 my-md-5">
+            <Container>
+              <Row className="justify-content-center">
+                <Col xs={12}>
+                  <h1 className="my-5 my-lg-5 text-center">
+                    {clients.heading}
+                  </h1>
+                </Col>
+                {clientsImages.edges.map((client, index) => {
+                  const image = getImage(client.node.childImageSharp);
+                  return (
+                    <Col
+                      key={index}
+                      sm={4}
+                      className="text-center mb-5 d-flex align-items-center justify-content-center"
+                      style={{ height: "60px" }}
+                    >
+                      <GatsbyImage image={image} alt="client" />
+                    </Col>
+                  );
+                })}
+              </Row>
+            </Container>
+          </div>
         </div>
-      </div>
+      ) : null}
       {/* About us */}
       <div className={`${prefix}-about`}>
         <div className="position-relative">
